@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Task View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AddTaskViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="AddTaskViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SV-NZ-H7G">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="touchUpInsideCloseButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0Xf-sC-iSc"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZuB-1N-5b0">
+                                <rect key="frame" x="0.0" y="630" width="393" height="222"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SIF-oa-GVm">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="222"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="SRp-bh-Ult" userLabel="Content Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="164"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHs-2H-PvZ">
+                                                        <rect key="frame" x="24" y="25" width="343" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="textColor" name="White87"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="f4R-Mn-nqL" userLabel="Text Field Stack View">
+                                                        <rect key="frame" x="24" y="63" width="343" height="91"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tti-Tx-7Hg" userLabel="Title Stack View">
+                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L3j-mC-Bu6">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="textColor" name="White87"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                                <color key="value" name="AFAFAF"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="editingDidBeginTitleTextField:" destination="Y6W-OH-hqX" eventType="editingDidBegin" id="vu7-Hz-p9O"/>
+                                                                            <action selector="editingDidEndTitleTextField:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="0PX-wR-g55"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="43" id="pGL-Mh-Gc3"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xs7-q2-Wco" userLabel="Description Stack View">
+                                                                <rect key="frame" x="0.0" y="48" width="343" height="43"/>
+                                                                <subviews>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ev-0w-0QM">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                                                        <color key="textColor" name="White87"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                                <color key="value" name="AFAFAF"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="editingDidBeginDescrriptionTextField:" destination="Y6W-OH-hqX" eventType="editingDidBegin" id="YWo-wa-vqK"/>
+                                                                            <action selector="editingDidEndDescriptionTextField:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="G0M-e3-ANc"/>
+                                                                        </connections>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="43" id="dJF-3p-YkH"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="25" left="24" bottom="10" right="26"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="MYn-NN-sG8" userLabel="Button Stack View">
+                                                <rect key="frame" x="0.0" y="164" width="393" height="58"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s7z-kM-ib5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="174" height="58"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWr-5m-uAY">
+                                                                <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="AWr-5m-uAY" secondAttribute="height" id="x3P-jl-vYX"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <inset key="contentEdgeInsets" minX="17" minY="17" maxX="15" maxY="17"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" image="TimerIcon"/>
+                                                                <connections>
+                                                                    <action selector="touchUpInsideTimerButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zfa-bT-fWn"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boD-vh-Ib9">
+                                                                <rect key="frame" x="58" y="0.0" width="58" height="58"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="boD-vh-Ib9" secondAttribute="height" id="pM6-UP-BgV"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <inset key="contentEdgeInsets" minX="17" minY="17" maxX="15" maxY="17"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" image="TagIcon"/>
+                                                                <connections>
+                                                                    <action selector="touchUpInsideCategoryButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VRB-f1-r3R"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjW-xt-GZS">
+                                                                <rect key="frame" x="116" y="0.0" width="58" height="58"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="bjW-xt-GZS" secondAttribute="height" id="NNq-pw-G38"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <inset key="contentEdgeInsets" minX="17" minY="17" maxX="15" maxY="17"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" image="Flag"/>
+                                                                <connections>
+                                                                    <action selector="touchUpInsidePriorityButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rAP-29-VHj"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXe-VV-4rz">
+                                                        <rect key="frame" x="335" y="0.0" width="58" height="58"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="fXe-VV-4rz" secondAttribute="height" id="y93-Ra-DIP"/>
+                                                        </constraints>
+                                                        <inset key="contentEdgeInsets" minX="17" minY="17" maxX="17" maxY="17"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="SendIcon"/>
+                                                        <connections>
+                                                            <action selector="touchUpInsideCreateTaskButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Oge-U4-BBF"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="58" id="BZ2-Uq-LrA"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="363636"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="SIF-oa-GVm" secondAttribute="trailing" id="5Fv-10-ymd"/>
+                                    <constraint firstItem="SIF-oa-GVm" firstAttribute="top" secondItem="ZuB-1N-5b0" secondAttribute="top" id="ZCG-yU-7F5"/>
+                                    <constraint firstAttribute="bottom" secondItem="SIF-oa-GVm" secondAttribute="bottom" id="jTr-gZ-uOC"/>
+                                    <constraint firstItem="SIF-oa-GVm" firstAttribute="leading" secondItem="ZuB-1N-5b0" secondAttribute="leading" id="s1a-c9-ewX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2SV-NZ-H7G" secondAttribute="trailing" id="2HL-Vi-p7U"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZuB-1N-5b0" secondAttribute="trailing" id="EYr-GO-2HM"/>
+                            <constraint firstItem="2SV-NZ-H7G" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="JeI-iV-k1z"/>
+                            <constraint firstItem="2SV-NZ-H7G" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XQP-H1-HbM"/>
+                            <constraint firstAttribute="bottom" secondItem="2SV-NZ-H7G" secondAttribute="bottom" id="geO-16-br6"/>
+                            <constraint firstItem="ZuB-1N-5b0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="h7X-8v-fdH"/>
+                            <constraint firstAttribute="bottom" secondItem="ZuB-1N-5b0" secondAttribute="bottom" id="hfe-WP-B2K"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundContentView" destination="ZuB-1N-5b0" id="Tww-zo-T9J"/>
+                        <outlet property="backgroundContentViewConstraint" destination="jTr-gZ-uOC" id="gOD-cn-eXi"/>
+                        <outlet property="backgroundDescriptionStackView" destination="Xs7-q2-Wco" id="izL-8I-7nJ"/>
+                        <outlet property="backgroundTitleStackView" destination="tti-Tx-7Hg" id="Hpo-cd-The"/>
+                        <outlet property="descriptionTextField" destination="3Ev-0w-0QM" id="ax9-Jm-gFL"/>
+                        <outlet property="titleTextField" destination="L3j-mC-Bu6" id="Se8-QZ-AAT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47" y="-51"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Flag" width="24" height="24"/>
+        <image name="SendIcon" width="24" height="24"/>
+        <image name="TagIcon" width="24" height="24"/>
+        <image name="TimerIcon" width="24" height="24"/>
+        <namedColor name="363636">
+            <color red="0.21199999749660492" green="0.21199999749660492" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AFAFAF">
+            <color red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White87">
+            <color red="1" green="1" blue="1" alpha="0.87000000476837158" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

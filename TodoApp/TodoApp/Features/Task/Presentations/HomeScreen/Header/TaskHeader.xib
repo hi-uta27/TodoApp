@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="TaskHeader" id="HHR-z6-fLc" customClass="TaskHeader" customModule="TodoApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="31"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fM1-jT-imP">
+                    <rect key="frame" x="0.0" y="8" width="77.666666666666671" height="111"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKs-U6-eZk">
+                            <rect key="frame" x="10" y="57.000000000000007" width="34" height="14.333333333333336"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" name="White87"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAs-7i-EXh">
+                            <rect key="frame" x="54" y="56" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="AZS-Dc-OKI"/>
+                                <constraint firstAttribute="width" secondItem="FAs-7i-EXh" secondAttribute="height" id="Cdm-fx-AYL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ArrowDown"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="White21"/>
+                    <edgeInsets key="layoutMargins" top="5" left="10" bottom="5" right="7.5"/>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKi-05-jYR">
+                    <rect key="frame" x="0.0" y="8" width="77.666666666666671" height="111"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="touchUpInsideHeader:" destination="HHR-z6-fLc" eventType="touchUpInside" id="TEL-PR-mj6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="gVh-cg-673"/>
+            <constraints>
+                <constraint firstItem="fM1-jT-imP" firstAttribute="top" secondItem="HHR-z6-fLc" secondAttribute="top" constant="8" id="1LT-b6-sCg"/>
+                <constraint firstItem="zKi-05-jYR" firstAttribute="bottom" secondItem="fM1-jT-imP" secondAttribute="bottom" id="5k4-GY-x9r"/>
+                <constraint firstItem="fM1-jT-imP" firstAttribute="leading" secondItem="gVh-cg-673" secondAttribute="leading" id="TVF-6k-uud"/>
+                <constraint firstAttribute="bottom" secondItem="fM1-jT-imP" secondAttribute="bottom" priority="250" constant="8" id="Xps-eO-qGn"/>
+                <constraint firstItem="zKi-05-jYR" firstAttribute="leading" secondItem="fM1-jT-imP" secondAttribute="leading" id="XqJ-n5-T9f"/>
+                <constraint firstItem="zKi-05-jYR" firstAttribute="trailing" secondItem="fM1-jT-imP" secondAttribute="trailing" id="kLt-MM-cRl"/>
+                <constraint firstItem="zKi-05-jYR" firstAttribute="top" secondItem="fM1-jT-imP" secondAttribute="top" id="xrb-NT-r9i"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backgroundStackView" destination="fM1-jT-imP" id="iXI-Vm-qCl"/>
+                <outlet property="label" destination="OKs-U6-eZk" id="XY1-aL-OaN"/>
+            </connections>
+            <point key="canvasLocation" x="103" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ArrowDown" width="16" height="16"/>
+        <namedColor name="White21">
+            <color red="1" green="1" blue="1" alpha="0.20999999344348907" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White87">
+            <color red="1" green="1" blue="1" alpha="0.87000000476837158" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoryColorCell" customModule="TodoApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H36-NW-W87">
+                        <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                        <color key="backgroundColor" name="80FFA3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="H36-NW-W87" secondAttribute="height" multiplier="1:1" id="iMr-CE-GRb"/>
+                            <constraint firstAttribute="height" constant="36" id="t1M-XG-yji"/>
+                        </constraints>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="selected" image="CheckIcon"/>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="H36-NW-W87" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="MuO-6N-rNq"/>
+                <constraint firstItem="H36-NW-W87" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="a7t-Oc-RDG"/>
+            </constraints>
+            <connections>
+                <outlet property="button" destination="H36-NW-W87" id="2zT-Oh-vcG"/>
+            </connections>
+            <point key="canvasLocation" x="121" y="-11"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="CheckIcon" width="24" height="24"/>
+        <namedColor name="80FFA3">
+            <color red="0.50196078431372548" green="1" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

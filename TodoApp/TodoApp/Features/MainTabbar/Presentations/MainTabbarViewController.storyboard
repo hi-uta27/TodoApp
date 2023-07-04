@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tabbar View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MainTabbarViewController" id="Y6W-OH-hqX" customClass="MainTabbarViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vNO-1C-pcz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3W-Ee-tiU">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="788"/>
+                                        <connections>
+                                            <segue destination="AsK-S3-0uM" kind="embed" identifier="embedTabbarController" id="UlZ-rB-HKR"/>
+                                        </connections>
+                                    </containerView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rIp-O9-Uj5">
+                                        <rect key="frame" x="0.0" y="788" width="414" height="108"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3C-JU-jeb">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USz-FN-NFQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="74"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bdg-gn-4DH">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="74"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvh-5Z-CdZ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="48"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="48" id="ML9-xk-Kmp"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal">
+                                                                            <imageReference key="image" image="Home" symbolScale="large"/>
+                                                                        </state>
+                                                                        <state key="selected">
+                                                                            <imageReference key="image" image="HomeSelected" symbolScale="large"/>
+                                                                        </state>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Jj-h5-sEn">
+                                                                        <rect key="frame" x="0.0" y="48" width="87.5" height="26"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="Index"/>
+                                                                        <state key="selected" title="Index"/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCR-ta-ftV" customClass="TabbarButton" customModule="TodoApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="74"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <connections>
+                                                                    <action selector="touchUpInsideTabbarButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UVR-ns-ve1"/>
+                                                                    <outletCollection property="components" destination="wvh-5Z-CdZ" collectionClass="NSMutableArray" id="oUH-py-qOS"/>
+                                                                    <outletCollection property="components" destination="8Jj-h5-sEn" collectionClass="NSMutableArray" id="K2j-jN-IbD"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="bdg-gn-4DH" firstAttribute="leading" secondItem="USz-FN-NFQ" secondAttribute="leading" id="IMJ-C8-3Ik"/>
+                                                            <constraint firstItem="MCR-ta-ftV" firstAttribute="top" secondItem="USz-FN-NFQ" secondAttribute="top" id="IZ3-gN-YWy"/>
+                                                            <constraint firstAttribute="bottom" secondItem="MCR-ta-ftV" secondAttribute="bottom" id="KAL-M9-aQ4"/>
+                                                            <constraint firstAttribute="trailing" secondItem="bdg-gn-4DH" secondAttribute="trailing" id="Utm-VU-iiD"/>
+                                                            <constraint firstAttribute="bottom" secondItem="bdg-gn-4DH" secondAttribute="bottom" id="Yyb-Fe-dP4"/>
+                                                            <constraint firstItem="bdg-gn-4DH" firstAttribute="top" secondItem="USz-FN-NFQ" secondAttribute="top" id="eyh-AY-29U"/>
+                                                            <constraint firstAttribute="trailing" secondItem="MCR-ta-ftV" secondAttribute="trailing" id="fCn-o9-hMI"/>
+                                                            <constraint firstItem="MCR-ta-ftV" firstAttribute="leading" secondItem="USz-FN-NFQ" secondAttribute="leading" id="zDi-cZ-6nI"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRw-BN-2aR">
+                                                        <rect key="frame" x="87.5" y="0.0" width="87.5" height="74"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NDy-Nc-84g">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="74"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weD-jx-0As">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="48"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="48" id="xc9-w1-zns"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal">
+                                                                            <imageReference key="image" image="Calendar" symbolScale="large"/>
+                                                                        </state>
+                                                                        <state key="selected" image="CalendarSelected"/>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wR8-Sa-2xw">
+                                                                        <rect key="frame" x="0.0" y="48" width="87.5" height="26"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="Calendar"/>
+                                                                        <state key="selected" title="Calendar"/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgJ-LI-GAF" customClass="TabbarButton" customModule="TodoApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="74"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <connections>
+                                                                    <action selector="touchUpInsideTabbarButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="d6f-mi-DeX"/>
+                                                                    <outletCollection property="components" destination="weD-jx-0As" collectionClass="NSMutableArray" id="QoP-3q-apS"/>
+                                                                    <outletCollection property="components" destination="wR8-Sa-2xw" collectionClass="NSMutableArray" id="CTU-h1-gdA"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="dgJ-LI-GAF" secondAttribute="bottom" id="AKM-e0-Q1N"/>
+                                                            <constraint firstItem="dgJ-LI-GAF" firstAttribute="top" secondItem="VRw-BN-2aR" secondAttribute="top" id="PKl-So-hCO"/>
+                                                            <constraint firstAttribute="bottom" secondItem="NDy-Nc-84g" secondAttribute="bottom" id="RjT-cm-xov"/>
+                                                            <constraint firstItem="NDy-Nc-84g" firstAttribute="leading" secondItem="VRw-BN-2aR" secondAttribute="leading" id="Rom-j9-HNf"/>
+                                                            <constraint firstAttribute="trailing" secondItem="NDy-Nc-84g" secondAttribute="trailing" id="SOT-TR-5um"/>
+                                                            <constraint firstItem="dgJ-LI-GAF" firstAttribute="leading" secondItem="VRw-BN-2aR" secondAttribute="leading" id="XO3-uj-3Tk"/>
+                                                            <constraint firstItem="NDy-Nc-84g" firstAttribute="top" secondItem="VRw-BN-2aR" secondAttribute="top" id="dDI-Fp-VUP"/>
+                                                            <constraint firstAttribute="trailing" secondItem="dgJ-LI-GAF" secondAttribute="trailing" id="pBn-hg-Luv"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9K-nK-qCe">
+                                                        <rect key="frame" x="175" y="0.0" width="64" height="74"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="nzT-VH-qfQ"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qw9-zc-8p4">
+                                                        <rect key="frame" x="239" y="0.0" width="87.5" height="74"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CrC-wH-MYc">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="74"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDC-xh-pJV">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="48"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="48" id="P3n-iH-Rli"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal">
+                                                                            <imageReference key="image" image="Focuse" symbolScale="large"/>
+                                                                        </state>
+                                                                        <state key="selected" image="FocuseSelected"/>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Z5-ed-7qH">
+                                                                        <rect key="frame" x="0.0" y="48" width="87.5" height="26"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="Focuse"/>
+                                                                        <state key="selected" title="Focuse"/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwo-WE-hsl" customClass="TabbarButton" customModule="TodoApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="74"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <connections>
+                                                                    <action selector="touchUpInsideTabbarButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Xlc-K7-WTO"/>
+                                                                    <outletCollection property="components" destination="rDC-xh-pJV" collectionClass="NSMutableArray" id="dMr-UZ-9Pl"/>
+                                                                    <outletCollection property="components" destination="7Z5-ed-7qH" collectionClass="NSMutableArray" id="pJ8-cx-hfF"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="rwo-WE-hsl" secondAttribute="trailing" id="6nx-Ge-oiE"/>
+                                                            <constraint firstItem="CrC-wH-MYc" firstAttribute="leading" secondItem="qw9-zc-8p4" secondAttribute="leading" id="AKN-VO-GEy"/>
+                                                            <constraint firstItem="rwo-WE-hsl" firstAttribute="leading" secondItem="qw9-zc-8p4" secondAttribute="leading" id="Nxd-xX-P6I"/>
+                                                            <constraint firstAttribute="trailing" secondItem="CrC-wH-MYc" secondAttribute="trailing" id="Yfb-dM-Orh"/>
+                                                            <constraint firstAttribute="bottom" secondItem="rwo-WE-hsl" secondAttribute="bottom" id="ae7-5R-czs"/>
+                                                            <constraint firstItem="rwo-WE-hsl" firstAttribute="top" secondItem="qw9-zc-8p4" secondAttribute="top" id="hws-wh-JG7"/>
+                                                            <constraint firstAttribute="bottom" secondItem="CrC-wH-MYc" secondAttribute="bottom" id="s2v-1N-ryZ"/>
+                                                            <constraint firstItem="CrC-wH-MYc" firstAttribute="top" secondItem="qw9-zc-8p4" secondAttribute="top" id="ujv-VR-GUf"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jBX-FG-8pO">
+                                                        <rect key="frame" x="326.5" y="0.0" width="87.5" height="74"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZkT-wq-fMq">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="74"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJX-xx-FdV">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="87.5" height="48"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="48" id="pxB-56-pW3"/>
+                                                                        </constraints>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal">
+                                                                            <imageReference key="image" image="User" symbolScale="large"/>
+                                                                        </state>
+                                                                        <state key="selected" image="User"/>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfW-lj-P4h">
+                                                                        <rect key="frame" x="0.0" y="48" width="87.5" height="26"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="Profile"/>
+                                                                        <state key="selected" title="Profile"/>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFz-Ad-yw5" customClass="TabbarButton" customModule="TodoApp" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="74"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <connections>
+                                                                    <action selector="touchUpInsideTabbarButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sNn-5R-yE5"/>
+                                                                    <outletCollection property="components" destination="xJX-xx-FdV" collectionClass="NSMutableArray" id="Zcw-kT-AFb"/>
+                                                                    <outletCollection property="components" destination="tfW-lj-P4h" collectionClass="NSMutableArray" id="PX3-iU-hkv"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="dFz-Ad-yw5" secondAttribute="bottom" id="1Io-Bf-fLl"/>
+                                                            <constraint firstAttribute="trailing" secondItem="dFz-Ad-yw5" secondAttribute="trailing" id="5z2-Rr-wYi"/>
+                                                            <constraint firstItem="ZkT-wq-fMq" firstAttribute="leading" secondItem="jBX-FG-8pO" secondAttribute="leading" id="Bri-lj-67n"/>
+                                                            <constraint firstItem="ZkT-wq-fMq" firstAttribute="top" secondItem="jBX-FG-8pO" secondAttribute="top" id="CCL-Kk-ap8"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ZkT-wq-fMq" secondAttribute="bottom" id="Wfh-ic-6RS"/>
+                                                            <constraint firstItem="dFz-Ad-yw5" firstAttribute="leading" secondItem="jBX-FG-8pO" secondAttribute="leading" id="hcx-Iw-jaN"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ZkT-wq-fMq" secondAttribute="trailing" id="pVD-bq-T5n"/>
+                                                            <constraint firstItem="dFz-Ad-yw5" firstAttribute="top" secondItem="jBX-FG-8pO" secondAttribute="top" id="zyW-AR-a0W"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="VRw-BN-2aR" firstAttribute="width" secondItem="USz-FN-NFQ" secondAttribute="width" id="4b2-h9-0ry"/>
+                                                    <constraint firstItem="jBX-FG-8pO" firstAttribute="width" secondItem="USz-FN-NFQ" secondAttribute="width" id="UoM-Cl-Oqh"/>
+                                                    <constraint firstItem="qw9-zc-8p4" firstAttribute="width" secondItem="USz-FN-NFQ" secondAttribute="width" id="fDB-w6-qa3"/>
+                                                    <constraint firstAttribute="height" constant="74" id="hTK-aj-xrH"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="Nni-HH-Esw"/>
+                                        <color key="backgroundColor" name="363636"/>
+                                        <constraints>
+                                            <constraint firstItem="Z3C-JU-jeb" firstAttribute="top" secondItem="rIp-O9-Uj5" secondAttribute="top" id="BSN-jz-d85"/>
+                                            <constraint firstItem="Nni-HH-Esw" firstAttribute="trailing" secondItem="Z3C-JU-jeb" secondAttribute="trailing" id="Mzr-RJ-owx"/>
+                                            <constraint firstItem="Z3C-JU-jeb" firstAttribute="bottom" secondItem="Nni-HH-Esw" secondAttribute="bottom" id="Rr5-OR-IGe"/>
+                                            <constraint firstItem="Z3C-JU-jeb" firstAttribute="leading" secondItem="Nni-HH-Esw" secondAttribute="leading" id="gUl-AY-2Wx"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqW-RB-z97">
+                                <rect key="frame" x="175" y="756" width="64" height="64"/>
+                                <color key="backgroundColor" name="8687E7"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="Y7m-uw-2OD"/>
+                                    <constraint firstAttribute="height" constant="64" id="q9W-eM-rhz"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="Add" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpInsideAddButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DCa-XA-Guf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="121212"/>
+                        <constraints>
+                            <constraint firstItem="VqW-RB-z97" firstAttribute="centerX" secondItem="rIp-O9-Uj5" secondAttribute="centerX" id="4ST-kf-M2K"/>
+                            <constraint firstItem="vNO-1C-pcz" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="IvD-EY-W5r"/>
+                            <constraint firstAttribute="trailing" secondItem="vNO-1C-pcz" secondAttribute="trailing" id="ROR-Tw-QtJ"/>
+                            <constraint firstAttribute="bottom" secondItem="vNO-1C-pcz" secondAttribute="bottom" id="Rrp-hX-QIR"/>
+                            <constraint firstItem="vNO-1C-pcz" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="lk8-U2-HG4"/>
+                            <constraint firstItem="rIp-O9-Uj5" firstAttribute="top" secondItem="VqW-RB-z97" secondAttribute="bottom" constant="-32" id="qY4-J0-FIx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="tabbarButtons" destination="MCR-ta-ftV" collectionClass="NSMutableArray" id="LLp-uf-0p9"/>
+                        <outletCollection property="tabbarButtons" destination="dgJ-LI-GAF" collectionClass="NSMutableArray" id="Lpm-c7-mxW"/>
+                        <outletCollection property="tabbarButtons" destination="rwo-WE-hsl" collectionClass="NSMutableArray" id="3VQ-Mh-e18"/>
+                        <outletCollection property="tabbarButtons" destination="dFz-Ad-yw5" collectionClass="NSMutableArray" id="jKQ-qd-6aJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="6PE-PG-USv" customClass="RoundCornerViewBehavior" customModule="TodoApp" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="32"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="views" destination="VqW-RB-z97" collectionClass="NSMutableArray" id="U3E-8a-dZs"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+        <!--Main Tabbar Controller-->
+        <scene sceneID="1BX-x3-kYe">
+            <objects>
+                <tabBarController id="AsK-S3-0uM" customClass="MainTabbarController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Dg-4S-woX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Lgu-Qz-b28" kind="relationship" relationship="viewControllers" id="E7w-dp-yMI"/>
+                        <segue destination="v95-e3-BiV" kind="relationship" relationship="viewControllers" id="O49-YM-BcM"/>
+                        <segue destination="cUf-u3-eo3" kind="relationship" relationship="viewControllers" id="04n-Ub-ZwM"/>
+                        <segue destination="b60-Ys-RFt" kind="relationship" relationship="viewControllers" id="K9u-gX-M8Q"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lLD-je-rjM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="-28"/>
+        </scene>
+        <!--HomeScreenViewController-->
+        <scene sceneID="fGV-pA-qVL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeScreenViewController" id="Lgu-Qz-b28" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="IB6-Ok-Ubg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tBQ-aK-VtA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1549" y="-149"/>
+        </scene>
+        <!--CalendarViewController-->
+        <scene sceneID="bTf-8D-err">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CalendarViewController" id="v95-e3-BiV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="jfY-fW-etd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjg-Q2-Lap" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1533" y="-73"/>
+        </scene>
+        <!--FocusMoodViewController-->
+        <scene sceneID="iDn-1v-0LZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FocusMoodViewController" id="cUf-u3-eo3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Ll3-cb-Tag"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tm6-E4-SQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1544" y="14"/>
+        </scene>
+        <!--UserProfileViewController-->
+        <scene sceneID="vEI-pN-TkF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UserProfileViewController" id="b60-Ys-RFt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="tZN-rX-jK8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ues-X8-flF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Add" width="32" height="32"/>
+        <image name="Calendar" width="24" height="24"/>
+        <image name="CalendarSelected" width="24" height="24"/>
+        <image name="Focuse" width="24" height="24"/>
+        <image name="FocuseSelected" width="24" height="24"/>
+        <image name="Home" width="24" height="24"/>
+        <image name="HomeSelected" width="24" height="24"/>
+        <image name="User" width="24" height="24"/>
+        <namedColor name="121212">
+            <color red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="363636">
+            <color red="0.21199999749660492" green="0.21199999749660492" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="8687E7">
+            <color red="0.52549019607843139" green="0.52941176470588236" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
