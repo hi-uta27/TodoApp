@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail Task View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DetailTaskViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DetailTaskViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="oHC-lR-mD0" userLabel="Content Stack View">
+                                <rect key="frame" x="0.0" y="58.999999999999972" width="393" height="483.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2YQ-ag-wxg">
+                                        <rect key="frame" x="24" y="10.999999999999993" width="345" height="114.33333333333331"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="pFR-xW-LKN" userLabel="Navigation Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="32"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Or6-6k-kIT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                        <color key="backgroundColor" name="1D1D1D"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" id="Dgz-d7-zXI"/>
+                                                            <constraint firstAttribute="width" secondItem="Or6-6k-kIT" secondAttribute="height" id="gtp-We-Djt"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="Cancel"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcp-fG-xgM">
+                                                        <rect key="frame" x="313" y="0.0" width="32" height="32"/>
+                                                        <color key="backgroundColor" name="1D1D1D"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" id="BU2-qZ-Qjp"/>
+                                                            <constraint firstAttribute="width" secondItem="Jcp-fG-xgM" secondAttribute="height" id="fLL-Bk-tnK"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="Refresh"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Zul-3x-65v" userLabel="Title Stack View">
+                                                <rect key="frame" x="0.0" y="31.999999999999993" width="345" height="82.333333333333314"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="JrM-0s-q7i" userLabel="Title Stack View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="61"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTc-pn-eKm">
+                                                                <rect key="frame" x="0.0" y="13" width="16" height="48"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="16" id="zdo-HD-Hfi"/>
+                                                                </constraints>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" image="CheckBox"/>
+                                                                <state key="selected" image="SelectedCheckBox"/>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do Math Homework" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvA-TI-0gG">
+                                                                <rect key="frame" x="27" y="13" width="259" height="48"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                                <color key="textColor" name="White87"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iv1-Nk-Mjg">
+                                                                <rect key="frame" x="297" y="13" width="48" height="48"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="iv1-Nk-Mjg" secondAttribute="height" id="hGO-co-3bc"/>
+                                                                    <constraint firstAttribute="height" constant="48" id="zY0-b8-YoN"/>
+                                                                </constraints>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" image="Edit"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="13" left="0.0" bottom="0.0" right="0.0"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4Px-VA-bZB" userLabel="Description Stack View">
+                                                        <rect key="frame" x="0.0" y="63.000000000000007" width="345" height="19.333333333333336"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do chapter 2to 5 for next week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBM-gt-uzt">
+                                                                <rect key="frame" x="27" y="0.0" width="318" height="19.333333333333332"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                <color key="textColor" name="White87"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <edgeInsets key="layoutMargins" top="0.0" left="27" bottom="0.0" right="0.0"/>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="eos-qE-cZ3">
+                                        <rect key="frame" x="24" y="163.33333333333337" width="345" height="293"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fbR-ru-rRi" userLabel="Time Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="37"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q64-AH-BzR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="37"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="4Ar-10-JMt"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="TimerIcon"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="159-TM-evn">
+                                                        <rect key="frame" x="32" y="0.0" width="185" height="37"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" name="White87"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5x-yu-X5l">
+                                                        <rect key="frame" x="225" y="0.0" width="120" height="37"/>
+                                                        <color key="backgroundColor" name="White21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="6Uv-DE-qRg"/>
+                                                            <constraint firstAttribute="height" constant="37" id="tOa-2g-yxc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Today At 16:45"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LyA-u7-Gxv" userLabel="Category Stack View">
+                                                <rect key="frame" x="0.0" y="63.999999999999972" width="345" height="37"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj3-WH-LhD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="37"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="Y8D-cJ-GXb"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="TagIcon"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDH-wF-HM4">
+                                                        <rect key="frame" x="32" y="0.0" width="206" height="37"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" name="White87"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zOA-eE-Hbh" userLabel="Category Stack View">
+                                                        <rect key="frame" x="246" y="0.0" width="99" height="37"/>
+                                                        <subviews>
+                                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYZ-uT-L8B">
+                                                                <rect key="frame" x="8" y="11.666666666666686" width="14" height="14"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="14" id="8WP-QE-8xV"/>
+                                                                    <constraint firstAttribute="width" secondItem="RYZ-uT-L8B" secondAttribute="height" id="IXb-Fq-ZSV"/>
+                                                                </constraints>
+                                                                <state key="normal" image="UniversityIcon">
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="thin"/>
+                                                                </state>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZ2-io-3xa">
+                                                                <rect key="frame" x="27" y="11.333333333333371" width="64" height="14.333333333333336"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="64" id="zyh-PX-ToS"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="White21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="37" id="Nim-ya-BFK"/>
+                                                        </constraints>
+                                                        <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="0.0" right="8"/>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QN4-CI-Xcl" userLabel="Priority Stack View">
+                                                <rect key="frame" x="0.0" y="127.99999999999997" width="345" height="37"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPJ-1L-aHR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="37"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="iTw-k5-uQZ"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="Flag"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Priority:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekr-Kb-Uqq">
+                                                        <rect key="frame" x="32" y="0.0" width="235" height="37"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" name="White87"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHu-eb-qmD">
+                                                        <rect key="frame" x="275" y="0.0" width="70" height="37"/>
+                                                        <color key="backgroundColor" name="White21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="37" id="adq-uW-yIn"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="70" id="xr6-sz-PUx"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Default"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a5s-dT-RVI" userLabel="Sub Task Stack View">
+                                                <rect key="frame" x="0.0" y="191.99999999999997" width="345" height="37"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCf-uF-IbO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="37"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="24" id="UNb-Dz-Ifx"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="Hierarchy"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub - Task:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxs-q8-7Cd">
+                                                        <rect key="frame" x="32" y="0.0" width="185" height="37"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" name="White87"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck5-4W-WzP">
+                                                        <rect key="frame" x="225" y="0.0" width="120" height="37"/>
+                                                        <color key="backgroundColor" name="White21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="Ikw-ak-p76"/>
+                                                            <constraint firstAttribute="height" constant="37" id="PUH-sa-B8x"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Add Sub - Task"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gsf-Ao-tjw" userLabel="Delete Stack View">
+                                                <rect key="frame" x="0.0" y="256" width="345" height="37"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i6-3s-ZPk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24" height="37"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="37" id="Cnv-wu-EAV"/>
+                                                            <constraint firstAttribute="width" constant="24" id="EJC-SE-li5"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="Trash"/>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCy-z5-rwn" userLabel="Delete">
+                                                        <rect key="frame" x="32" y="0.0" width="313" height="37"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" name="FF4949"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="11" left="24" bottom="27" right="24"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfA-YB-01A">
+                                <rect key="frame" x="24" y="743" width="345" height="48"/>
+                                <color key="backgroundColor" name="8687E7"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="YgT-Xt-5ml"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Edit Task">
+                                    <color key="titleColor" name="White87"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojK-2e-UFf">
+                                <rect key="frame" x="270" y="286.33333333333331" width="99" height="37"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ca-3M-D1A">
+                                <rect key="frame" x="24" y="478.33333333333331" width="345" height="36.999999999999943"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="121212"/>
+                        <constraints>
+                            <constraint firstItem="ojK-2e-UFf" firstAttribute="leading" secondItem="zOA-eE-Hbh" secondAttribute="leading" id="1lL-m0-0Ut"/>
+                            <constraint firstItem="ojK-2e-UFf" firstAttribute="trailing" secondItem="zOA-eE-Hbh" secondAttribute="trailing" id="8Sh-Dd-Hyr"/>
+                            <constraint firstItem="7Ca-3M-D1A" firstAttribute="leading" secondItem="Gsf-Ao-tjw" secondAttribute="leading" id="BsQ-tM-Hbx"/>
+                            <constraint firstItem="oHC-lR-mD0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="HD5-ep-IIW"/>
+                            <constraint firstItem="7Ca-3M-D1A" firstAttribute="bottom" secondItem="Gsf-Ao-tjw" secondAttribute="bottom" id="Sig-bf-ZbS"/>
+                            <constraint firstItem="7Ca-3M-D1A" firstAttribute="top" secondItem="Gsf-Ao-tjw" secondAttribute="top" id="TVZ-Nn-byM"/>
+                            <constraint firstItem="ojK-2e-UFf" firstAttribute="bottom" secondItem="zOA-eE-Hbh" secondAttribute="bottom" id="UnA-DR-9d4"/>
+                            <constraint firstItem="oHC-lR-mD0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="V03-Jn-Be9"/>
+                            <constraint firstItem="wfA-YB-01A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Vjh-XT-Iir"/>
+                            <constraint firstItem="7Ca-3M-D1A" firstAttribute="trailing" secondItem="Gsf-Ao-tjw" secondAttribute="trailing" id="W9O-dR-aXZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wfA-YB-01A" secondAttribute="bottom" constant="27" id="Xof-Xc-IhM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wfA-YB-01A" secondAttribute="trailing" constant="24" id="Zmk-5o-Tip"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oHC-lR-mD0" secondAttribute="trailing" id="aBR-sX-nhb"/>
+                            <constraint firstItem="ojK-2e-UFf" firstAttribute="top" secondItem="zOA-eE-Hbh" secondAttribute="top" id="dM9-WX-Gp0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="xTZ-cI-Exf" userLabel="Round Corner 4 View Behavior" customClass="RoundCornerViewBehavior" customModule="TodoApp" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="views" destination="Or6-6k-kIT" collectionClass="NSMutableArray" id="bK5-11-bcc"/>
+                        <outletCollection property="views" destination="Jcp-fG-xgM" collectionClass="NSMutableArray" id="rhX-3c-QE4"/>
+                        <outletCollection property="views" destination="wfA-YB-01A" collectionClass="NSMutableArray" id="7dA-Nm-bed"/>
+                    </connections>
+                </customObject>
+                <customObject id="UAb-Lj-quW" userLabel="Round Corner 6 View Behavior" customClass="RoundCornerViewBehavior" customModule="TodoApp" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="views" destination="X5x-yu-X5l" collectionClass="NSMutableArray" id="OBl-zc-Tgn"/>
+                        <outletCollection property="views" destination="oHu-eb-qmD" collectionClass="NSMutableArray" id="UTo-bN-vH5"/>
+                        <outletCollection property="views" destination="ck5-4W-WzP" collectionClass="NSMutableArray" id="gIt-BU-8oD"/>
+                        <outletCollection property="views" destination="zOA-eE-Hbh" collectionClass="NSMutableArray" id="F6t-xf-Pby"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="132" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Cancel" width="24" height="24"/>
+        <image name="CheckBox" width="16" height="16"/>
+        <image name="Edit" width="48" height="48"/>
+        <image name="Flag" width="24" height="24"/>
+        <image name="Hierarchy" width="24" height="24"/>
+        <image name="Refresh" width="24" height="24"/>
+        <image name="SelectedCheckBox" width="16" height="16"/>
+        <image name="TagIcon" width="24" height="24"/>
+        <image name="TimerIcon" width="24" height="24"/>
+        <image name="Trash" width="24" height="24"/>
+        <image name="UniversityIcon" width="32" height="32"/>
+        <namedColor name="121212">
+            <color red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="1D1D1D">
+            <color red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="8687E7">
+            <color red="0.52549019607843139" green="0.52941176470588236" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FF4949">
+            <color red="1" green="0.28627450980392155" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White21">
+            <color red="1" green="1" blue="1" alpha="0.20999999344348907" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White87">
+            <color red="1" green="1" blue="1" alpha="0.87000000476837158" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

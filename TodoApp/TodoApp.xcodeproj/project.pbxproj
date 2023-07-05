@@ -141,6 +141,8 @@
 		2BFE12DC2A333616001155EA /* CreateCategoryRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE12DB2A333616001155EA /* CreateCategoryRepositoryImpl.swift */; };
 		2BFE12DE2A3337AD001155EA /* CreateCategoryUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE12DD2A3337AD001155EA /* CreateCategoryUseCaseImpl.swift */; };
 		2BFE12E02A33382B001155EA /* CreateCategoryInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE12DF2A33382B001155EA /* CreateCategoryInject.swift */; };
+		63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D64C282A55621900913D63 /* DetailTaskViewController.swift */; };
+		63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -274,6 +276,8 @@
 		2BFE12DB2A333616001155EA /* CreateCategoryRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryRepositoryImpl.swift; sourceTree = "<group>"; };
 		2BFE12DD2A3337AD001155EA /* CreateCategoryUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryUseCaseImpl.swift; sourceTree = "<group>"; };
 		2BFE12DF2A33382B001155EA /* CreateCategoryInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryInject.swift; sourceTree = "<group>"; };
+		63D64C282A55621900913D63 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
+		63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTaskViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,6 +487,7 @@
 		2B7BCEFF2A3FE6DA0021DA74 /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				63D64C272A55620300913D63 /* DetailTask */,
 				2B2EAE782A445F4800A88123 /* Validators */,
 				2B2EAE772A445F3A00A88123 /* ScreenRouter */,
 				2BC969A92A428CDD00D11EB1 /* TaskAlarm */,
@@ -1029,6 +1034,15 @@
 			path = Inject;
 			sourceTree = "<group>";
 		};
+		63D64C272A55620300913D63 /* DetailTask */ = {
+			isa = PBXGroup;
+			children = (
+				63D64C282A55621900913D63 /* DetailTaskViewController.swift */,
+				63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */,
+			);
+			path = DetailTask;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1114,6 +1128,7 @@
 				2B9328DF2A3C1DB600DD6730 /* AddTaskViewController.storyboard in Resources */,
 				2B57DE792A2F1B8E002160E7 /* LaunchScreen.storyboard in Resources */,
 				2B72067F2A36BFF5009A1158 /* CreateCategoryViewController.storyboard in Resources */,
+				63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */,
 				2B8E30552A32E83000CFDD3D /* CategoryCell.xib in Resources */,
 				2B62641C2A418BAE00B53646 /* ChooseTimeViewController.storyboard in Resources */,
 				2BBFCCEF2A49686E0095EA4D /* TaskHeader.xib in Resources */,
@@ -1196,6 +1211,7 @@
 				2B6C14DE2A4D9C4B00161D85 /* MainTabbarController.swift in Sources */,
 				2B8E304F2A32E3DD00CFDD3D /* CategoryCollectionViewDataSource.swift in Sources */,
 				2B9328E72A3C5F2D00DD6730 /* TaskAlarmViewController.swift in Sources */,
+				63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */,
 				2B83EE6D2A3081D70009D5C6 /* ReadCategoryUseCaseImpl.swift in Sources */,
 				2B3192D22A4D20E6005C6F69 /* Debounce.swift in Sources */,
 				2BA3EA4B2A4AFE0900C496DD /* UpdateTaskInject.swift in Sources */,
