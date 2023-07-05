@@ -337,6 +337,7 @@
                     <connections>
                         <outlet property="categoryIconButton" destination="RYZ-uT-L8B" id="SsY-iC-Cqp"/>
                         <outlet property="categoryTitleLabel" destination="YZ2-io-3xa" id="rEF-HX-o4k"/>
+                        <outlet property="checkBoxButton" destination="xTc-pn-eKm" id="XeB-UJ-Qeb"/>
                         <outlet property="dateTimeButton" destination="X5x-yu-X5l" id="j3U-Bi-Fzy"/>
                         <outlet property="descriptionLabel" destination="bBM-gt-uzt" id="Lmh-QF-GgB"/>
                         <outlet property="titleLabel" destination="fvA-TI-0gG" id="5xx-RR-EhB"/>
