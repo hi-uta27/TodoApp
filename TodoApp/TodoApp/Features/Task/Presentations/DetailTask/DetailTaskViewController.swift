@@ -5,7 +5,7 @@
 //  Created by TaHieu on 7/5/23.
 //
 
-import Foundation
+import UIKit
 
 class DetailTaskViewController: BaseViewController {
     @IBOutlet private var titleLabel: UILabel!
