@@ -16,6 +16,7 @@ class DetailTaskViewController: BaseViewController {
     @IBOutlet private var checkBoxButton: UIButton!
     
     private var defaultTaskEntity: TaskEntity!
+
     private var taskEntity: TaskEntity!
     private var openTaskTitle: (() -> Void)!
     private var openTaskTime: (() -> Void)!
@@ -26,6 +27,7 @@ class DetailTaskViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI(with: taskEntity)
     }
     
     private func updateUI(with taskEntity: TaskEntity) {
