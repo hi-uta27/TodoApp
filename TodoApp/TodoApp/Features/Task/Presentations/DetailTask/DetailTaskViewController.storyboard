@@ -35,6 +35,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="Cancel"/>
+                                                        <connections>
+                                                            <action selector="touchUpInsideCloseButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tXr-Q7-lnL"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcp-fG-xgM">
                                                         <rect key="frame" x="313" y="0.0" width="32" height="32"/>
@@ -45,6 +48,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="Refresh"/>
+                                                        <connections>
+                                                            <action selector="touchUpInsideRefreshButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SlL-Lq-3ZD"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -62,6 +68,9 @@
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" image="CheckBox"/>
                                                                 <state key="selected" image="SelectedCheckBox"/>
+                                                                <connections>
+                                                                    <action selector="touchUpInsideCheckBoxButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DyS-4t-eO9"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do Math Homework" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvA-TI-0gG">
                                                                 <rect key="frame" x="27" y="13" width="259" height="48"/>
@@ -77,6 +86,9 @@
                                                                 </constraints>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" image="Edit"/>
+                                                                <connections>
+                                                                    <action selector="touchUpInsideEditTitleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ml6-Gx-8GU"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <edgeInsets key="layoutMargins" top="13" left="0.0" bottom="0.0" right="0.0"/>
@@ -128,6 +140,9 @@
                                                         <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Today At 16:45"/>
+                                                        <connections>
+                                                            <action selector="touchUpInsideDateTimeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="D3O-fA-qnJ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -206,6 +221,9 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Default"/>
+                                                        <connections>
+                                                            <action selector="touchUpInsidePriorityButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="k5q-G8-koF"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -236,6 +254,9 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="Add Sub - Task"/>
+                                                        <connections>
+                                                            <action selector="touchUpInsideSubTaskButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6bW-0E-p3p"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -275,14 +296,23 @@
                                 <state key="normal" title="Edit Task">
                                     <color key="titleColor" name="White87"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchUpInsideEditTaskButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9uK-66-oVk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojK-2e-UFf">
                                 <rect key="frame" x="270" y="286.33333333333331" width="99" height="37"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="touchUpInsideCategoryButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JGa-bT-lgU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ca-3M-D1A">
                                 <rect key="frame" x="24" y="478.33333333333331" width="345" height="36.999999999999943"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="touchUpInsideDeleteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YXP-f2-ODR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -304,6 +334,13 @@
                             <constraint firstItem="ojK-2e-UFf" firstAttribute="top" secondItem="zOA-eE-Hbh" secondAttribute="top" id="dM9-WX-Gp0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="categoryIconButton" destination="RYZ-uT-L8B" id="SsY-iC-Cqp"/>
+                        <outlet property="categoryTitleLabel" destination="YZ2-io-3xa" id="rEF-HX-o4k"/>
+                        <outlet property="dateTimeButton" destination="X5x-yu-X5l" id="j3U-Bi-Fzy"/>
+                        <outlet property="descriptionLabel" destination="bBM-gt-uzt" id="Lmh-QF-GgB"/>
+                        <outlet property="titleLabel" destination="fvA-TI-0gG" id="5xx-RR-EhB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="xTZ-cI-Exf" userLabel="Round Corner 4 View Behavior" customClass="RoundCornerViewBehavior" customModule="TodoApp" customModuleProvider="target">

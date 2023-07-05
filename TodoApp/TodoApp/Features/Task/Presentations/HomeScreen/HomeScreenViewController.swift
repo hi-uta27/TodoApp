@@ -43,7 +43,8 @@ class HomeScreenViewController: BaseViewController {
         }
         tableViewDataSource.didSelectItem = { [weak self] taskEntity in
             print(Self.self, #function, taskEntity)
-            self?.openTaskDetail?(taskEntity)
+//            self?.openTaskDetail?(taskEntity)
+            
         }
         refreshTaskToday()
     }

@@ -10,16 +10,12 @@ import UIKit
 class DetailTaskViewController: BaseViewController {
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var descriptionLabel: UILabel!
-    @IBOutlet private var dateTimeLabel: UIButton!
+    @IBOutlet private var dateTimeButton: UIButton!
     @IBOutlet private var categoryTitleLabel: UILabel!
-    @IBOutlet private var categoryIconLabel: UIButton!
+    @IBOutlet private var categoryIconButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-
-    @IBAction private func touchUpInsideCancelButton(_ sender: Any) {
-        print(Self.self, #function)
     }
     
     @IBAction private func touchUpInsideRefreshButton(_ sender: Any) {
@@ -57,4 +53,9 @@ class DetailTaskViewController: BaseViewController {
     @IBAction private func touchUpInsideEditTaskButton(_ sender: Any) {
         print(Self.self, #function)
     }
+}
+
+extension DetailTaskViewController {
+    static func initailize(taskEntity: TaskEntity,
+    )
 }

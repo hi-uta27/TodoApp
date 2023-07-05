@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -312,7 +312,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Lgu-Qz-b28" kind="relationship" relationship="viewControllers" id="E7w-dp-yMI"/>
+                        <segue destination="Lgu-Qz-b28" kind="relationship" relationship="viewControllers" destinationCreationSelector="segueHomeViewController" id="E7w-dp-yMI"/>
                         <segue destination="v95-e3-BiV" kind="relationship" relationship="viewControllers" id="O49-YM-BcM"/>
                         <segue destination="cUf-u3-eo3" kind="relationship" relationship="viewControllers" id="04n-Ub-ZwM"/>
                         <segue destination="b60-Ys-RFt" kind="relationship" relationship="viewControllers" id="K9u-gX-M8Q"/>
