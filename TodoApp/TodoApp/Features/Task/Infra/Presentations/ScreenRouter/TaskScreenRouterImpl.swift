@@ -37,6 +37,32 @@ class TaskScreenRouterImpl: NSObject, TaskScreenRouter {
         parent.present(navigationController, animated: true)
     }
 
+    func openDetailTask(from parent: UIViewController, taskEntity: TaskEntity, complete: @escaping (TaskEntity) -> Void) {
+        let viewController = DetailTaskViewController.initailize(
+            taskEntity: taskEntity,
+            openTaskTitle: { [weak self] in
+                print(Self.self, #function, "Open Task Title")
+            },
+            openTaskTime: { [weak self] in
+                self?.openTaskAlarm()
+            },
+            openTaskCategory: { [weak self] in
+                self?.openChooseCategory()
+            },
+            openTaskPriority: { [weak self] in
+                self?.openTaskPriority()
+            },
+            openSubTask: { [weak self] in
+                print(Self.self, #function, "Open Sub Task")
+            },
+            editTaskSuccess: { taskEntity in
+                complete(taskEntity)
+            })
+        taskScreenDataSource = viewController
+        navigationController.setViewControllers([viewController], animated: false)
+        parent.present(navigationController, animated: true)
+    }
+
     deinit {
         print(Self.self, #function)
     }
