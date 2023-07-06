@@ -18,6 +18,7 @@ class HomeScreenViewController: BaseViewController {
     private lazy var tableViewDataSource = TaskTableViewDataSource()
     var readTaskUseCase = di.resolve(ReadTaskUseCase.self)!
     var updateTaskUseCase = di.resolve(UpdateTaskUseCase.self)!
+    var router = di.resolve(TaskScreenRouter.self)!
     private var openTaskDetail: ((TaskEntity) -> Void)!
     private var debouncer: Debouncer!
 
@@ -38,15 +39,18 @@ class HomeScreenViewController: BaseViewController {
 
         tableViewDataSource.configTableView(tableView)
         tableViewDataSource.tapInsideCheckBox = { [weak self] taskEntity in
-            print(Self.self, #function, taskEntity)
             self?.toogleTaskStatus(taskEntity)
         }
         tableViewDataSource.didSelectItem = { [weak self] taskEntity in
-            print(Self.self, #function, taskEntity)
-//            self?.openTaskDetail?(taskEntity)
-            
+            self?.didSelectItem(taskEntity: taskEntity)
         }
         refreshTaskToday()
+    }
+
+    private func didSelectItem(taskEntity: TaskEntity) {
+        router.openDetailTask(from: self, taskEntity: taskEntity) { taskEntity in
+            print(Self.self, #function, taskEntity)
+        }
     }
 
     private func refreshTaskToday() {

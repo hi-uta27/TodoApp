@@ -76,6 +76,11 @@ class DetailTaskViewController: BaseViewController {
     @IBAction private func touchUpInsideEditTaskButton(_ sender: Any) {
         print(Self.self, #function)
     }
+    
+    override func shoudClose() -> Bool {
+        dismiss(animated: true)
+        return false
+    }
 }
 
 extension DetailTaskViewController {

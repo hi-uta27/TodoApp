@@ -41,7 +41,7 @@ class TaskScreenRouterImpl: NSObject, TaskScreenRouter {
         let viewController = DetailTaskViewController.initailize(
             taskEntity: taskEntity,
             openTaskTitle: { [weak self] in
-                print(Self.self, #function, "Open Task Title")
+                print(self!, #function, "Open Task Title")
             },
             openTaskTime: { [weak self] in
                 self?.openTaskAlarm()
@@ -53,7 +53,7 @@ class TaskScreenRouterImpl: NSObject, TaskScreenRouter {
                 self?.openTaskPriority()
             },
             openSubTask: { [weak self] in
-                print(Self.self, #function, "Open Sub Task")
+                print(self!, #function, "Open Sub Task")
             },
             editTaskSuccess: { taskEntity in
                 complete(taskEntity)
