@@ -15,8 +15,8 @@ class DetailTaskViewController: BaseViewController {
     @IBOutlet private var categoryIconButton: UIButton!
     @IBOutlet private var checkBoxButton: UIButton!
     
-    var deleteTaskUseCase = di.resolve(DeleteTaskUseCase.self)!
-    var updateTaskUseCase = di.resolve(UpdateTaskUseCase.self)!
+    lazy var deleteTaskUseCase = di.resolve(DeleteTaskUseCase.self)!
+    lazy var updateTaskUseCase = di.resolve(UpdateTaskUseCase.self)!
     
     private var taskPresentation: TaskPresentation!
     private var openTaskTitle: (() -> Void)!
@@ -70,11 +70,11 @@ class DetailTaskViewController: BaseViewController {
     }
     
     @IBAction private func touchUpInsideDeleteButton(_ sender: Any) {
-        updateTask(taskPresentation)
+        deleteTask(taskPresentation.taskEntity)
     }
     
     @IBAction private func touchUpInsideEditTaskButton(_ sender: Any) {
-        print(Self.self, #function)
+        updateTask(taskPresentation)
     }
     
     override func shoudClose() -> Bool {
@@ -125,3 +125,4 @@ extension DetailTaskViewController: TaskScreenDataSource {
 }
 
 extension DetailTaskViewController: UpdateTaskViewController {}
+extension DetailTaskViewController: DeleteTaskViewController {}
