@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DeteleteTaskUseCaseImpl: DeleteTaskUseCase {
+class DeleteTaskUseCaseImpl: DeleteTaskUseCase {
     private let repository: DeleteTaskRepository
 
     init(repository: DeleteTaskRepository) {
