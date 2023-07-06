@@ -13,10 +13,17 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="TaskTitleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="TaskTitleViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NDl-1y-AOT">
+                    <view key="view" contentMode="scaleToFill" id="NDl-1y-AOT" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhN-cj-Ifa">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="touchUpInsideCloseButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Sg2-81-80H"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqR-2m-pl0" userLabel="Background Content View">
                                 <rect key="frame" x="24" y="312.66666666666669" width="345" height="227.00000000000006"/>
                                 <subviews>
@@ -63,8 +70,8 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="editingDidBeginTitleTextField:" destination="Y6W-OH-hqX" eventType="editingDidBegin" id="fw8-kw-ZNb"/>
-                                                                    <action selector="editingDidEndTitleTextField:" destination="Y6W-OH-hqX" eventType="editingDidBegin" id="bwk-Se-47B"/>
+                                                                    <action selector="editingDidBeginTitleTextField:" destination="Y6W-OH-hqX" eventType="editingDidBegin" id="Xfe-SU-xwt"/>
+                                                                    <action selector="editingDidEndTitleTextField:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="wvo-ct-UWM"/>
                                                                 </connections>
                                                             </textField>
                                                         </subviews>
@@ -151,8 +158,12 @@
                         <color key="backgroundColor" name="121212"/>
                         <constraints>
                             <constraint firstItem="gqR-2m-pl0" firstAttribute="centerY" secondItem="NDl-1y-AOT" secondAttribute="centerY" id="22S-Ou-jN4"/>
+                            <constraint firstItem="oJE-nS-gXX" firstAttribute="trailing" secondItem="rhN-cj-Ifa" secondAttribute="trailing" id="6Um-D7-cKO"/>
                             <constraint firstAttribute="trailing" secondItem="gqR-2m-pl0" secondAttribute="trailing" constant="24" id="7oX-WR-pnP"/>
+                            <constraint firstItem="rhN-cj-Ifa" firstAttribute="leading" secondItem="oJE-nS-gXX" secondAttribute="leading" id="Mp1-CP-Gop"/>
+                            <constraint firstItem="rhN-cj-Ifa" firstAttribute="top" secondItem="oJE-nS-gXX" secondAttribute="top" id="ZjU-Hb-h3m"/>
                             <constraint firstItem="gqR-2m-pl0" firstAttribute="leading" secondItem="NDl-1y-AOT" secondAttribute="leading" constant="24" id="c2H-FW-fvH"/>
+                            <constraint firstItem="oJE-nS-gXX" firstAttribute="bottom" secondItem="rhN-cj-Ifa" secondAttribute="bottom" id="dqk-AV-JFP"/>
                         </constraints>
                     </view>
                     <connections>
@@ -164,6 +175,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="b1D-T9-DzR" userLabel="Round Corner 4" customClass="RoundCornerViewBehavior" customModule="TodoApp" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outletCollection property="views" destination="Sf6-EU-p23" collectionClass="NSMutableArray" id="VhW-HJ-rze"/>
                         <outletCollection property="views" destination="gqR-2m-pl0" collectionClass="NSMutableArray" id="BNv-AR-mI0"/>

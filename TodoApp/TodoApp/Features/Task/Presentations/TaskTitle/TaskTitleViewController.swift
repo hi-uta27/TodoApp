@@ -19,7 +19,7 @@ class TaskTitleViewController: BaseViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        titleTextField.resignFirstResponder()
+        titleTextField.becomeFirstResponder()
     }
 
     override func configSubView() {
@@ -59,6 +59,11 @@ class TaskTitleViewController: BaseViewController {
                             borderColor: UIColor(named: "979797"),
                             radius: 4,
                             contentInset: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
+    }
+
+    override func shoudClose() -> Bool {
+        navigationController?.popSlideDown()
+        return false
     }
 }
 
