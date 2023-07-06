@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DeleteTaskUseCase {
-    func delete(taskEntity: TaskEntity, completed: @escaping (Error?) -> Void)
+    func deleteTask(_ taskEntity: TaskEntity, completed: @escaping (Error?) -> Void)
 }

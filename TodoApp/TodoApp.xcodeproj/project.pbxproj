@@ -143,6 +143,7 @@
 		2BFE12E02A33382B001155EA /* CreateCategoryInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE12DF2A33382B001155EA /* CreateCategoryInject.swift */; };
 		63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA02A56586C0006EDF6 /* TaskPresentation.swift */; };
 		63734DA32A566FE60006EDF6 /* DeleteTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */; };
+		63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */; };
 		63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D64C282A55621900913D63 /* DetailTaskViewController.swift */; };
 		63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */; };
 /* End PBXBuildFile section */
@@ -280,6 +281,7 @@
 		2BFE12DF2A33382B001155EA /* CreateCategoryInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryInject.swift; sourceTree = "<group>"; };
 		63734DA02A56586C0006EDF6 /* TaskPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresentation.swift; sourceTree = "<group>"; };
 		63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCase.swift; sourceTree = "<group>"; };
+		63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskRepository.swift; sourceTree = "<group>"; };
 		63D64C282A55621900913D63 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
 		63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTaskViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -729,6 +731,7 @@
 				2B9794BA2A3ACE1D00F4B8E8 /* CreateTaskRepository.swift */,
 				2BBFCCC92A4952BD0095EA4D /* ReadTaskRepository.swift */,
 				2BBFCCD92A4964570095EA4D /* UpdateTaskRepository.swift */,
+				63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1237,6 +1240,7 @@
 				2B7206792A36B98D009A1158 /* ReadCategoryLocalDataSource.swift in Sources */,
 				2B2EAE722A445E2A00A88123 /* TaskScreenRouterImpl.swift in Sources */,
 				63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */,
+				63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */,
 				2B6C14E22A4D9F1400161D85 /* TabbarButton.swift in Sources */,
 				2BD165AC2A30432A00AFEA24 /* ReadCategoryRepository.swift in Sources */,
 				2B1DEF972A4BF4500061CB00 /* TasksLocalDataSource.swift in Sources */,
