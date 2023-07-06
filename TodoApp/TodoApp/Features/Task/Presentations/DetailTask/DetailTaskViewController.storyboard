@@ -96,7 +96,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4Px-VA-bZB" userLabel="Description Stack View">
                                                         <rect key="frame" x="0.0" y="63.000000000000007" width="345" height="19.333333333333336"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do chapter 2to 5 for next week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBM-gt-uzt">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do chapter 2 to 5 for next week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBM-gt-uzt">
                                                                 <rect key="frame" x="27" y="0.0" width="318" height="19.333333333333332"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <color key="textColor" name="White87"/>
@@ -123,27 +123,31 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="TimerIcon"/>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="159-TM-evn">
-                                                        <rect key="frame" x="32" y="0.0" width="185" height="37"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Task Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="159-TM-evn">
+                                                        <rect key="frame" x="32" y="0.0" width="188.33333333333334" height="37"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <color key="textColor" name="White87"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5x-yu-X5l">
-                                                        <rect key="frame" x="225" y="0.0" width="120" height="37"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j7e-T1-ATE" userLabel="Category Stack View">
+                                                        <rect key="frame" x="228.33333333333334" y="0.0" width="116.66666666666666" height="37"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Today At 16:45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTm-I3-3na">
+                                                                <rect key="frame" x="15.999999999999972" y="11.333333333333314" width="84.666666666666671" height="14.333333333333336"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="CwT-kq-pKE"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
                                                         <color key="backgroundColor" name="White21"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="6Uv-DE-qRg"/>
-                                                            <constraint firstAttribute="height" constant="37" id="tOa-2g-yxc"/>
+                                                            <constraint firstAttribute="height" constant="37" id="zPy-7f-E2b"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="Today At 16:45"/>
-                                                        <connections>
-                                                            <action selector="touchUpInsideDateTimeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="D3O-fA-qnJ"/>
-                                                        </connections>
-                                                    </button>
+                                                        <edgeInsets key="layoutMargins" top="0.0" left="16" bottom="0.0" right="16"/>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LyA-u7-Gxv" userLabel="Category Stack View">
@@ -300,18 +304,26 @@
                                     <action selector="touchUpInsideEditTaskButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9uK-66-oVk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojK-2e-UFf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojK-2e-UFf" userLabel="Category Button">
                                 <rect key="frame" x="246.33333333333334" y="286.33333333333331" width="122.66666666666666" height="37"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="touchUpInsideCategoryButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JGa-bT-lgU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ca-3M-D1A">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ca-3M-D1A" userLabel="Delete Button">
                                 <rect key="frame" x="24" y="478.33333333333331" width="345" height="36.999999999999943"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="touchUpInsideDeleteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YXP-f2-ODR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvl-qT-dyx" userLabel="Date Time Button">
+                                <rect key="frame" x="252.33333333333334" y="222.33333333333334" width="116.66666666666666" height="37.000000000000028"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="touchUpInsideDateTimeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Mvz-fa-WyX"/>
+                                    <action selector="touchUpInsideDeleteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VHA-5a-g2f"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -322,23 +334,27 @@
                             <constraint firstItem="ojK-2e-UFf" firstAttribute="trailing" secondItem="zOA-eE-Hbh" secondAttribute="trailing" id="8Sh-Dd-Hyr"/>
                             <constraint firstItem="7Ca-3M-D1A" firstAttribute="leading" secondItem="Gsf-Ao-tjw" secondAttribute="leading" id="BsQ-tM-Hbx"/>
                             <constraint firstItem="oHC-lR-mD0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="HD5-ep-IIW"/>
+                            <constraint firstItem="Xvl-qT-dyx" firstAttribute="top" secondItem="j7e-T1-ATE" secondAttribute="top" id="JH6-gR-HDp"/>
                             <constraint firstItem="7Ca-3M-D1A" firstAttribute="bottom" secondItem="Gsf-Ao-tjw" secondAttribute="bottom" id="Sig-bf-ZbS"/>
                             <constraint firstItem="7Ca-3M-D1A" firstAttribute="top" secondItem="Gsf-Ao-tjw" secondAttribute="top" id="TVZ-Nn-byM"/>
                             <constraint firstItem="ojK-2e-UFf" firstAttribute="bottom" secondItem="zOA-eE-Hbh" secondAttribute="bottom" id="UnA-DR-9d4"/>
                             <constraint firstItem="oHC-lR-mD0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="V03-Jn-Be9"/>
                             <constraint firstItem="wfA-YB-01A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Vjh-XT-Iir"/>
+                            <constraint firstItem="Xvl-qT-dyx" firstAttribute="leading" secondItem="j7e-T1-ATE" secondAttribute="leading" id="VrH-Ki-t1U"/>
                             <constraint firstItem="7Ca-3M-D1A" firstAttribute="trailing" secondItem="Gsf-Ao-tjw" secondAttribute="trailing" id="W9O-dR-aXZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wfA-YB-01A" secondAttribute="bottom" constant="27" id="Xof-Xc-IhM"/>
+                            <constraint firstItem="Xvl-qT-dyx" firstAttribute="trailing" secondItem="j7e-T1-ATE" secondAttribute="trailing" id="Y6d-Go-hRk"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wfA-YB-01A" secondAttribute="trailing" constant="24" id="Zmk-5o-Tip"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oHC-lR-mD0" secondAttribute="trailing" id="aBR-sX-nhb"/>
                             <constraint firstItem="ojK-2e-UFf" firstAttribute="top" secondItem="zOA-eE-Hbh" secondAttribute="top" id="dM9-WX-Gp0"/>
+                            <constraint firstItem="Xvl-qT-dyx" firstAttribute="bottom" secondItem="j7e-T1-ATE" secondAttribute="bottom" id="vBL-Cw-Lao"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="categoryIconButton" destination="RYZ-uT-L8B" id="SsY-iC-Cqp"/>
                         <outlet property="categoryTitleLabel" destination="YZ2-io-3xa" id="rEF-HX-o4k"/>
                         <outlet property="checkBoxButton" destination="xTc-pn-eKm" id="XeB-UJ-Qeb"/>
-                        <outlet property="dateTimeButton" destination="X5x-yu-X5l" id="j3U-Bi-Fzy"/>
+                        <outlet property="dateTimeLabel" destination="hTm-I3-3na" id="Jx6-c1-BbR"/>
                         <outlet property="descriptionLabel" destination="bBM-gt-uzt" id="Lmh-QF-GgB"/>
                         <outlet property="titleLabel" destination="fvA-TI-0gG" id="5xx-RR-EhB"/>
                     </connections>
@@ -363,10 +379,10 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outletCollection property="views" destination="X5x-yu-X5l" collectionClass="NSMutableArray" id="OBl-zc-Tgn"/>
                         <outletCollection property="views" destination="oHu-eb-qmD" collectionClass="NSMutableArray" id="UTo-bN-vH5"/>
                         <outletCollection property="views" destination="ck5-4W-WzP" collectionClass="NSMutableArray" id="gIt-BU-8oD"/>
                         <outletCollection property="views" destination="zOA-eE-Hbh" collectionClass="NSMutableArray" id="F6t-xf-Pby"/>
+                        <outletCollection property="views" destination="j7e-T1-ATE" collectionClass="NSMutableArray" id="hyC-eT-5IW"/>
                     </connections>
                 </customObject>
             </objects>

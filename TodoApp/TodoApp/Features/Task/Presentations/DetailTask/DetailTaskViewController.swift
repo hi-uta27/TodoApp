@@ -10,7 +10,7 @@ import UIKit
 class DetailTaskViewController: BaseViewController {
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var descriptionLabel: UILabel!
-    @IBOutlet private var dateTimeButton: UIButton!
+    @IBOutlet private var dateTimeLabel: UILabel!
     @IBOutlet private var categoryTitleLabel: UILabel!
     @IBOutlet private var categoryIconButton: UIButton!
     @IBOutlet private var checkBoxButton: UIButton!
@@ -32,7 +32,7 @@ class DetailTaskViewController: BaseViewController {
         titleLabel.text = taskEntity.title
         descriptionLabel.text = taskEntity.descriptions
         let stringFormatDate = "'Today At' HH:mm"
-        dateTimeButton.setTitle(taskEntity.startTime.toFormat(stringFormatDate), for: .normal)
+        dateTimeLabel.text = taskEntity.startTime.toFormat(stringFormatDate)
         categoryIconButton.setImage(UIImage(named: taskEntity.category.icon), for: .normal)
         categoryTitleLabel.text = taskEntity.category.name
     }
@@ -106,8 +106,8 @@ extension DetailTaskViewController {
 extension DetailTaskViewController: TaskScreenDataSource {
     func didUpdateDateTime(_ dateTime: Date) {
         taskPresentation.setStartTime(dateTime)
-        let stringFormatDate = "'Today At' HH:mm"
-        dateTimeButton.setTitle(taskPresentation.startTime.toFormat(stringFormatDate), for: .normal)
+        let stringFormatDate = "dd/MM/yyyy 'At' HH:mm"
+        dateTimeLabel.text = taskPresentation.startTime.toFormat(stringFormatDate)
     }
     
     func didUpdateCategory(_ category: CategoryEntity) {
