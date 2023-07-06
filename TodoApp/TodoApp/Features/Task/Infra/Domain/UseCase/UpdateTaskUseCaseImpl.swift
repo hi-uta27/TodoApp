@@ -19,4 +19,8 @@ class UpdateTaskUseCaseImpl: UpdateTaskUseCase {
     func toogleTaskStatus(_ taskEntity: TaskEntity, complete: @escaping (Error?) -> Void) {
         repository.changeTaskStatus(id: taskEntity.id, status: taskEntity.status.toggle(), complete: complete)
     }
+
+    func update(_ taskEntity: TaskEntity, title: String, description: String?, dateTime: Date, category: CategoryEntity, priority: Int, status: TaskStatus, complete: @escaping (Error?) -> Void) {
+        repository.update(id: taskEntity.id, title: title, description: description, dateTime: dateTime, category: category, priority: priority, status: status, complete: complete)
+    }
 }

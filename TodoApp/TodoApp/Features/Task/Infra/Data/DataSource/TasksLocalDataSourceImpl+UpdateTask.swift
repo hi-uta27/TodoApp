@@ -23,4 +23,17 @@ extension TasksLocalDataSourceImpl {
             }
         }
     }
+
+    func update(id: String, title: String, description: String?, dateTime: Date, category: CategoryEntity, priority: Int, status: TaskStatus, complete: @escaping (Error?) -> Void) {
+        guard let model = queryAll(returningClass: RTaskModel.self)?.where({ $0.id.like(id) }).first else { return }
+        let task = RTaskModel(id: model.id, title: title, descriptions: description, startTime: dateTime, priority: priority, status: status, category: category)
+        save(entity: task, update: true) { result in
+            switch result {
+            case .success:
+                complete(nil)
+            case .failure(let failure):
+                complete(failure)
+            }
+        }
+    }
 }
