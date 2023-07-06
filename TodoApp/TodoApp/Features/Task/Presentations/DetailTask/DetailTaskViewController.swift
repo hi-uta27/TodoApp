@@ -15,9 +15,7 @@ class DetailTaskViewController: BaseViewController {
     @IBOutlet private var categoryIconButton: UIButton!
     @IBOutlet private var checkBoxButton: UIButton!
     
-    private var defaultTaskEntity: TaskEntity!
-
-    private var taskEntity: TaskEntity!
+    private var taskPresentation: TaskPresentation!
     private var openTaskTitle: (() -> Void)!
     private var openTaskTime: (() -> Void)!
     private var openTaskCategory: (() -> Void)!
@@ -27,7 +25,7 @@ class DetailTaskViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI(with: taskEntity)
+        updateUI(with: taskPresentation.taskEntity)
     }
     
     private func updateUI(with taskEntity: TaskEntity) {
@@ -40,13 +38,12 @@ class DetailTaskViewController: BaseViewController {
     }
     
     @IBAction private func touchUpInsideRefreshButton(_ sender: Any) {
-        taskEntity = defaultTaskEntity
-        updateUI(with: taskEntity)
+        updateUI(with: taskPresentation.taskEntity)
     }
     
     @IBAction private func touchUpInsideCheckBoxButton(_ sender: Any) {
-        let taskEntity = taskEntity.status.toggle()
-        checkBoxButton.isSelected = taskEntity == .completed
+        taskPresentation.toggleStatus()
+        checkBoxButton.isSelected = taskPresentation.status == .completed
     }
     
     @IBAction private func touchUpInsideEditTitleButton(_ sender: Any) {
@@ -93,8 +90,7 @@ extension DetailTaskViewController {
                            editTaskSuccess: @escaping (TaskEntity) -> Void) -> Self
     {
         let viewController = initial()
-        viewController.defaultTaskEntity = taskEntity
-        viewController.taskEntity = taskEntity
+        viewController.taskPresentation = .init(taskEntity: taskEntity)
         viewController.openTaskTitle = openTaskTitle
         viewController.openTaskTime = openTaskTime
         viewController.openTaskCategory = openTaskCategory
@@ -105,16 +101,22 @@ extension DetailTaskViewController {
     }
 }
 
+// MARK: - TaskScreenDataSource
+
 extension DetailTaskViewController: TaskScreenDataSource {
     func didUpdateDateTime(_ dateTime: Date) {
-//        taskEntity.startTime = dateTime
+        taskPresentation.setStartTime(dateTime)
+        let stringFormatDate = "'Today At' HH:mm"
+        dateTimeButton.setTitle(taskPresentation.startTime.toFormat(stringFormatDate), for: .normal)
     }
     
     func didUpdateCategory(_ category: CategoryEntity) {
-//        taskEntity.category = category
+        taskPresentation.setCategory(category)
+        categoryIconButton.setImage(UIImage(named: taskPresentation.category.icon), for: .normal)
+        categoryTitleLabel.text = taskPresentation.category.name
     }
     
     func didUpdatePriority(_ priority: Int) {
-//        taskEntity.priority = priority
+        taskPresentation.setPriority(priority)
     }
 }
