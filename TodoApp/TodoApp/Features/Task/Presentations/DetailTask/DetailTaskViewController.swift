@@ -70,7 +70,7 @@ class DetailTaskViewController: BaseViewController {
     }
     
     @IBAction private func touchUpInsideDeleteButton(_ sender: Any) {
-        deleteTask(taskPresentation.taskEntity)
+        showDeleteAlert(taskPresentation.taskEntity)
     }
     
     @IBAction private func touchUpInsideEditTaskButton(_ sender: Any) {

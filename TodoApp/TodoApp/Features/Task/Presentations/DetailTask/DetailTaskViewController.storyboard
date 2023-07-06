@@ -322,8 +322,7 @@
                                 <rect key="frame" x="252.33333333333334" y="222.33333333333334" width="116.66666666666666" height="37.000000000000028"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
-                                    <action selector="touchUpInsideDateTimeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Mvz-fa-WyX"/>
-                                    <action selector="touchUpInsideDeleteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VHA-5a-g2f"/>
+                                    <action selector="touchUpInsideDateTimeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Alm-qh-zLe"/>
                                 </connections>
                             </button>
                         </subviews>
