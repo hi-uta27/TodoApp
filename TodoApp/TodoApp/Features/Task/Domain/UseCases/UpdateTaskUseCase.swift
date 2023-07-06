@@ -7,7 +7,8 @@
 
 import Foundation
 
-// Func updateTask with: TaskEntity -> Error?
 protocol UpdateTaskUseCase {
     func toogleTaskStatus(_ taskEntity: TaskEntity, complete: @escaping (Error?) -> Void)
+    func update(_ taskEntity: TaskEntity, title: String, description: String?, dateTime: Date,
+                category: CategoryEntity, priority: Int, status: TaskStatus, complete: @escaping (Error?) -> Void)
 }
