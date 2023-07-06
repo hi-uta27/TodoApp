@@ -29,7 +29,8 @@ class TaskScreenRouterImpl: NSObject, TaskScreenRouter {
             openPriority: { [weak self] in
                 self?.openTaskPriority()
             },
-            createTaskSuccessed: { taskEntity in
+            createTaskSuccessed: { [weak self] taskEntity in
+                self?.model = .init()
                 complete(taskEntity)
             })
         taskScreenDataSource = viewController
@@ -55,7 +56,8 @@ class TaskScreenRouterImpl: NSObject, TaskScreenRouter {
             openSubTask: { [weak self] in
                 print(self!, #function, "Open Sub Task")
             },
-            editTaskSuccess: { taskEntity in
+            editTaskSuccess: { [weak self] taskEntity in
+                self?.model = .init()
                 complete(taskEntity)
             })
         taskScreenDataSource = viewController
