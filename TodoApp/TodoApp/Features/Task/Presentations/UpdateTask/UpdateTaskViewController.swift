@@ -25,8 +25,12 @@ extension UpdateTaskViewController {
 
     func updateTask(_ task: TaskPresentation) {
         updateTaskUseCase.update(task.taskEntity, title: task.title, description: task.description, dateTime: task.startTime, category: task.category, priority: task.priority, status: task.status) { [weak self] result in
-            guard let error = result else { return }
-            self?.updateTaskFailure(error)
+            switch result {
+            case .none:
+                self?.dismiss(animated: true)
+            case .some(let error):
+                self?.updateTaskFailure(error)
+            }
         }
     }
 
