@@ -18,6 +18,7 @@ enum TaskInject {
         registerCreateTask(container: container)
         registerReadTask(container: container)
         registerUpdateTask(container: container)
+        registerDeleteTask(container: container)
     }
 }
 
@@ -36,3 +37,4 @@ extension TaskInject {
 extension TaskInject: CreateTaskInject {}
 extension TaskInject: ReadTaskInject {}
 extension TaskInject: UpdateTaskInject {}
+extension TaskInject: DeleteTaskInject {}

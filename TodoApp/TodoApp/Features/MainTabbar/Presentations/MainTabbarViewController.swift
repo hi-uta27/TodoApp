@@ -11,7 +11,7 @@ class MainTabbarViewController: UIViewController {
     @IBOutlet private var tabbarButtons: [UIButton]!
     private weak var mainTabBarController: UITabBarController?
 
-    private lazy var taskScreenRouter = TaskScreenRouterImpl()
+    private var router: TaskScreenRouter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,8 @@ class MainTabbarViewController: UIViewController {
     }
 
     @IBAction private func touchUpInsideAddButton(_ sender: Any) {
-        taskScreenRouter.openAddTask(from: self) { taskEntity in
+        router = di.resolve(TaskScreenRouter.self)!
+        router.openAddTask(from: self) { taskEntity in
             print(Self.self, #function, taskEntity)
         }
     }

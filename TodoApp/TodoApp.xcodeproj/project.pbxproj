@@ -141,6 +141,17 @@
 		2BFE12DC2A333616001155EA /* CreateCategoryRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE12DB2A333616001155EA /* CreateCategoryRepositoryImpl.swift */; };
 		2BFE12DE2A3337AD001155EA /* CreateCategoryUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE12DD2A3337AD001155EA /* CreateCategoryUseCaseImpl.swift */; };
 		2BFE12E02A33382B001155EA /* CreateCategoryInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE12DF2A33382B001155EA /* CreateCategoryInject.swift */; };
+		63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA02A56586C0006EDF6 /* TaskPresentation.swift */; };
+		63734DA32A566FE60006EDF6 /* DeleteTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */; };
+		63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */; };
+		63734DA72A5672DF0006EDF6 /* DeleteTaskLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA62A5672DF0006EDF6 /* DeleteTaskLocalDataSource.swift */; };
+		63734DA92A5673210006EDF6 /* TasksLocalDataSource+DeleteTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA82A5673210006EDF6 /* TasksLocalDataSource+DeleteTask.swift */; };
+		63734DAB2A56747B0006EDF6 /* DeleteTaskRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DAA2A56747B0006EDF6 /* DeleteTaskRepositoryImpl.swift */; };
+		63734DAD2A5674B30006EDF6 /* DeleteTaskUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DAC2A5674B30006EDF6 /* DeleteTaskUseCaseImpl.swift */; };
+		63734DAF2A5675270006EDF6 /* DeleteTaskInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DAE2A5675270006EDF6 /* DeleteTaskInject.swift */; };
+		63734DB12A5677830006EDF6 /* DeleteTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DB02A5677830006EDF6 /* DeleteTaskViewController.swift */; };
+		63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D64C282A55621900913D63 /* DetailTaskViewController.swift */; };
+		63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -274,6 +285,17 @@
 		2BFE12DB2A333616001155EA /* CreateCategoryRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryRepositoryImpl.swift; sourceTree = "<group>"; };
 		2BFE12DD2A3337AD001155EA /* CreateCategoryUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryUseCaseImpl.swift; sourceTree = "<group>"; };
 		2BFE12DF2A33382B001155EA /* CreateCategoryInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryInject.swift; sourceTree = "<group>"; };
+		63734DA02A56586C0006EDF6 /* TaskPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresentation.swift; sourceTree = "<group>"; };
+		63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCase.swift; sourceTree = "<group>"; };
+		63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskRepository.swift; sourceTree = "<group>"; };
+		63734DA62A5672DF0006EDF6 /* DeleteTaskLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskLocalDataSource.swift; sourceTree = "<group>"; };
+		63734DA82A5673210006EDF6 /* TasksLocalDataSource+DeleteTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TasksLocalDataSource+DeleteTask.swift"; sourceTree = "<group>"; };
+		63734DAA2A56747B0006EDF6 /* DeleteTaskRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskRepositoryImpl.swift; sourceTree = "<group>"; };
+		63734DAC2A5674B30006EDF6 /* DeleteTaskUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCaseImpl.swift; sourceTree = "<group>"; };
+		63734DAE2A5675270006EDF6 /* DeleteTaskInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskInject.swift; sourceTree = "<group>"; };
+		63734DB02A5677830006EDF6 /* DeleteTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskViewController.swift; sourceTree = "<group>"; };
+		63D64C282A55621900913D63 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
+		63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTaskViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +352,7 @@
 				2B0981C32A39A11D00B80C03 /* CreateTaskUseCase.swift */,
 				2BBFCCC32A4950680095EA4D /* ReadTaskUseCase.swift */,
 				2BBFCCD72A4964390095EA4D /* UpdateTaskUseCase.swift */,
+				63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -353,6 +376,7 @@
 		2B2EAE6F2A445DFE00A88123 /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				63734D9F2A5658560006EDF6 /* DetailTask */,
 				2B2EAE7C2A445FEA00A88123 /* TaskAlarm */,
 				2B2EAE702A445E0500A88123 /* ScreenRouter */,
 			);
@@ -483,6 +507,7 @@
 		2B7BCEFF2A3FE6DA0021DA74 /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				63D64C272A55620300913D63 /* DetailTask */,
 				2B2EAE782A445F4800A88123 /* Validators */,
 				2B2EAE772A445F3A00A88123 /* ScreenRouter */,
 				2BC969A92A428CDD00D11EB1 /* TaskAlarm */,
@@ -491,6 +516,7 @@
 				2BBFCCD12A4961970095EA4D /* HomeScreen */,
 				2B1DEF9B2A4C0E410061CB00 /* ReadTask */,
 				2B1DEF9A2A4C0E330061CB00 /* UpdateTask */,
+				63734DB22A5677880006EDF6 /* DeleteTask */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -676,6 +702,7 @@
 				2B9794D72A3B037800F4B8E8 /* CreateTaskUseCaseImpl.swift */,
 				2BBFCCCB2A495D650095EA4D /* ReadTaskUseCaseImpl.swift */,
 				2BBFCCDD2A49663A0095EA4D /* UpdateTaskUseCaseImpl.swift */,
+				63734DAC2A5674B30006EDF6 /* DeleteTaskUseCaseImpl.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -687,6 +714,7 @@
 				2BBFCCCF2A495D9E0095EA4D /* TasksLocalDataSourceImpl+ReadTask.swift */,
 				2BBFCCE12A49665F0095EA4D /* TasksLocalDataSourceImpl+UpdateTask.swift */,
 				2B1DEF982A4BF4E30061CB00 /* TasksLocalDataSourceImpl+CreateTask.swift */,
+				63734DA82A5673210006EDF6 /* TasksLocalDataSource+DeleteTask.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -697,6 +725,7 @@
 				2B9794D52A3B021300F4B8E8 /* CreateTaskRepositoryImpl.swift */,
 				2BBFCCCD2A495D850095EA4D /* ReadTaskRepositoryImpl.swift */,
 				2BBFCCDF2A4966490095EA4D /* UpdateTaskRepositoryImpl.swift */,
+				63734DAA2A56747B0006EDF6 /* DeleteTaskRepositoryImpl.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -707,6 +736,7 @@
 				2B9794C52A3AE2BA00F4B8E8 /* CreateTaskLocalDataSource.swift */,
 				2BBFCCC72A4952920095EA4D /* ReadTaskLocalDataSource.swift */,
 				2BBFCCDB2A4964730095EA4D /* UpdateTaskLocalDataSource.swift */,
+				63734DA62A5672DF0006EDF6 /* DeleteTaskLocalDataSource.swift */,
 				2B1DEF962A4BF4500061CB00 /* TasksLocalDataSource.swift */,
 			);
 			path = DataSource;
@@ -718,6 +748,7 @@
 				2B9794BA2A3ACE1D00F4B8E8 /* CreateTaskRepository.swift */,
 				2BBFCCC92A4952BD0095EA4D /* ReadTaskRepository.swift */,
 				2BBFCCD92A4964570095EA4D /* UpdateTaskRepository.swift */,
+				63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -740,6 +771,7 @@
 				2B9794DC2A3B043C00F4B8E8 /* CreateTaskInject.swift */,
 				2B0B029F2A4A822C0018C454 /* ReadTaskInject.swift */,
 				2BA3EA4A2A4AFE0900C496DD /* UpdateTaskInject.swift */,
+				63734DAE2A5675270006EDF6 /* DeleteTaskInject.swift */,
 			);
 			path = Inject;
 			sourceTree = "<group>";
@@ -1029,6 +1061,31 @@
 			path = Inject;
 			sourceTree = "<group>";
 		};
+		63734D9F2A5658560006EDF6 /* DetailTask */ = {
+			isa = PBXGroup;
+			children = (
+				63734DA02A56586C0006EDF6 /* TaskPresentation.swift */,
+			);
+			path = DetailTask;
+			sourceTree = "<group>";
+		};
+		63734DB22A5677880006EDF6 /* DeleteTask */ = {
+			isa = PBXGroup;
+			children = (
+				63734DB02A5677830006EDF6 /* DeleteTaskViewController.swift */,
+			);
+			path = DeleteTask;
+			sourceTree = "<group>";
+		};
+		63D64C272A55620300913D63 /* DetailTask */ = {
+			isa = PBXGroup;
+			children = (
+				63D64C282A55621900913D63 /* DetailTaskViewController.swift */,
+				63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */,
+			);
+			path = DetailTask;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1114,6 +1171,7 @@
 				2B9328DF2A3C1DB600DD6730 /* AddTaskViewController.storyboard in Resources */,
 				2B57DE792A2F1B8E002160E7 /* LaunchScreen.storyboard in Resources */,
 				2B72067F2A36BFF5009A1158 /* CreateCategoryViewController.storyboard in Resources */,
+				63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */,
 				2B8E30552A32E83000CFDD3D /* CategoryCell.xib in Resources */,
 				2B62641C2A418BAE00B53646 /* ChooseTimeViewController.storyboard in Resources */,
 				2BBFCCEF2A49686E0095EA4D /* TaskHeader.xib in Resources */,
@@ -1133,9 +1191,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B9E2D7C2A4E770900FA3531 /* CalendarViewController.swift in Sources */,
+				63734DA32A566FE60006EDF6 /* DeleteTaskUseCase.swift in Sources */,
 				2BFE12D12A33282A001155EA /* CreateCategoryUseCase.swift in Sources */,
 				2B7206812A36C8EC009A1158 /* UITextField+Style.swift in Sources */,
 				2B9328E52A3C42FF00DD6730 /* TaskValidator.swift in Sources */,
+				63734DA92A5673210006EDF6 /* TasksLocalDataSource+DeleteTask.swift in Sources */,
 				2B9E2D7A2A4E76CD00FA3531 /* FocusMoodViewController.swift in Sources */,
 				2B0B02AB2A4AC3C10018C454 /* UpdateTaskViewController.swift in Sources */,
 				2B1DEF992A4BF4E30061CB00 /* TasksLocalDataSourceImpl+CreateTask.swift in Sources */,
@@ -1152,7 +1212,9 @@
 				2BB9E5E52A43002B00755022 /* Date+Convert.swift in Sources */,
 				2B8E30592A32E83A00CFDD3D /* ChooseCategoryViewController.swift in Sources */,
 				2B6264182A41863D00B53646 /* SinglePickerView.swift in Sources */,
+				63734DAF2A5675270006EDF6 /* DeleteTaskInject.swift in Sources */,
 				2BBFCCE22A49665F0095EA4D /* TasksLocalDataSourceImpl+UpdateTask.swift in Sources */,
+				63734DB12A5677830006EDF6 /* DeleteTaskViewController.swift in Sources */,
 				2BBFCCE92A49682F0095EA4D /* TaskCell.swift in Sources */,
 				2B0981C72A39A12700B80C03 /* TaskEntity.swift in Sources */,
 				2B9794BB2A3ACE1D00F4B8E8 /* CreateTaskRepository.swift in Sources */,
@@ -1183,6 +1245,7 @@
 				2B83EE732A3092E40009D5C6 /* AppCategoryModel.swift in Sources */,
 				2B9794D02A3AF0A000F4B8E8 /* RTaskModel.swift in Sources */,
 				2BB9E5E12A42FFD300755022 /* TimeSinglePickerItem.swift in Sources */,
+				63734DAB2A56747B0006EDF6 /* DeleteTaskRepositoryImpl.swift in Sources */,
 				2B83EE652A30776F0009D5C6 /* RCategoryModel.swift in Sources */,
 				2B9794D82A3B037800F4B8E8 /* CreateTaskUseCaseImpl.swift in Sources */,
 				2BBFCCDE2A49663A0095EA4D /* UpdateTaskUseCaseImpl.swift in Sources */,
@@ -1196,6 +1259,8 @@
 				2B6C14DE2A4D9C4B00161D85 /* MainTabbarController.swift in Sources */,
 				2B8E304F2A32E3DD00CFDD3D /* CategoryCollectionViewDataSource.swift in Sources */,
 				2B9328E72A3C5F2D00DD6730 /* TaskAlarmViewController.swift in Sources */,
+				63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */,
+				63734DAD2A5674B30006EDF6 /* DeleteTaskUseCaseImpl.swift in Sources */,
 				2B83EE6D2A3081D70009D5C6 /* ReadCategoryUseCaseImpl.swift in Sources */,
 				2B3192D22A4D20E6005C6F69 /* Debounce.swift in Sources */,
 				2BA3EA4B2A4AFE0900C496DD /* UpdateTaskInject.swift in Sources */,
@@ -1205,6 +1270,8 @@
 				2BBFCCCE2A495D850095EA4D /* ReadTaskRepositoryImpl.swift in Sources */,
 				2B7206792A36B98D009A1158 /* ReadCategoryLocalDataSource.swift in Sources */,
 				2B2EAE722A445E2A00A88123 /* TaskScreenRouterImpl.swift in Sources */,
+				63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */,
+				63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */,
 				2B6C14E22A4D9F1400161D85 /* TabbarButton.swift in Sources */,
 				2BD165AC2A30432A00AFEA24 /* ReadCategoryRepository.swift in Sources */,
 				2B1DEF972A4BF4500061CB00 /* TasksLocalDataSource.swift in Sources */,
@@ -1228,6 +1295,7 @@
 				2B8E30542A32E83000CFDD3D /* CategoryCell.swift in Sources */,
 				2B9328E32A3C3A5A00DD6730 /* KeyboardNotifications.swift in Sources */,
 				2B03C4292A38072C007B4C40 /* UIAlertAction+Action.swift in Sources */,
+				63734DA72A5672DF0006EDF6 /* DeleteTaskLocalDataSource.swift in Sources */,
 				2BFE12E02A33382B001155EA /* CreateCategoryInject.swift in Sources */,
 				2B2EAE742A445EF700A88123 /* UINavigationController+Action.swift in Sources */,
 				2B3192CB2A4D167B005C6F69 /* RoundCornerViewBehavior.swift in Sources */,
