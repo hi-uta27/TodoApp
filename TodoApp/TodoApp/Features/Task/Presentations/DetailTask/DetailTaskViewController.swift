@@ -15,6 +15,9 @@ class DetailTaskViewController: BaseViewController {
     @IBOutlet private var categoryIconButton: UIButton!
     @IBOutlet private var checkBoxButton: UIButton!
     
+    var deleteTaskUseCase = di.resolve(DeleteTaskUseCase.self)!
+    var updateTaskUseCase = di.resolve(UpdateTaskUseCase.self)!
+    
     private var taskPresentation: TaskPresentation!
     private var openTaskTitle: (() -> Void)!
     private var openTaskTime: (() -> Void)!
@@ -67,7 +70,7 @@ class DetailTaskViewController: BaseViewController {
     }
     
     @IBAction private func touchUpInsideDeleteButton(_ sender: Any) {
-        print(Self.self, #function)
+        updateTask(taskPresentation)
     }
     
     @IBAction private func touchUpInsideEditTaskButton(_ sender: Any) {
@@ -120,3 +123,5 @@ extension DetailTaskViewController: TaskScreenDataSource {
         taskPresentation.setPriority(priority)
     }
 }
+
+extension DetailTaskViewController: UpdateTaskViewController {}

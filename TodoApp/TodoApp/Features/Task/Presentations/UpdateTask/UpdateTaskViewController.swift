@@ -22,4 +22,15 @@ extension UpdateTaskViewController {
     private func toogleTaskFailure(_ failure: Error) {
         showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
     }
+
+    func updateTask(_ task: TaskPresentation) {
+        updateTaskUseCase.update(task.taskEntity, title: task.title, description: task.description, dateTime: task.startTime, category: task.category, priority: task.priority, status: task.status) { [weak self] result in
+            guard let error = result else { return }
+            self?.updateTaskFailure(error)
+        }
+    }
+
+    private func updateTaskFailure(_ failure: Error) {
+        showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
+    }
 }
