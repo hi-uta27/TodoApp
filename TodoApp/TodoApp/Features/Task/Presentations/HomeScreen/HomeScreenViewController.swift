@@ -16,9 +16,9 @@ class HomeScreenViewController: BaseViewController {
     @IBOutlet private var imageButton: UIButton!
 
     private lazy var tableViewDataSource = TaskTableViewDataSource()
-    var readTaskUseCase = di.resolve(ReadTaskUseCase.self)!
-    var updateTaskUseCase = di.resolve(UpdateTaskUseCase.self)!
-    var router = di.resolve(TaskScreenRouter.self)!
+    lazy var readTaskUseCase = di.resolve(ReadTaskUseCase.self)!
+    lazy var updateTaskUseCase = di.resolve(UpdateTaskUseCase.self)!
+    private var router: TaskScreenRouter!
     private var openTaskDetail: ((TaskEntity) -> Void)!
     private var debouncer: Debouncer!
 
@@ -48,6 +48,7 @@ class HomeScreenViewController: BaseViewController {
     }
 
     private func didSelectItem(taskEntity: TaskEntity) {
+        router = di.resolve(TaskScreenRouter.self)!
         router.openDetailTask(from: self, taskEntity: taskEntity) { taskEntity in
             print(Self.self, #function, taskEntity)
         }
