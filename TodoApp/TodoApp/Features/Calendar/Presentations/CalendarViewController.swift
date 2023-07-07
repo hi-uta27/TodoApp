@@ -37,13 +37,13 @@ class CalendarViewController: BaseViewController {
     }
 
     @IBAction private func touchUpInsidePreviousMonthButton(_ sender: Any) {
-        let prevMonth = fsCalendar.currentPage.dateAt(.prevWeek)
-        changeCalendar(with: prevMonth)
+        let prevWeek = fsCalendar.currentPage.dateAt(.prevWeek)
+        changeCalendar(with: prevWeek)
     }
 
     @IBAction private func touchUpInsideNextMonthButton(_ sender: Any) {
-        let nextMonth = fsCalendar.currentPage.dateAt(.nextWeek)
-        changeCalendar(with: nextMonth)
+        let nextWeek = fsCalendar.currentPage.dateAt(.nextWeek)
+        changeCalendar(with: nextWeek)
     }
 
     private func changeCalendar(with date: Date) {
