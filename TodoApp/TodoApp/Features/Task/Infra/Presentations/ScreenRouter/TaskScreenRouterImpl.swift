@@ -40,8 +40,8 @@ class TaskScreenRouterImpl: NSObject, TaskScreenRouter {
     func openDetailTask(from parent: UIViewController, taskEntity: TaskEntity, complete: @escaping (TaskEntity) -> Void) {
         let viewController = DetailTaskViewController.initailize(
             taskEntity: taskEntity,
-            openTaskTitle: { [weak self] in
-                print(self!, #function, "Open Task Title")
+            openTaskTitle: { [weak self] title, description in
+                self?.openTaskTitle(title: title, descriptions: description)
             },
             openTaskTime: { [weak self] in
                 self?.openTaskAlarm()
@@ -135,5 +135,19 @@ private extension TaskScreenRouterImpl {
     func completeSetPriority() {
         guard let priority = model.priority else { return }
         taskScreenDataSource?.didUpdatePriority(priority)
+    }
+}
+
+private extension TaskScreenRouterImpl {
+    func openTaskTitle(title: String, descriptions: String?) {
+        let viewController = TaskTitleViewController.initial(taskTitle: title, descriptions: descriptions) { [weak self] title, descriptions in
+            self?.completeSetTitle(title: title, descriptions: descriptions)
+        }
+        navigationController.pushSlideUpViewController(viewController)
+    }
+
+    func completeSetTitle(title: String, descriptions: String?) {
+        navigationController.popSlideDown()
+        taskScreenDataSource?.didUpdateTitle(title, descriptions: descriptions)
     }
 }

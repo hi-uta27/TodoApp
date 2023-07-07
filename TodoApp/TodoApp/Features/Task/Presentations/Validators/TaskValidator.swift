@@ -48,7 +48,7 @@ enum TaskValidator {
         }
     }
 
-    private static func validateTitle(_ title: String?) throws -> String {
+    static func validateTitle(_ title: String?) throws -> String {
         if let title = title, !title.isEmpty {
             return title
         } else {
@@ -56,7 +56,7 @@ enum TaskValidator {
         }
     }
 
-    private static func validateDescription(_ description: String?) throws -> String? {
+    static func validateDescription(_ description: String?) throws -> String? {
         return description
     }
 

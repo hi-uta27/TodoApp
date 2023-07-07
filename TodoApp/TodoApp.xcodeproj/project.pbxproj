@@ -150,6 +150,8 @@
 		63734DAD2A5674B30006EDF6 /* DeleteTaskUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DAC2A5674B30006EDF6 /* DeleteTaskUseCaseImpl.swift */; };
 		63734DAF2A5675270006EDF6 /* DeleteTaskInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DAE2A5675270006EDF6 /* DeleteTaskInject.swift */; };
 		63734DB12A5677830006EDF6 /* DeleteTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DB02A5677830006EDF6 /* DeleteTaskViewController.swift */; };
+		63C933A82A56C155006DFFE2 /* TaskTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C933A72A56C155006DFFE2 /* TaskTitleViewController.swift */; };
+		63C933AA2A56C176006DFFE2 /* TaskTitleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C933A92A56C176006DFFE2 /* TaskTitleViewController.storyboard */; };
 		63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D64C282A55621900913D63 /* DetailTaskViewController.swift */; };
 		63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */; };
 /* End PBXBuildFile section */
@@ -294,6 +296,8 @@
 		63734DAC2A5674B30006EDF6 /* DeleteTaskUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCaseImpl.swift; sourceTree = "<group>"; };
 		63734DAE2A5675270006EDF6 /* DeleteTaskInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskInject.swift; sourceTree = "<group>"; };
 		63734DB02A5677830006EDF6 /* DeleteTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskViewController.swift; sourceTree = "<group>"; };
+		63C933A72A56C155006DFFE2 /* TaskTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTitleViewController.swift; sourceTree = "<group>"; };
+		63C933A92A56C176006DFFE2 /* TaskTitleViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskTitleViewController.storyboard; sourceTree = "<group>"; };
 		63D64C282A55621900913D63 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
 		63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTaskViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -507,6 +511,7 @@
 		2B7BCEFF2A3FE6DA0021DA74 /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				63C933A62A56C131006DFFE2 /* TaskTitle */,
 				63D64C272A55620300913D63 /* DetailTask */,
 				2B2EAE782A445F4800A88123 /* Validators */,
 				2B2EAE772A445F3A00A88123 /* ScreenRouter */,
@@ -1077,6 +1082,15 @@
 			path = DeleteTask;
 			sourceTree = "<group>";
 		};
+		63C933A62A56C131006DFFE2 /* TaskTitle */ = {
+			isa = PBXGroup;
+			children = (
+				63C933A72A56C155006DFFE2 /* TaskTitleViewController.swift */,
+				63C933A92A56C176006DFFE2 /* TaskTitleViewController.storyboard */,
+			);
+			path = TaskTitle;
+			sourceTree = "<group>";
+		};
 		63D64C272A55620300913D63 /* DetailTask */ = {
 			isa = PBXGroup;
 			children = (
@@ -1169,6 +1183,7 @@
 				2B9328CC2A3C094E00DD6730 /* TaskPriorityViewController.storyboard in Resources */,
 				2BC969B42A429CCB00D11EB1 /* TimePickerCell.xib in Resources */,
 				2B9328DF2A3C1DB600DD6730 /* AddTaskViewController.storyboard in Resources */,
+				63C933AA2A56C176006DFFE2 /* TaskTitleViewController.storyboard in Resources */,
 				2B57DE792A2F1B8E002160E7 /* LaunchScreen.storyboard in Resources */,
 				2B72067F2A36BFF5009A1158 /* CreateCategoryViewController.storyboard in Resources */,
 				63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */,
@@ -1306,6 +1321,7 @@
 				2BA28F932A2F38A0004BB3D9 /* ProgressHUD.swift in Sources */,
 				2B8E30512A32E46200CFDD3D /* CreateCategoryModel.swift in Sources */,
 				2B9328D12A3C096900DD6730 /* TaskPriorityCell.swift in Sources */,
+				63C933A82A56C155006DFFE2 /* TaskTitleViewController.swift in Sources */,
 				2B0B02A92A4AC3AC0018C454 /* ReadTaskViewController.swift in Sources */,
 				2B2EAE6E2A43F9BC00A88123 /* DateModel.swift in Sources */,
 				2B0B02A02A4A822C0018C454 /* ReadTaskInject.swift in Sources */,

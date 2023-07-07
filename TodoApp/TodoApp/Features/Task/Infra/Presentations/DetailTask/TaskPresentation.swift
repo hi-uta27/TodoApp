@@ -32,7 +32,7 @@ extension TaskPresentation {
         self.title = title
     }
 
-    func setDescription(_ description: String) {
+    func setDescription(_ description: String?) {
         self.description = description
     }
 
@@ -50,5 +50,14 @@ extension TaskPresentation {
 
     func toggleStatus() {
         status = status.toggle()
+    }
+
+    func refresh() {
+        title = taskEntity.title
+        description = taskEntity.descriptions
+        startTime = taskEntity.startTime
+        category = taskEntity.category
+        priority = taskEntity.priority
+        status = taskEntity.status
     }
 }

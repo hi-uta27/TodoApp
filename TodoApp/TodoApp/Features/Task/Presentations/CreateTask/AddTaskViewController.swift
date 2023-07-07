@@ -158,6 +158,8 @@ extension AddTaskViewController {
 // MARK: - TaskScreenDataSource
 
 extension AddTaskViewController: TaskScreenDataSource {
+    func didUpdateTitle(_ title: String, descriptions: String?) {}
+
     func didUpdateCategory(_ category: CategoryEntity) {
         self.category = category
     }
