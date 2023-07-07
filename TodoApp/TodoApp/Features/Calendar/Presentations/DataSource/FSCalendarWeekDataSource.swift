@@ -13,6 +13,7 @@ class FSCalendarWeekDataSource: NSObject {
     var didSelect: ((Date) -> Void)!
 
     func configCalendar(_ calendar: FSCalendar) {
+        calendar.scope = .week
         calendar.appearance.borderRadius = 0.6
         calendar.appearance.caseOptions = .weekdayUsesUpperCase
         calendar.appearance.titleFont = UIFont.systemFont(ofSize: 12, weight: .bold)

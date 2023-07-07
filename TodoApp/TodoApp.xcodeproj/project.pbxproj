@@ -819,9 +819,9 @@
 		2B9E2D772A4E769F00FA3531 /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				63F684822A580D0100B9A86A /* DataSource */,
 				2B9E2D7B2A4E770900FA3531 /* CalendarViewController.swift */,
 				2B9E2D812A4E774F00FA3531 /* CalendarViewController.storyboard */,
-				63F684802A58094700B9A86A /* FSCalendarWeekDataSource.swift */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -1101,6 +1101,14 @@
 				63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */,
 			);
 			path = DetailTask;
+			sourceTree = "<group>";
+		};
+		63F684822A580D0100B9A86A /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				63F684802A58094700B9A86A /* FSCalendarWeekDataSource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

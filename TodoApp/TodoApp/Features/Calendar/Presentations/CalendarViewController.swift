@@ -14,26 +14,32 @@ class CalendarViewController: BaseViewController {
     @IBOutlet private var yearLabel: UILabel!
     @IBOutlet private var tableView: UITableView!
 
+    lazy var readTaskUseCase = di.resolve(ReadTaskUseCase.self)!
     private lazy var calendarDataSource = FSCalendarWeekDataSource()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    private var today: Date { Date() }
 
     override func configSubView() {
         super.configSubView()
-        fsCalendar.scope = .week
         calendarDataSource.configCalendar(fsCalendar)
         calendarDataSource.didSelect = { [weak self] date in
-            print(self ?? "", date)
+            self?.readTask(with: date)
         }
-        fsCalendar.select(Date())
+        fsCalendar.select(today)
         updateCalendarLabel()
+
+        readTask(with: today)
     }
 
     private func updateCalendarLabel() {
         monthLabel.text = fsCalendar.currentPage.monthName(.default)
         yearLabel.text = "\(fsCalendar.currentPage.year)"
+    }
+
+    private func readTask(with date: Date) {
+        let filter = TaskFilterModel(date: date, keyword: nil)
+        refreshTask(filter: filter, refreshTaskSuccess: { [weak self] taskEntities in
+            print(self ?? "", #function, taskEntities ?? "")
+        })
     }
 
     @IBAction private func touchUpInsidePreviousMonthButton(_ sender: Any) {
@@ -51,3 +57,5 @@ class CalendarViewController: BaseViewController {
         updateCalendarLabel()
     }
 }
+
+extension CalendarViewController: ReadTaskViewController {}
