@@ -19,7 +19,7 @@ class DetailTaskViewController: BaseViewController {
     lazy var updateTaskUseCase = di.resolve(UpdateTaskUseCase.self)!
     
     private var taskPresentation: TaskPresentation!
-    private var openTaskTitle: (() -> Void)!
+    private var openTaskTitle: ((String, String?) -> Void)!
     private var openTaskTime: (() -> Void)!
     private var openTaskCategory: (() -> Void)!
     private var openTaskPriority: (() -> Void)!
@@ -50,7 +50,8 @@ class DetailTaskViewController: BaseViewController {
     }
     
     @IBAction private func touchUpInsideEditTitleButton(_ sender: Any) {
-        openTaskTitle?()
+        let a = taskPresentation
+        openTaskTitle?(taskPresentation.title, taskPresentation.description)
     }
     
     @IBAction private func touchUpInsideDateTimeButton(_ sender: Any) {
@@ -85,7 +86,7 @@ class DetailTaskViewController: BaseViewController {
 
 extension DetailTaskViewController {
     static func initailize(taskEntity: TaskEntity,
-                           openTaskTitle: @escaping () -> Void,
+                           openTaskTitle: @escaping (String, String?) -> Void,
                            openTaskTime: @escaping () -> Void,
                            openTaskCategory: @escaping () -> Void,
                            openTaskPriority: @escaping () -> Void,
@@ -107,6 +108,13 @@ extension DetailTaskViewController {
 // MARK: - TaskScreenDataSource
 
 extension DetailTaskViewController: TaskScreenDataSource {
+    func didUpdateTitle(_ title: String, descriptions: String?) {
+        taskPresentation.setTitle(title)
+        taskPresentation.setDescription(descriptions)
+        titleLabel.text = taskPresentation.title
+        descriptionLabel.text = taskPresentation.description
+    }
+
     func didUpdateDateTime(_ dateTime: Date) {
         taskPresentation.setStartTime(dateTime)
         let stringFormatDate = "dd/MM/yyyy 'At' HH:mm"

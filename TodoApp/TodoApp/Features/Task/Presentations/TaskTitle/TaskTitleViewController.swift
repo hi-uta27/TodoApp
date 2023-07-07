@@ -31,7 +31,7 @@ class TaskTitleViewController: BaseViewController {
     @IBAction private func touchUpInsideEditButton(_ sender: Any) {
         do {
             let taskTitle = try TaskValidator.validateTitle(titleTextField.text)
-            let descriptions = try TaskValidator.validateDescription(titleTextField.text)
+            let descriptions = try TaskValidator.validateDescription(descriptionTextField.text)
             editTask?(taskTitle, descriptions)
         } catch {
             showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])

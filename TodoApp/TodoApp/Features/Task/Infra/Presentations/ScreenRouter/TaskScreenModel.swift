@@ -8,8 +8,6 @@
 import Foundation
 
 class TaskScreenModel {
-    var title: String?
-    var description: String?
     var dateTime: DateModel = .init()
     var category: CategoryEntity?
     var priority: Int?

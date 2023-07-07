@@ -32,7 +32,7 @@ extension TaskPresentation {
         self.title = title
     }
 
-    func setDescription(_ description: String) {
+    func setDescription(_ description: String?) {
         self.description = description
     }
 

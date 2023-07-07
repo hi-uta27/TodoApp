@@ -11,4 +11,5 @@ protocol TaskScreenDataSource: NSObject {
     func didUpdateDateTime(_ dateTime: Date)
     func didUpdateCategory(_ category: CategoryEntity)
     func didUpdatePriority(_ priority: Int)
+    func didUpdateTitle(_ title: String, descriptions: String?)
 }
