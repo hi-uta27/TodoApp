@@ -42,6 +42,7 @@ class DetailTaskViewController: BaseViewController {
     }
     
     @IBAction private func touchUpInsideRefreshButton(_ sender: Any) {
+        taskPresentation.refresh()
         updateUI(with: taskPresentation.taskEntity)
     }
     
