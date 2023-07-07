@@ -15,7 +15,7 @@ class CalendarTableViewDataSource: NSObject {
     var didSelectItem: ((TaskEntity) -> Void)!
 
     func configTableView(_ tableView: UITableView) {
-        tableView.register(.init(nibName: TaskHeader.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: TaskHeader.identifier)
+        tableView.register(.init(nibName: CalendarHeader.identifier, bundle: nil), forHeaderFooterViewReuseIdentifier: CalendarHeader.identifier)
         tableView.register(.init(nibName: TaskCell.identifier, bundle: nil), forCellReuseIdentifier: TaskCell.identifier)
         tableView.dataSource = self
         tableView.delegate = self
@@ -58,15 +58,11 @@ extension CalendarTableViewDataSource: UITableViewDelegate {
         UITableView.automaticDimension
     }
 
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        if let title = TaskStatus(rawValue: section)?.description {
-//            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: TaskHeader.identifier) as! TaskHeader
-//            header.binding(title)
-//            return header
-//        } else {
-//            return nil
-//        }
-//    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: CalendarHeader.identifier) as! CalendarHeader
+
+        return header
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let taskEntity = models[indexPath.row]
