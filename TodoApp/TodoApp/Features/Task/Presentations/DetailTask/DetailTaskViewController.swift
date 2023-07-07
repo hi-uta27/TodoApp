@@ -38,6 +38,7 @@ class DetailTaskViewController: BaseViewController {
         dateTimeLabel.text = taskEntity.startTime.toFormat(stringFormatDate)
         categoryIconButton.setImage(UIImage(named: taskEntity.category.icon), for: .normal)
         categoryTitleLabel.text = taskEntity.category.name
+        checkBoxButton.isSelected = taskEntity.status == .completed
     }
     
     @IBAction private func touchUpInsideRefreshButton(_ sender: Any) {
@@ -50,7 +51,6 @@ class DetailTaskViewController: BaseViewController {
     }
     
     @IBAction private func touchUpInsideEditTitleButton(_ sender: Any) {
-        let a = taskPresentation
         openTaskTitle?(taskPresentation.title, taskPresentation.description)
     }
     
