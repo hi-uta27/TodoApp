@@ -154,6 +154,7 @@
 		63C933AA2A56C176006DFFE2 /* TaskTitleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C933A92A56C176006DFFE2 /* TaskTitleViewController.storyboard */; };
 		63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D64C282A55621900913D63 /* DetailTaskViewController.swift */; };
 		63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */; };
+		63F684812A58094700B9A86A /* FSCalendarWeekDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F684802A58094700B9A86A /* FSCalendarWeekDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -300,6 +301,7 @@
 		63C933A92A56C176006DFFE2 /* TaskTitleViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskTitleViewController.storyboard; sourceTree = "<group>"; };
 		63D64C282A55621900913D63 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
 		63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTaskViewController.storyboard; sourceTree = "<group>"; };
+		63F684802A58094700B9A86A /* FSCalendarWeekDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarWeekDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -819,6 +821,7 @@
 			children = (
 				2B9E2D7B2A4E770900FA3531 /* CalendarViewController.swift */,
 				2B9E2D812A4E774F00FA3531 /* CalendarViewController.storyboard */,
+				63F684802A58094700B9A86A /* FSCalendarWeekDataSource.swift */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -1240,6 +1243,7 @@
 				2B0B02A72A4AA1D70018C454 /* TaskStatus+Value.swift in Sources */,
 				2B0981C42A39A11D00B80C03 /* CreateTaskUseCase.swift in Sources */,
 				2B9E2D7E2A4E772800FA3531 /* UserProfileViewController.swift in Sources */,
+				63F684812A58094700B9A86A /* FSCalendarWeekDataSource.swift in Sources */,
 				2BBFCCCA2A4952BD0095EA4D /* ReadTaskRepository.swift in Sources */,
 				2B3192CD2A4D1726005C6F69 /* RoundCornerMarkViewBehavior.swift in Sources */,
 				2B57DE8B2A2F215D002160E7 /* BaseViewController.swift in Sources */,
