@@ -16,6 +16,7 @@ class CalendarViewController: BaseViewController {
 
     lazy var readTaskUseCase = di.resolve(ReadTaskUseCase.self)!
     private lazy var calendarDataSource = FSCalendarWeekDataSource()
+    private lazy var tableViewDataSource = CalendarTableViewDataSource()
     private var today: Date { Date() }
 
     override func configSubView() {
@@ -26,6 +27,14 @@ class CalendarViewController: BaseViewController {
         }
         fsCalendar.select(today)
         updateCalendarLabel()
+
+        tableViewDataSource.configTableView(tableView)
+        tableViewDataSource.didSelectItem = { [weak self] taskEntity in
+            print(self ?? "", taskEntity)
+        }
+        tableViewDataSource.tapInsideCheckBox = { [weak self] taskEntity in
+            print(self ?? "", taskEntity)
+        }
 
         readTask(with: today)
     }
@@ -38,7 +47,7 @@ class CalendarViewController: BaseViewController {
     private func readTask(with date: Date) {
         let filter = TaskFilterModel(date: date, keyword: nil)
         refreshTask(filter: filter, refreshTaskSuccess: { [weak self] taskEntities in
-            print(self ?? "", #function, taskEntities ?? "")
+            self?.tableViewDataSource.setModels(taskEntities ?? [])
         })
     }
 
