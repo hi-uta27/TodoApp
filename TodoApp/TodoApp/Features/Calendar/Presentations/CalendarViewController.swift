@@ -18,6 +18,7 @@ class CalendarViewController: BaseViewController {
     lazy var updateTaskUseCase = di.resolve(UpdateTaskUseCase.self)!
     private lazy var calendarDataSource = FSCalendarWeekDataSource()
     private lazy var tableViewDataSource = CalendarTableViewDataSource()
+    private var router: TaskScreenRouter!
     private var taskEntities: [TaskEntity] = []
     private var selectedDate: Date = .init()
     private var selectedStatus: TaskStatus = .todo
@@ -39,7 +40,7 @@ class CalendarViewController: BaseViewController {
 
         tableViewDataSource.configTableView(tableView)
         tableViewDataSource.didSelectItem = { [weak self] taskEntity in
-            print(self ?? "", taskEntity)
+            self?.didSelectItem(taskEntity: taskEntity)
         }
         tableViewDataSource.tapInsideCheckBox = { [weak self] taskEntity in
             self?.toogleTaskStatus(taskEntity)
@@ -59,6 +60,13 @@ class CalendarViewController: BaseViewController {
     private func updateCalendarLabel() {
         monthLabel.text = fsCalendar.currentPage.monthName(.default)
         yearLabel.text = "\(fsCalendar.currentPage.year)"
+    }
+
+    private func didSelectItem(taskEntity: TaskEntity) {
+        router = di.resolve(TaskScreenRouter.self)!
+        router.openDetailTask(from: self, taskEntity: taskEntity) { taskEntity in
+            print(Self.self, #function, taskEntity)
+        }
     }
 
     private func readTask(with date: Date) {
