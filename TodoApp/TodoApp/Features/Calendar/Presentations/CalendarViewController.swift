@@ -15,19 +15,26 @@ class CalendarViewController: BaseViewController {
     @IBOutlet private var tableView: UITableView!
 
     lazy var readTaskUseCase = di.resolve(ReadTaskUseCase.self)!
+    lazy var updateTaskUseCase = di.resolve(UpdateTaskUseCase.self)!
     private lazy var calendarDataSource = FSCalendarWeekDataSource()
     private lazy var tableViewDataSource = CalendarTableViewDataSource()
     private var taskEntities: [TaskEntity] = []
-    private var today: Date { Date() }
-    private var selectedStatus: TaskStatus?
+    private var selectedDate: Date = .init()
+    private var selectedStatus: TaskStatus = .todo
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        registerObserveTaskNotification()
+    }
 
     override func configSubView() {
         super.configSubView()
         calendarDataSource.configCalendar(fsCalendar)
         calendarDataSource.didSelect = { [weak self] date in
+            self?.selectedDate = date
             self?.readTask(with: date)
         }
-        fsCalendar.select(today)
+        fsCalendar.select(selectedDate)
         updateCalendarLabel()
 
         tableViewDataSource.configTableView(tableView)
@@ -35,7 +42,7 @@ class CalendarViewController: BaseViewController {
             print(self ?? "", taskEntity)
         }
         tableViewDataSource.tapInsideCheckBox = { [weak self] taskEntity in
-            print(self ?? "", taskEntity)
+            self?.toogleTaskStatus(taskEntity)
         }
         tableViewDataSource.tapInsideTodoButton = { [weak self] in
             self?.selectedStatus = .todo
@@ -46,7 +53,7 @@ class CalendarViewController: BaseViewController {
             self?.setModels()
         }
 
-        readTask(with: today)
+        readTask(with: selectedDate)
     }
 
     private func updateCalendarLabel() {
@@ -80,6 +87,25 @@ class CalendarViewController: BaseViewController {
         fsCalendar.setCurrentPage(date, animated: true)
         updateCalendarLabel()
     }
+
+    // MARK: observeTaskChangeNotification
+
+    private func registerObserveTaskNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(observeTaskChangeNotification), name: .taskChangeNotification, object: nil)
+    }
+
+    @objc private func observeTaskChangeNotification() {
+        readTask(with: selectedDate)
+    }
+
+    private func removeObserveTaskNotification() {
+        NotificationCenter.default.removeObserver(self, name: .taskChangeNotification, object: nil)
+    }
+
+    deinit {
+        removeObserveTaskNotification()
+    }
 }
 
 extension CalendarViewController: ReadTaskViewController {}
+extension CalendarViewController: UpdateTaskViewController {}
