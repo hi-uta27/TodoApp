@@ -38,6 +38,11 @@ class CalendarViewController: BaseViewController {
         fsCalendar.select(selectedDate)
         updateCalendarLabel()
 
+        tableView.configPullToRefreshView()
+        tableView.configPullToRefresh { [weak self] in
+            self?.readTask(with: self?.selectedDate ?? Date())
+        }
+
         tableViewDataSource.configTableView(tableView)
         tableViewDataSource.didSelectItem = { [weak self] taskEntity in
             self?.didSelectItem(taskEntity: taskEntity)
@@ -72,6 +77,7 @@ class CalendarViewController: BaseViewController {
     private func readTask(with date: Date) {
         let filter = TaskFilterModel(date: date, keyword: nil)
         refreshTask(filter: filter, refreshTaskSuccess: { [weak self] taskEntities in
+            self?.tableView.stopPullToRefreshAnimation()
             self?.taskEntities = taskEntities ?? []
             self?.setModels()
         })
