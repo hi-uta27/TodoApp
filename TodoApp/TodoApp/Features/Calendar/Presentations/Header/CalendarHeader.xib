@@ -32,6 +32,9 @@
                                     <state key="normal" title="Todo">
                                         <color key="titleColor" name="White87"/>
                                     </state>
+                                    <connections>
+                                        <action selector="touchUpInsideTodoButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="2nL-3a-NGl"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whA-CT-Qcn">
                                     <rect key="frame" x="212.66666666666663" y="66" width="170.33333333333337" height="48"/>
@@ -44,6 +47,9 @@
                                     <state key="normal" title="Completed">
                                         <color key="titleColor" name="White87"/>
                                     </state>
+                                    <connections>
+                                        <action selector="touchUpInsideCompletedButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="42k-bM-GmX"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

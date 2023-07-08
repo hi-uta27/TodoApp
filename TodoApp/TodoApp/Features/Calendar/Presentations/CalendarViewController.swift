@@ -17,7 +17,9 @@ class CalendarViewController: BaseViewController {
     lazy var readTaskUseCase = di.resolve(ReadTaskUseCase.self)!
     private lazy var calendarDataSource = FSCalendarWeekDataSource()
     private lazy var tableViewDataSource = CalendarTableViewDataSource()
+    private var taskEntities: [TaskEntity] = []
     private var today: Date { Date() }
+    private var selectedStatus: TaskStatus?
 
     override func configSubView() {
         super.configSubView()
@@ -35,6 +37,14 @@ class CalendarViewController: BaseViewController {
         tableViewDataSource.tapInsideCheckBox = { [weak self] taskEntity in
             print(self ?? "", taskEntity)
         }
+        tableViewDataSource.tapInsideTodoButton = { [weak self] in
+            self?.selectedStatus = .todo
+            self?.setModels()
+        }
+        tableViewDataSource.tapInsideCompletedButton = { [weak self] in
+            self?.selectedStatus = .completed
+            self?.setModels()
+        }
 
         readTask(with: today)
     }
@@ -47,8 +57,13 @@ class CalendarViewController: BaseViewController {
     private func readTask(with date: Date) {
         let filter = TaskFilterModel(date: date, keyword: nil)
         refreshTask(filter: filter, refreshTaskSuccess: { [weak self] taskEntities in
-            self?.tableViewDataSource.setModels(taskEntities ?? [])
+            self?.taskEntities = taskEntities ?? []
+            self?.setModels()
         })
+    }
+
+    private func setModels() {
+        tableViewDataSource.setModels(taskEntities.filter { $0.status == selectedStatus })
     }
 
     @IBAction private func touchUpInsidePreviousMonthButton(_ sender: Any) {

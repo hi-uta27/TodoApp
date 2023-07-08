@@ -11,6 +11,8 @@ class CalendarTableViewDataSource: NSObject {
     private weak var tableView: UITableView?
     private var models: [TaskEntity] = []
 
+    var tapInsideTodoButton: (() -> Void)!
+    var tapInsideCompletedButton: (() -> Void)!
     var tapInsideCheckBox: ((TaskEntity) -> Void)!
     var didSelectItem: ((TaskEntity) -> Void)!
 
@@ -23,7 +25,7 @@ class CalendarTableViewDataSource: NSObject {
     }
 
     func setModels(_ models: [TaskEntity]) {
-        self.models = models.filter { $0.status == .todo }
+        self.models = models
         tableView?.reloadData()
     }
 }
@@ -60,7 +62,12 @@ extension CalendarTableViewDataSource: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: CalendarHeader.identifier) as! CalendarHeader
-
+        header.touchUpInsideTodoButton = { [weak self] in
+            self?.tapInsideTodoButton?()
+        }
+        header.touchUpInsideCompletedButton = { [weak self] in
+            self?.tapInsideCompletedButton?()
+        }
         return header
     }
 
