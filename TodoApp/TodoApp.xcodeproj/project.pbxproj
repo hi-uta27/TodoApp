@@ -154,6 +154,10 @@
 		63C933AA2A56C176006DFFE2 /* TaskTitleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C933A92A56C176006DFFE2 /* TaskTitleViewController.storyboard */; };
 		63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D64C282A55621900913D63 /* DetailTaskViewController.swift */; };
 		63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */; };
+		63F684812A58094700B9A86A /* FSCalendarWeekDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F684802A58094700B9A86A /* FSCalendarWeekDataSource.swift */; };
+		63F684842A580D7500B9A86A /* CalendarTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F684832A580D7500B9A86A /* CalendarTableViewDataSource.swift */; };
+		63F684872A58115C00B9A86A /* CalendarHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F684862A58115C00B9A86A /* CalendarHeader.swift */; };
+		63F684892A58117C00B9A86A /* CalendarHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63F684882A58117C00B9A86A /* CalendarHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -300,6 +304,10 @@
 		63C933A92A56C176006DFFE2 /* TaskTitleViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskTitleViewController.storyboard; sourceTree = "<group>"; };
 		63D64C282A55621900913D63 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
 		63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTaskViewController.storyboard; sourceTree = "<group>"; };
+		63F684802A58094700B9A86A /* FSCalendarWeekDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarWeekDataSource.swift; sourceTree = "<group>"; };
+		63F684832A580D7500B9A86A /* CalendarTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableViewDataSource.swift; sourceTree = "<group>"; };
+		63F684862A58115C00B9A86A /* CalendarHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeader.swift; sourceTree = "<group>"; };
+		63F684882A58117C00B9A86A /* CalendarHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -817,6 +825,8 @@
 		2B9E2D772A4E769F00FA3531 /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				63F684852A58113300B9A86A /* Header */,
+				63F684822A580D0100B9A86A /* DataSource */,
 				2B9E2D7B2A4E770900FA3531 /* CalendarViewController.swift */,
 				2B9E2D812A4E774F00FA3531 /* CalendarViewController.storyboard */,
 			);
@@ -1100,6 +1110,24 @@
 			path = DetailTask;
 			sourceTree = "<group>";
 		};
+		63F684822A580D0100B9A86A /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				63F684802A58094700B9A86A /* FSCalendarWeekDataSource.swift */,
+				63F684832A580D7500B9A86A /* CalendarTableViewDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		63F684852A58113300B9A86A /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				63F684862A58115C00B9A86A /* CalendarHeader.swift */,
+				63F684882A58117C00B9A86A /* CalendarHeader.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1174,6 +1202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63F684892A58117C00B9A86A /* CalendarHeader.xib in Resources */,
 				2B9E2D802A4E773900FA3531 /* UserProfileViewController.storyboard in Resources */,
 				2BBFCCD62A4961FC0095EA4D /* HomeScreenViewController.storyboard in Resources */,
 				2BBFCCEA2A49682F0095EA4D /* TaskCell.xib in Resources */,
@@ -1231,6 +1260,7 @@
 				2BBFCCE22A49665F0095EA4D /* TasksLocalDataSourceImpl+UpdateTask.swift in Sources */,
 				63734DB12A5677830006EDF6 /* DeleteTaskViewController.swift in Sources */,
 				2BBFCCE92A49682F0095EA4D /* TaskCell.swift in Sources */,
+				63F684842A580D7500B9A86A /* CalendarTableViewDataSource.swift in Sources */,
 				2B0981C72A39A12700B80C03 /* TaskEntity.swift in Sources */,
 				2B9794BB2A3ACE1D00F4B8E8 /* CreateTaskRepository.swift in Sources */,
 				2BFE12DC2A333616001155EA /* CreateCategoryRepositoryImpl.swift in Sources */,
@@ -1240,6 +1270,7 @@
 				2B0B02A72A4AA1D70018C454 /* TaskStatus+Value.swift in Sources */,
 				2B0981C42A39A11D00B80C03 /* CreateTaskUseCase.swift in Sources */,
 				2B9E2D7E2A4E772800FA3531 /* UserProfileViewController.swift in Sources */,
+				63F684812A58094700B9A86A /* FSCalendarWeekDataSource.swift in Sources */,
 				2BBFCCCA2A4952BD0095EA4D /* ReadTaskRepository.swift in Sources */,
 				2B3192CD2A4D1726005C6F69 /* RoundCornerMarkViewBehavior.swift in Sources */,
 				2B57DE8B2A2F215D002160E7 /* BaseViewController.swift in Sources */,
@@ -1298,6 +1329,7 @@
 				2B62641F2A4194F300B53646 /* FSCalendarDataSource.swift in Sources */,
 				2BBFCCC42A4950680095EA4D /* ReadTaskUseCase.swift in Sources */,
 				2B03C42D2A3814FF007B4C40 /* CategoryValidator.swift in Sources */,
+				63F684872A58115C00B9A86A /* CalendarHeader.swift in Sources */,
 				2B2EAE762A445F1200A88123 /* TaskScreenModel.swift in Sources */,
 				2B83EE682A3078E00009D5C6 /* CategoriesLocalDataSourceImpl.swift in Sources */,
 				2B945AD62A395FAA004EED4F /* UIImage+CategoryIcon.swift in Sources */,

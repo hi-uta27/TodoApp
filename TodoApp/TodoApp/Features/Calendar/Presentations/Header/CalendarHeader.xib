@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="CalendarHeader" id="iN0-l3-epB" customClass="CalendarHeader" customModule="TodoApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDg-pL-JR9">
+                    <rect key="frame" x="0.0" y="8" width="393" height="64"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="gcs-A9-Tsi">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="156"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSH-nz-khF">
+                                    <rect key="frame" x="10" y="66" width="170.66666666666666" height="48"/>
+                                    <color key="backgroundColor" name="8687E7"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="cr8-a6-2F1"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Todo">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="touchUpInsideTodoButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="2nL-3a-NGl"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whA-CT-Qcn">
+                                    <rect key="frame" x="212.66666666666663" y="66" width="170.33333333333337" height="48"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="dtK-vP-ClX"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Completed">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="touchUpInsideCompletedButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="42k-bM-GmX"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <edgeInsets key="layoutMargins" top="15" left="10" bottom="16" right="10"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="4C4C4C"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="gcs-A9-Tsi" secondAttribute="trailing" id="EgO-IB-JPC"/>
+                        <constraint firstAttribute="bottom" secondItem="gcs-A9-Tsi" secondAttribute="bottom" priority="250" id="Z5c-DP-zmp"/>
+                        <constraint firstItem="gcs-A9-Tsi" firstAttribute="leading" secondItem="GDg-pL-JR9" secondAttribute="leading" id="bTQ-Mj-7Kk"/>
+                        <constraint firstItem="gcs-A9-Tsi" firstAttribute="top" secondItem="GDg-pL-JR9" secondAttribute="top" id="hR5-YA-7g9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="GDg-pL-JR9" secondAttribute="bottom" constant="8" id="O4i-Ay-kEi"/>
+                <constraint firstItem="GDg-pL-JR9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Ukg-z0-3QR"/>
+                <constraint firstItem="GDg-pL-JR9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hWw-O0-HAc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GDg-pL-JR9" secondAttribute="trailing" id="lkJ-oh-7Be"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backgroundContentView" destination="GDg-pL-JR9" id="UPY-pJ-OdC"/>
+                <outlet property="completedButton" destination="whA-CT-Qcn" id="30E-bc-CPj"/>
+                <outlet property="todoButton" destination="CSH-nz-khF" id="KhK-a3-QfJ"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="4C4C4C">
+            <color red="0.29803921568627451" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="8687E7">
+            <color red="0.52549019607843139" green="0.52941176470588236" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
