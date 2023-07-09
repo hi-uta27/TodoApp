@@ -141,6 +141,8 @@
 		2BFE12DC2A333616001155EA /* CreateCategoryRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE12DB2A333616001155EA /* CreateCategoryRepositoryImpl.swift */; };
 		2BFE12DE2A3337AD001155EA /* CreateCategoryUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE12DD2A3337AD001155EA /* CreateCategoryUseCaseImpl.swift */; };
 		2BFE12E02A33382B001155EA /* CreateCategoryInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE12DF2A33382B001155EA /* CreateCategoryInject.swift */; };
+		635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C22A5AA0C10045666D /* IntroViewController.swift */; };
+		635BE0C52A5AA0D20045666D /* IntroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */; };
 		63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA02A56586C0006EDF6 /* TaskPresentation.swift */; };
 		63734DA32A566FE60006EDF6 /* DeleteTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */; };
 		63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */; };
@@ -291,6 +293,8 @@
 		2BFE12DB2A333616001155EA /* CreateCategoryRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryRepositoryImpl.swift; sourceTree = "<group>"; };
 		2BFE12DD2A3337AD001155EA /* CreateCategoryUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryUseCaseImpl.swift; sourceTree = "<group>"; };
 		2BFE12DF2A33382B001155EA /* CreateCategoryInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryInject.swift; sourceTree = "<group>"; };
+		635BE0C22A5AA0C10045666D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
 		63734DA02A56586C0006EDF6 /* TaskPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresentation.swift; sourceTree = "<group>"; };
 		63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCase.swift; sourceTree = "<group>"; };
 		63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskRepository.swift; sourceTree = "<group>"; };
@@ -1000,6 +1004,7 @@
 		2BD1659B2A301AC300AFEA24 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				635BE0C02A5AA0930045666D /* Intrp */,
 				2B9E2D852A4E78DD00FA3531 /* MainTabbar */,
 				2B9E2D752A4E768F00FA3531 /* Focuse */,
 				2B9E2D742A4E768400FA3531 /* Calendar */,
@@ -1074,6 +1079,23 @@
 				2BFE12DF2A33382B001155EA /* CreateCategoryInject.swift */,
 			);
 			path = Inject;
+			sourceTree = "<group>";
+		};
+		635BE0C02A5AA0930045666D /* Intrp */ = {
+			isa = PBXGroup;
+			children = (
+				635BE0C12A5AA09B0045666D /* Intro */,
+			);
+			path = Intrp;
+			sourceTree = "<group>";
+		};
+		635BE0C12A5AA09B0045666D /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				635BE0C22A5AA0C10045666D /* IntroViewController.swift */,
+				635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */,
+			);
+			path = Intro;
 			sourceTree = "<group>";
 		};
 		63734D9F2A5658560006EDF6 /* DetailTask */ = {
@@ -1218,6 +1240,7 @@
 				63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */,
 				2B8E30552A32E83000CFDD3D /* CategoryCell.xib in Resources */,
 				2B62641C2A418BAE00B53646 /* ChooseTimeViewController.storyboard in Resources */,
+				635BE0C52A5AA0D20045666D /* IntroViewController.storyboard in Resources */,
 				2BBFCCEF2A49686E0095EA4D /* TaskHeader.xib in Resources */,
 				2B7206882A36D114009A1158 /* CategoryColorCell.xib in Resources */,
 				2B9E2D822A4E774F00FA3531 /* CalendarViewController.storyboard in Resources */,
@@ -1317,6 +1340,7 @@
 				2B7206792A36B98D009A1158 /* ReadCategoryLocalDataSource.swift in Sources */,
 				2B2EAE722A445E2A00A88123 /* TaskScreenRouterImpl.swift in Sources */,
 				63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */,
+				635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */,
 				63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */,
 				2B6C14E22A4D9F1400161D85 /* TabbarButton.swift in Sources */,
 				2BD165AC2A30432A00AFEA24 /* ReadCategoryRepository.swift in Sources */,
