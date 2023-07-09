@@ -145,6 +145,8 @@
 		635BE0C52A5AA0D20045666D /* IntroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */; };
 		635BE0C82A5AA5580045666D /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C72A5AA5580045666D /* StartScreenViewController.swift */; };
 		635BE0CA2A5AA5660045666D /* StartScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635BE0C92A5AA5660045666D /* StartScreenViewController.storyboard */; };
+		635BE0CD2A5AAC210045666D /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0CC2A5AAC210045666D /* OnboardingViewController.swift */; };
+		635BE0CF2A5AAC2A0045666D /* OnboardingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635BE0CE2A5AAC2A0045666D /* OnboardingViewController.storyboard */; };
 		63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA02A56586C0006EDF6 /* TaskPresentation.swift */; };
 		63734DA32A566FE60006EDF6 /* DeleteTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */; };
 		63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */; };
@@ -299,6 +301,8 @@
 		635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
 		635BE0C72A5AA5580045666D /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		635BE0C92A5AA5660045666D /* StartScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartScreenViewController.storyboard; sourceTree = "<group>"; };
+		635BE0CC2A5AAC210045666D /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		635BE0CE2A5AAC2A0045666D /* OnboardingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingViewController.storyboard; sourceTree = "<group>"; };
 		63734DA02A56586C0006EDF6 /* TaskPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresentation.swift; sourceTree = "<group>"; };
 		63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCase.swift; sourceTree = "<group>"; };
 		63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskRepository.swift; sourceTree = "<group>"; };
@@ -1088,6 +1092,7 @@
 		635BE0C02A5AA0930045666D /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				635BE0CB2A5AAC0C0045666D /* Onboarding */,
 				635BE0C62A5AA52F0045666D /* StartScreen */,
 				635BE0C12A5AA09B0045666D /* Intro */,
 			);
@@ -1110,6 +1115,15 @@
 				635BE0C92A5AA5660045666D /* StartScreenViewController.storyboard */,
 			);
 			path = StartScreen;
+			sourceTree = "<group>";
+		};
+		635BE0CB2A5AAC0C0045666D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				635BE0CC2A5AAC210045666D /* OnboardingViewController.swift */,
+				635BE0CE2A5AAC2A0045666D /* OnboardingViewController.storyboard */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		63734D9F2A5658560006EDF6 /* DetailTask */ = {
@@ -1241,6 +1255,7 @@
 				635BE0CA2A5AA5660045666D /* StartScreenViewController.storyboard in Resources */,
 				63F684892A58117C00B9A86A /* CalendarHeader.xib in Resources */,
 				2B9E2D802A4E773900FA3531 /* UserProfileViewController.storyboard in Resources */,
+				635BE0CF2A5AAC2A0045666D /* OnboardingViewController.storyboard in Resources */,
 				2BBFCCD62A4961FC0095EA4D /* HomeScreenViewController.storyboard in Resources */,
 				2BBFCCEA2A49682F0095EA4D /* TaskCell.xib in Resources */,
 				2B9328E92A3C5F3A00DD6730 /* TaskAlarmViewController.storyboard in Resources */,
@@ -1297,6 +1312,7 @@
 				63734DAF2A5675270006EDF6 /* DeleteTaskInject.swift in Sources */,
 				2BBFCCE22A49665F0095EA4D /* TasksLocalDataSourceImpl+UpdateTask.swift in Sources */,
 				63734DB12A5677830006EDF6 /* DeleteTaskViewController.swift in Sources */,
+				635BE0CD2A5AAC210045666D /* OnboardingViewController.swift in Sources */,
 				2BBFCCE92A49682F0095EA4D /* TaskCell.swift in Sources */,
 				63F684842A580D7500B9A86A /* CalendarTableViewDataSource.swift in Sources */,
 				2B0981C72A39A12700B80C03 /* TaskEntity.swift in Sources */,

@@ -12,7 +12,7 @@ class AppSceneRouter {
     private(set) var rootNavigationController: UINavigationController = .init()
 
     func prepareScene() {
-        let viewController = MainTabbarViewController.initial()
+        let viewController = OnboardingViewController.initial()
         rootNavigationController.viewControllers = [viewController]
     }
 }
