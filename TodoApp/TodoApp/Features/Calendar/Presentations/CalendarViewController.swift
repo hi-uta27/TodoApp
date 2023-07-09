@@ -13,6 +13,7 @@ class CalendarViewController: BaseViewController {
     @IBOutlet private var monthLabel: UILabel!
     @IBOutlet private var yearLabel: UILabel!
     @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var calendarHeightConstraint: NSLayoutConstraint!
 
     lazy var readTaskUseCase = di.resolve(ReadTaskUseCase.self)!
     lazy var updateTaskUseCase = di.resolve(UpdateTaskUseCase.self)!
@@ -30,7 +31,7 @@ class CalendarViewController: BaseViewController {
 
     override func configSubView() {
         super.configSubView()
-        calendarDataSource.configCalendar(fsCalendar)
+        calendarDataSource.configCalendar(fsCalendar, heighConstraint: calendarHeightConstraint, from: self)
         calendarDataSource.didSelect = { [weak self] date in
             self?.selectedDate = date
             self?.readTask(with: date)

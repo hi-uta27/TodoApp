@@ -10,9 +10,12 @@ import FSCalendar
 import SwiftDate
 
 class FSCalendarWeekDataSource: NSObject {
+    private var viewController: UIViewController!
+    private var heighConstraint: NSLayoutConstraint!
+
     var didSelect: ((Date) -> Void)!
 
-    func configCalendar(_ calendar: FSCalendar) {
+    func configCalendar(_ calendar: FSCalendar, heighConstraint: NSLayoutConstraint, from viewController: UIViewController) {
         calendar.scope = .week
         calendar.appearance.borderRadius = 0.6
         calendar.appearance.caseOptions = .weekdayUsesUpperCase
@@ -24,6 +27,8 @@ class FSCalendarWeekDataSource: NSObject {
 
         calendar.dataSource = self
         calendar.delegate = self
+        self.heighConstraint = heighConstraint
+        self.viewController = viewController
     }
 }
 
@@ -38,8 +43,17 @@ extension FSCalendarWeekDataSource: FSCalendarDelegate {
         print(Self.self, #function)
         didSelect?(date)
     }
+
+    func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
+        heighConstraint.constant = bounds.height
+        viewController.view.layoutIfNeeded()
+    }
 }
 
 // MARK: - FSCalendarDelegateAppearance
 
-extension FSCalendarWeekDataSource: FSCalendarDelegateAppearance {}
+extension FSCalendarWeekDataSource: FSCalendarDelegateAppearance {
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
+        return UIColor(named: "272727")
+    }
+}
