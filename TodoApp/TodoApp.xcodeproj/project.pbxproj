@@ -143,6 +143,8 @@
 		2BFE12E02A33382B001155EA /* CreateCategoryInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE12DF2A33382B001155EA /* CreateCategoryInject.swift */; };
 		635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C22A5AA0C10045666D /* IntroViewController.swift */; };
 		635BE0C52A5AA0D20045666D /* IntroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */; };
+		635BE0C82A5AA5580045666D /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C72A5AA5580045666D /* StartScreenViewController.swift */; };
+		635BE0CA2A5AA5660045666D /* StartScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635BE0C92A5AA5660045666D /* StartScreenViewController.storyboard */; };
 		63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA02A56586C0006EDF6 /* TaskPresentation.swift */; };
 		63734DA32A566FE60006EDF6 /* DeleteTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */; };
 		63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */; };
@@ -295,6 +297,8 @@
 		2BFE12DF2A33382B001155EA /* CreateCategoryInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryInject.swift; sourceTree = "<group>"; };
 		635BE0C22A5AA0C10045666D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
+		635BE0C72A5AA5580045666D /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		635BE0C92A5AA5660045666D /* StartScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartScreenViewController.storyboard; sourceTree = "<group>"; };
 		63734DA02A56586C0006EDF6 /* TaskPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresentation.swift; sourceTree = "<group>"; };
 		63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCase.swift; sourceTree = "<group>"; };
 		63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskRepository.swift; sourceTree = "<group>"; };
@@ -1004,7 +1008,7 @@
 		2BD1659B2A301AC300AFEA24 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				635BE0C02A5AA0930045666D /* Intrp */,
+				635BE0C02A5AA0930045666D /* Intro */,
 				2B9E2D852A4E78DD00FA3531 /* MainTabbar */,
 				2B9E2D752A4E768F00FA3531 /* Focuse */,
 				2B9E2D742A4E768400FA3531 /* Calendar */,
@@ -1081,12 +1085,13 @@
 			path = Inject;
 			sourceTree = "<group>";
 		};
-		635BE0C02A5AA0930045666D /* Intrp */ = {
+		635BE0C02A5AA0930045666D /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				635BE0C62A5AA52F0045666D /* StartScreen */,
 				635BE0C12A5AA09B0045666D /* Intro */,
 			);
-			path = Intrp;
+			path = Intro;
 			sourceTree = "<group>";
 		};
 		635BE0C12A5AA09B0045666D /* Intro */ = {
@@ -1096,6 +1101,15 @@
 				635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */,
 			);
 			path = Intro;
+			sourceTree = "<group>";
+		};
+		635BE0C62A5AA52F0045666D /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				635BE0C72A5AA5580045666D /* StartScreenViewController.swift */,
+				635BE0C92A5AA5660045666D /* StartScreenViewController.storyboard */,
+			);
+			path = StartScreen;
 			sourceTree = "<group>";
 		};
 		63734D9F2A5658560006EDF6 /* DetailTask */ = {
@@ -1224,6 +1238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635BE0CA2A5AA5660045666D /* StartScreenViewController.storyboard in Resources */,
 				63F684892A58117C00B9A86A /* CalendarHeader.xib in Resources */,
 				2B9E2D802A4E773900FA3531 /* UserProfileViewController.storyboard in Resources */,
 				2BBFCCD62A4961FC0095EA4D /* HomeScreenViewController.storyboard in Resources */,
@@ -1366,6 +1381,7 @@
 				2B8E30542A32E83000CFDD3D /* CategoryCell.swift in Sources */,
 				2B9328E32A3C3A5A00DD6730 /* KeyboardNotifications.swift in Sources */,
 				2B03C4292A38072C007B4C40 /* UIAlertAction+Action.swift in Sources */,
+				635BE0C82A5AA5580045666D /* StartScreenViewController.swift in Sources */,
 				63734DA72A5672DF0006EDF6 /* DeleteTaskLocalDataSource.swift in Sources */,
 				2BFE12E02A33382B001155EA /* CreateCategoryInject.swift in Sources */,
 				2B2EAE742A445EF700A88123 /* UINavigationController+Action.swift in Sources */,
