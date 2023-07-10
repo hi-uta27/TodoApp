@@ -141,6 +141,9 @@
 		2BFE12DC2A333616001155EA /* CreateCategoryRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE12DB2A333616001155EA /* CreateCategoryRepositoryImpl.swift */; };
 		2BFE12DE2A3337AD001155EA /* CreateCategoryUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE12DD2A3337AD001155EA /* CreateCategoryUseCaseImpl.swift */; };
 		2BFE12E02A33382B001155EA /* CreateCategoryInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE12DF2A33382B001155EA /* CreateCategoryInject.swift */; };
+		630CAD952A5C537A00300DFE /* OnboardingScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD942A5C537A00300DFE /* OnboardingScreenRouter.swift */; };
+		630CAD9A2A5C549100300DFE /* OnboardingScreenRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD992A5C549100300DFE /* OnboardingScreenRouterImpl.swift */; };
+		630CAD9C2A5C561200300DFE /* IntroInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD9B2A5C561200300DFE /* IntroInject.swift */; };
 		635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C22A5AA0C10045666D /* IntroViewController.swift */; };
 		635BE0C52A5AA0D20045666D /* IntroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */; };
 		635BE0C82A5AA5580045666D /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C72A5AA5580045666D /* StartScreenViewController.swift */; };
@@ -301,6 +304,9 @@
 		2BFE12DB2A333616001155EA /* CreateCategoryRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryRepositoryImpl.swift; sourceTree = "<group>"; };
 		2BFE12DD2A3337AD001155EA /* CreateCategoryUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryUseCaseImpl.swift; sourceTree = "<group>"; };
 		2BFE12DF2A33382B001155EA /* CreateCategoryInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryInject.swift; sourceTree = "<group>"; };
+		630CAD942A5C537A00300DFE /* OnboardingScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenRouter.swift; sourceTree = "<group>"; };
+		630CAD992A5C549100300DFE /* OnboardingScreenRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenRouterImpl.swift; sourceTree = "<group>"; };
+		630CAD9B2A5C561200300DFE /* IntroInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroInject.swift; sourceTree = "<group>"; };
 		635BE0C22A5AA0C10045666D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
 		635BE0C72A5AA5580045666D /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
@@ -1100,6 +1106,7 @@
 		630CAD922A5C52F200300DFE /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
+				630CAD932A5C535E00300DFE /* ScreenRouter */,
 				635BE0CB2A5AAC0C0045666D /* Onboarding */,
 				635BE0C62A5AA52F0045666D /* StartScreen */,
 				635BE0C12A5AA09B0045666D /* Intro */,
@@ -1107,9 +1114,52 @@
 			path = Presentations;
 			sourceTree = "<group>";
 		};
+		630CAD932A5C535E00300DFE /* ScreenRouter */ = {
+			isa = PBXGroup;
+			children = (
+				630CAD942A5C537A00300DFE /* OnboardingScreenRouter.swift */,
+			);
+			path = ScreenRouter;
+			sourceTree = "<group>";
+		};
+		630CAD962A5C545200300DFE /* Infra */ = {
+			isa = PBXGroup;
+			children = (
+				630CAD982A5C548000300DFE /* ScreenRouter */,
+				630CAD972A5C546100300DFE /* Onboarding */,
+			);
+			path = Infra;
+			sourceTree = "<group>";
+		};
+		630CAD972A5C546100300DFE /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				63ECF3882A5BA4F9009D5C58 /* OnboardingModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		630CAD982A5C548000300DFE /* ScreenRouter */ = {
+			isa = PBXGroup;
+			children = (
+				630CAD992A5C549100300DFE /* OnboardingScreenRouterImpl.swift */,
+			);
+			path = ScreenRouter;
+			sourceTree = "<group>";
+		};
+		630CAD9D2A5C561600300DFE /* Inject */ = {
+			isa = PBXGroup;
+			children = (
+				630CAD9B2A5C561200300DFE /* IntroInject.swift */,
+			);
+			path = Inject;
+			sourceTree = "<group>";
+		};
 		635BE0C02A5AA0930045666D /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				630CAD9D2A5C561600300DFE /* Inject */,
+				630CAD962A5C545200300DFE /* Infra */,
 				630CAD922A5C52F200300DFE /* Presentations */,
 			);
 			path = Intro;
@@ -1138,7 +1188,6 @@
 			children = (
 				63ECF3852A5B9480009D5C58 /* DataSource */,
 				63ECF3802A5B9263009D5C58 /* Cell */,
-				63ECF38A2A5C031F009D5C58 /* Infra */,
 				635BE0CC2A5AAC210045666D /* OnboardingViewController.swift */,
 				635BE0CE2A5AAC2A0045666D /* OnboardingViewController.storyboard */,
 			);
@@ -1194,14 +1243,6 @@
 				63ECF3862A5B9497009D5C58 /* OnboardingCollectionDataSource.swift */,
 			);
 			path = DataSource;
-			sourceTree = "<group>";
-		};
-		63ECF38A2A5C031F009D5C58 /* Infra */ = {
-			isa = PBXGroup;
-			children = (
-				63ECF3882A5BA4F9009D5C58 /* OnboardingModel.swift */,
-			);
-			path = Infra;
 			sourceTree = "<group>";
 		};
 		63F684822A580D0100B9A86A /* DataSource */ = {
@@ -1337,6 +1378,7 @@
 				2BFE12D12A33282A001155EA /* CreateCategoryUseCase.swift in Sources */,
 				2B7206812A36C8EC009A1158 /* UITextField+Style.swift in Sources */,
 				2B9328E52A3C42FF00DD6730 /* TaskValidator.swift in Sources */,
+				630CAD9C2A5C561200300DFE /* IntroInject.swift in Sources */,
 				63734DA92A5673210006EDF6 /* TasksLocalDataSource+DeleteTask.swift in Sources */,
 				2B9E2D7A2A4E76CD00FA3531 /* FocusMoodViewController.swift in Sources */,
 				2B0B02AB2A4AC3C10018C454 /* UpdateTaskViewController.swift in Sources */,
@@ -1353,6 +1395,7 @@
 				2BC969B22A429CB700D11EB1 /* TimePickerCell.swift in Sources */,
 				2B9794DB2A3B041700F4B8E8 /* TaskInject.swift in Sources */,
 				2BB9E5E52A43002B00755022 /* Date+Convert.swift in Sources */,
+				630CAD9A2A5C549100300DFE /* OnboardingScreenRouterImpl.swift in Sources */,
 				2B8E30592A32E83A00CFDD3D /* ChooseCategoryViewController.swift in Sources */,
 				2B6264182A41863D00B53646 /* SinglePickerView.swift in Sources */,
 				63734DAF2A5675270006EDF6 /* DeleteTaskInject.swift in Sources */,
@@ -1363,6 +1406,7 @@
 				63F684842A580D7500B9A86A /* CalendarTableViewDataSource.swift in Sources */,
 				2B0981C72A39A12700B80C03 /* TaskEntity.swift in Sources */,
 				2B9794BB2A3ACE1D00F4B8E8 /* CreateTaskRepository.swift in Sources */,
+				630CAD952A5C537A00300DFE /* OnboardingScreenRouter.swift in Sources */,
 				2BFE12DC2A333616001155EA /* CreateCategoryRepositoryImpl.swift in Sources */,
 				2B6C14E02A4D9DC600161D85 /* MainTabbarViewController.swift in Sources */,
 				2B2EAE6C2A43EBBF00A88123 /* TaskScreenRouter.swift in Sources */,

@@ -14,6 +14,7 @@ enum AppContainer {
     static func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         CategoryInject.register(container: di)
         TaskInject.register(container: di)
+        IntroInject.register(container: di)
         return true
     }
 }
