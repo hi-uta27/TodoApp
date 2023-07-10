@@ -9,10 +9,10 @@ import UIKit
 
 class OnboardingViewController: BaseViewController {
     @IBOutlet private var collectionView: UICollectionView!
-    @IBOutlet private var confirmLabel: UILabel!
+    @IBOutlet private var nextLabel: UILabel!
 
     private lazy var onboardingTableViewDataSource = OnboardingCollectionDataSource()
-    private var tapInsideSkipButton: (() -> Void)!
+    private var openGetStarted: (() -> Void)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +22,16 @@ class OnboardingViewController: BaseViewController {
         super.configSubView()
         onboardingTableViewDataSource.configCollectionView(collectionView)
         onboardingTableViewDataSource.scrollToEnd = { [weak self] result in
-            self?.confirmLabel.text = result ? "GET STARTED" : "NEXT"
-            guard result == true else { return }
-            self?.tapInsideSkipButton?()
+            DispatchQueue.main.async {
+                self?.nextLabel.text = result ? "GET STARTED" : "NEXT"
+                guard result == true else { return }
+                self?.openGetStarted?()
+            }
         }
     }
 
     @IBAction private func touchUpInsideSkipButton(_ sender: Any) {
-        tapInsideSkipButton?()
+        openGetStarted?()
     }
 
     @IBAction private func touchUpInsideBackButton(_ sender: Any) {
@@ -42,9 +44,9 @@ class OnboardingViewController: BaseViewController {
 }
 
 extension OnboardingViewController {
-    static func initial(tapInsideSkipButton: @escaping () -> Void) -> Self {
+    static func initial(openGetStarted: @escaping () -> Void) -> Self {
         let viewController = initial()
-        viewController.tapInsideSkipButton = tapInsideSkipButton
+        viewController.openGetStarted = openGetStarted
         return viewController
     }
 }
