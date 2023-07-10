@@ -15,7 +15,12 @@ class OnboardingCollectionDataSource: NSObject {
         }
     }
 
-    private var selectedPage = 0
+    private var selectedPage = 0 {
+        didSet {
+            scrollToEnd?(selectedPage == models.count - 1)
+        }
+    }
+
     var scrollToEnd: ((Bool) -> Void)!
 
     func configCollectionView(_ collectionView: UICollectionView) {
@@ -40,7 +45,6 @@ class OnboardingCollectionDataSource: NSObject {
     private func scrollTo(index: Int) {
         selectedPage = max(0, min(index, models.count - 1))
         collectionView?.scrollToItem(at: IndexPath(row: selectedPage, section: 0), at: .centeredHorizontally, animated: true)
-        scrollToEnd?(selectedPage == models.count - 1)
     }
 }
 
