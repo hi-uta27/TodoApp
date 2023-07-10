@@ -14,7 +14,7 @@ class OnboardingScreenRouterImpl: OnboardingScreenRouter {
         self.navigationController = navigationController
     }
 
-    func openIntro() {
+    func openIntroForApp() {
         openIntroScreen()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
             self?.openOnboardingScreen()
