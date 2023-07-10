@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -82,10 +83,14 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="1" translatesAutoresizingMaskIntoConstraints="NO" id="0y2-sJ-cUg">
+                                <rect key="frame" x="156.33333333333334" y="349" width="80.666666666666657" height="26"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="121212"/>
                         <constraints>
+                            <constraint firstItem="0y2-sJ-cUg" firstAttribute="top" secondItem="4S0-w6-2CQ" secondAttribute="top" constant="250" id="3XQ-1L-vLx"/>
                             <constraint firstItem="eWc-6S-8nf" firstAttribute="bottom" secondItem="NnK-XJ-yus" secondAttribute="bottom" id="Blh-lS-JQm"/>
                             <constraint firstItem="7o8-ii-kqA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ITD-XE-LcK"/>
                             <constraint firstItem="4S0-w6-2CQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Lwv-Qp-gbn"/>
@@ -99,11 +104,13 @@
                             <constraint firstItem="cvV-8i-obT" firstAttribute="top" secondItem="4S0-w6-2CQ" secondAttribute="bottom" id="uvS-WV-4HX"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="4S0-w6-2CQ" secondAttribute="trailing" id="wN4-uK-ZjR"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="cvV-8i-obT" secondAttribute="bottom" constant="49" id="yXa-J0-Qa9"/>
+                            <constraint firstItem="0y2-sJ-cUg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zfO-LR-7Bf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="4S0-w6-2CQ" id="msd-0U-u3n"/>
                         <outlet property="nextLabel" destination="THA-qj-q0k" id="MCE-OH-NFX"/>
+                        <outlet property="pageControl" destination="0y2-sJ-cUg" id="hFn-b4-xfL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

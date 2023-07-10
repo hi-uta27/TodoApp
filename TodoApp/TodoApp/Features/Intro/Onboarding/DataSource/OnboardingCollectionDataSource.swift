@@ -9,13 +9,13 @@ import UIKit
 
 class OnboardingCollectionDataSource: NSObject {
     private weak var collectionView: UICollectionView?
-    private var models: [OnboardingModel] = OnboardingModel.onboardings {
+    private var models: [OnboardingModel] = [] {
         didSet {
             collectionView?.reloadData()
         }
     }
 
-    private var selectedPage = 0 {
+    private(set) var selectedPage = 0 {
         didSet {
             scrollToEnd?(selectedPage == models.count - 1)
         }

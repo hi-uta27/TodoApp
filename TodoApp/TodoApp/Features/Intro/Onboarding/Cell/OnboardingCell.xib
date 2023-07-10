@@ -27,17 +27,14 @@
                                     <constraint firstAttribute="height" constant="200" id="D8X-eP-Tug"/>
                                 </constraints>
                             </imageView>
-                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Lhb-Wa-PWK">
-                                <rect key="frame" x="129.66666666666666" y="242" width="115.66666666666666" height="26"/>
-                            </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can easily manage all of your daily tasks in DoMe for free" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIL-ph-Exz">
-                                <rect key="frame" x="48" y="398.33333333333331" width="279" height="38.333333333333314"/>
+                                <rect key="frame" x="28" y="397.33333333333331" width="319" height="38.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="0.67000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage your tasks" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAU-q0-dpX">
-                                <rect key="frame" x="40" y="318" width="295" height="38.333333333333314"/>
+                                <rect key="frame" x="28" y="317" width="319" height="38.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <color key="textColor" name="White87"/>
                                 <nil key="highlightedColor"/>
@@ -46,17 +43,15 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sIL-ph-Exz" firstAttribute="top" secondItem="qAU-q0-dpX" secondAttribute="bottom" constant="42" id="ExT-BH-1lr"/>
-                            <constraint firstItem="Lhb-Wa-PWK" firstAttribute="top" secondItem="8ge-kA-boc" secondAttribute="bottom" constant="42" id="Ria-th-Ouz"/>
                             <constraint firstItem="8ge-kA-boc" firstAttribute="centerX" secondItem="fDn-rN-SSO" secondAttribute="centerX" id="UJw-QZ-rje"/>
-                            <constraint firstItem="Lhb-Wa-PWK" firstAttribute="centerX" secondItem="fDn-rN-SSO" secondAttribute="centerX" id="Zu4-oc-H1p"/>
                             <constraint firstItem="8ge-kA-boc" firstAttribute="top" secondItem="fDn-rN-SSO" secondAttribute="top" id="aEy-rx-kXz"/>
-                            <constraint firstAttribute="trailing" secondItem="qAU-q0-dpX" secondAttribute="trailing" constant="40" id="aVV-ya-AHJ"/>
+                            <constraint firstAttribute="trailing" secondItem="qAU-q0-dpX" secondAttribute="trailing" constant="28" id="aVV-ya-AHJ"/>
                             <constraint firstItem="qAU-q0-dpX" firstAttribute="centerX" secondItem="fDn-rN-SSO" secondAttribute="centerX" id="bfN-Q9-Xcx"/>
-                            <constraint firstItem="qAU-q0-dpX" firstAttribute="top" secondItem="Lhb-Wa-PWK" secondAttribute="bottom" constant="50" id="kmj-Qy-qXm"/>
                             <constraint firstItem="8ge-kA-boc" firstAttribute="width" secondItem="8ge-kA-boc" secondAttribute="height" multiplier="271:296" id="lvH-hu-WiG"/>
-                            <constraint firstItem="sIL-ph-Exz" firstAttribute="leading" secondItem="qAU-q0-dpX" secondAttribute="leading" constant="8" id="qOG-TT-wyq"/>
-                            <constraint firstItem="sIL-ph-Exz" firstAttribute="trailing" secondItem="qAU-q0-dpX" secondAttribute="trailing" constant="-8" id="x6g-QT-7tE"/>
-                            <constraint firstItem="qAU-q0-dpX" firstAttribute="leading" secondItem="fDn-rN-SSO" secondAttribute="leading" constant="40" id="yCR-q2-KhA"/>
+                            <constraint firstItem="sIL-ph-Exz" firstAttribute="leading" secondItem="qAU-q0-dpX" secondAttribute="leading" id="qOG-TT-wyq"/>
+                            <constraint firstItem="sIL-ph-Exz" firstAttribute="trailing" secondItem="qAU-q0-dpX" secondAttribute="trailing" id="x6g-QT-7tE"/>
+                            <constraint firstItem="qAU-q0-dpX" firstAttribute="leading" secondItem="fDn-rN-SSO" secondAttribute="leading" constant="28" id="yCR-q2-KhA"/>
+                            <constraint firstItem="qAU-q0-dpX" firstAttribute="top" secondItem="8ge-kA-boc" secondAttribute="bottom" constant="117" id="ySS-HQ-t7c"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -71,7 +66,6 @@
             <connections>
                 <outlet property="descriptionLabel" destination="sIL-ph-Exz" id="VRN-O1-1nc"/>
                 <outlet property="image" destination="8ge-kA-boc" id="ETl-RI-EmU"/>
-                <outlet property="pageControl" destination="Lhb-Wa-PWK" id="HFx-fx-Ac9"/>
                 <outlet property="titleLabel" destination="qAU-q0-dpX" id="rvr-wP-J5c"/>
             </connections>
             <point key="canvasLocation" x="131" y="-11"/>

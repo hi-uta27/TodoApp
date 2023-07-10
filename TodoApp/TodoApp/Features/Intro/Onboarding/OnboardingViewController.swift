@@ -10,6 +10,7 @@ import UIKit
 class OnboardingViewController: BaseViewController {
     @IBOutlet private var collectionView: UICollectionView!
     @IBOutlet private var nextLabel: UILabel!
+    @IBOutlet private var pageControl: UIPageControl!
 
     private lazy var onboardingTableViewDataSource = OnboardingCollectionDataSource()
     private var openGetStarted: (() -> Void)!
@@ -22,12 +23,18 @@ class OnboardingViewController: BaseViewController {
         super.configSubView()
         onboardingTableViewDataSource.configCollectionView(collectionView)
         onboardingTableViewDataSource.scrollToEnd = { [weak self] result in
-            DispatchQueue.main.async {
-                self?.nextLabel.text = result ? "GET STARTED" : "NEXT"
-                guard result == true else { return }
-                self?.openGetStarted?()
-            }
+            self?.scrollToEnd(isScrollToEnd: result)
         }
+        let models = OnboardingModel.onboardings
+        pageControl.numberOfPages = models.count
+        onboardingTableViewDataSource.setData(models)
+    }
+
+    private func scrollToEnd(isScrollToEnd: Bool) {
+        nextLabel.text = isScrollToEnd ? "GET STARTED" : "NEXT"
+        pageControl.currentPage = onboardingTableViewDataSource.selectedPage
+        guard isScrollToEnd == true else { return }
+        openGetStarted?()
     }
 
     @IBAction private func touchUpInsideSkipButton(_ sender: Any) {

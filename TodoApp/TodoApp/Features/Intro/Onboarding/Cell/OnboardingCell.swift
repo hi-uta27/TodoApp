@@ -13,7 +13,6 @@ class OnboardingCell: UICollectionViewCell {
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var descriptionLabel: UILabel!
     @IBOutlet private var image: UIImageView!
-    @IBOutlet private var pageControl: UIPageControl!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +24,5 @@ extension OnboardingCell {
         titleLabel.text = model.title
         descriptionLabel.text = model.description
         image.image = UIImage(named: "\(model.image)")
-        pageControl.currentPage = indexPath.row
     }
 }
