@@ -9,6 +9,14 @@ import UIKit
 
 class OnboardingScreenRouterImpl: OnboardingScreenRouter {
     private var navigationController: UINavigationController
+    private var isFirstInstall: Bool {
+        get {
+            return UserDefaults.standard.string(forKey: "OnboardingScreenRouter_IsFirstInstall") == nil ? true : false
+        }
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "OnboardingScreenRouter_IsFirstInstall")
+        }
+    }
 
     init(navigationController: UINavigationController = .init()) {
         self.navigationController = navigationController
@@ -16,8 +24,12 @@ class OnboardingScreenRouterImpl: OnboardingScreenRouter {
 
     func openIntroForApp() {
         openIntroScreen()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
-            self?.openOnboardingScreen()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            if let isFirstInstall = self?.isFirstInstall, isFirstInstall {
+                self?.openOnboardingScreen()
+            } else {
+                self?.openStartScreen()
+            }
         }
     }
 
@@ -30,7 +42,7 @@ class OnboardingScreenRouterImpl: OnboardingScreenRouter {
         let viewController = OnboardingViewController.initial { [weak self] in
             self?.openStartScreen()
         }
-        navigationController.setViewControllers([viewController], animated: true)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
 
