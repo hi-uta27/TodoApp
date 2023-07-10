@@ -8,5 +8,5 @@
 import UIKit
 
 protocol OnboardingScreenRouter {
-    func openOnboarding()
+    func openIntro()
 }

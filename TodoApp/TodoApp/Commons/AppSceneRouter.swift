@@ -13,6 +13,6 @@ class AppSceneRouter {
     private lazy var onboardingRouter = di.resolve(OnboardingScreenRouter.self, argument: rootNavigationController)!
 
     func prepareScene() {
-        onboardingRouter.openOnboarding()
+        onboardingRouter.openIntro()
     }
 }
