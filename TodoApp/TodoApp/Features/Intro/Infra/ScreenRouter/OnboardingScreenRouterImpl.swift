@@ -40,6 +40,7 @@ class OnboardingScreenRouterImpl: OnboardingScreenRouter {
 
     private func openOnboardingScreen() {
         let viewController = OnboardingViewController.initial { [weak self] in
+            self?.isFirstInstall = true
             self?.openStartScreen()
         }
         navigationController.pushViewController(viewController, animated: true)

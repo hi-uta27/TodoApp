@@ -45,8 +45,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="BACK"/>
                                         <connections>
-                                            <action selector="touchUpInsideBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ml4-fK-upv"/>
-                                            <action selector="touchUpInsideCloseButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qZZ-41-deF"/>
+                                            <action selector="touchUpInsideBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ma6-Ee-oM3"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NnK-XJ-yus" userLabel="Next Stack View">

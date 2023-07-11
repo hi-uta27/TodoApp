@@ -22,19 +22,17 @@ class OnboardingViewController: BaseViewController {
     override func configSubView() {
         super.configSubView()
         onboardingTableViewDataSource.configCollectionView(collectionView)
-        onboardingTableViewDataSource.scrollToEnd = { [weak self] result in
-            self?.scrollToEnd(isScrollToEnd: result)
+        onboardingTableViewDataSource.scrollToEndOfItem = { [weak self] result in
+            self?.scrollToEndOfItem(isScrollToEnd: result)
         }
         let models = OnboardingModel.onboardings
         pageControl.numberOfPages = models.count
         onboardingTableViewDataSource.setData(models)
     }
 
-    private func scrollToEnd(isScrollToEnd: Bool) {
+    private func scrollToEndOfItem(isScrollToEnd: Bool) {
         nextLabel.text = isScrollToEnd ? "GET STARTED" : "NEXT"
         pageControl.currentPage = onboardingTableViewDataSource.selectedPage
-        guard isScrollToEnd == true else { return }
-        openGetStarted?()
     }
 
     @IBAction private func touchUpInsideSkipButton(_ sender: Any) {
@@ -46,7 +44,11 @@ class OnboardingViewController: BaseViewController {
     }
 
     @IBAction private func touchUpInsideNextButton(_ sender: Any) {
-        onboardingTableViewDataSource.moveToNextItem()
+        if onboardingTableViewDataSource.selectedPage == pageControl.numberOfPages - 1 {
+            openGetStarted?()
+        } else {
+            onboardingTableViewDataSource.moveToNextItem()
+        }
     }
 }
 

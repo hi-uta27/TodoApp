@@ -17,11 +17,11 @@ class OnboardingCollectionDataSource: NSObject {
 
     private(set) var selectedPage = 0 {
         didSet {
-            scrollToEnd?(selectedPage == models.count - 1)
+            scrollToEndOfItem?(selectedPage == models.count - 1)
         }
     }
 
-    var scrollToEnd: ((Bool) -> Void)!
+    var scrollToEndOfItem: ((Bool) -> Void)!
 
     func configCollectionView(_ collectionView: UICollectionView) {
         collectionView.register(.init(nibName: OnboardingCell.identifier, bundle: nil), forCellWithReuseIdentifier: OnboardingCell.identifier)
