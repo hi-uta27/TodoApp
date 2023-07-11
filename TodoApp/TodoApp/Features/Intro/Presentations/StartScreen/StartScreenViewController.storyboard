@@ -17,18 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20k-Yf-XFA">
-                                <rect key="frame" x="12" y="60" width="48" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="DNx-EU-WRV"/>
-                                    <constraint firstAttribute="width" secondItem="20k-Yf-XFA" secondAttribute="height" id="PSf-HC-9ID"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="ArrowLeft"/>
-                                <connections>
-                                    <action selector="touchUpInsideCloseButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cwk-Bi-bs6"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to UpTodo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKW-CH-rPD">
                                 <rect key="frame" x="40" y="166" width="313" height="38.333333333333343"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
@@ -46,7 +34,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHc-Ak-5Z0">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="48"/>
-                                        <color key="backgroundColor" name="8687E7"/>
+                                        <color key="backgroundColor" name="8875FF"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="l3H-88-zNh"/>
                                         </constraints>
@@ -75,8 +63,6 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="121212"/>
                         <constraints>
-                            <constraint firstItem="IKW-CH-rPD" firstAttribute="top" secondItem="20k-Yf-XFA" secondAttribute="bottom" constant="58" id="1T4-Rg-pNq"/>
-                            <constraint firstItem="20k-Yf-XFA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="1" id="2fA-xQ-OYc"/>
                             <constraint firstItem="IKW-CH-rPD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="43h-bS-VE1"/>
                             <constraint firstItem="SIn-Ob-YCK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Ngc-1Y-Lu0"/>
                             <constraint firstItem="ksi-yz-41f" firstAttribute="leading" secondItem="IKW-CH-rPD" secondAttribute="leading" constant="8" id="NlC-xg-4Hv"/>
@@ -85,7 +71,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="SIn-Ob-YCK" secondAttribute="bottom" constant="54" id="jmS-cd-PYr"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SIn-Ob-YCK" secondAttribute="trailing" constant="24" id="r6z-Yv-ZPe"/>
                             <constraint firstItem="ksi-yz-41f" firstAttribute="trailing" secondItem="IKW-CH-rPD" secondAttribute="trailing" constant="-8" id="sE2-fu-RRM"/>
-                            <constraint firstItem="20k-Yf-XFA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="yR5-19-4xW"/>
+                            <constraint firstItem="IKW-CH-rPD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="107" id="ssT-QU-yJO"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -119,12 +105,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ArrowLeft" width="24" height="24"/>
         <namedColor name="121212">
             <color red="0.070588235294117646" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="8687E7">
             <color red="0.52549019607843139" green="0.52941176470588236" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="8875FF">
+            <color red="0.53333333333333333" green="0.45882352941176469" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="White87">
             <color red="1" green="1" blue="1" alpha="0.87000000476837158" colorSpace="custom" customColorSpace="sRGB"/>

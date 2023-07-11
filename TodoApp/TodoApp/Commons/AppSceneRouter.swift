@@ -10,9 +10,9 @@ import UIKit
 class AppSceneRouter {
     static let shared = AppSceneRouter()
     private(set) var rootNavigationController: UINavigationController = .init()
+    private lazy var onboardingRouter = di.resolve(OnboardingScreenRouter.self, argument: rootNavigationController)!
 
     func prepareScene() {
-        let viewController = MainTabbarViewController.initial()
-        rootNavigationController.viewControllers = [viewController]
+        onboardingRouter.openIntroForApp()
     }
 }
