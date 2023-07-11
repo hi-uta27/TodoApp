@@ -7,7 +7,7 @@ protocol FirebaseAuthentication: BaseViewController {
     var googleSignIn: GIDSignIn { get set }
 }
 
-// MARK: Firebase Email
+// MARK: Email
 
 extension FirebaseAuthentication {
     func loginWith(email: String, password: String, loginSuccesed: @escaping () -> Void) {
@@ -25,7 +25,7 @@ extension FirebaseAuthentication {
     }
 }
 
-// MARK: Firebase Google
+// MARK: Google
 
 extension FirebaseAuthentication {
     func loginWithGoogle(loginSuccesed: @escaping () -> Void) {
@@ -50,4 +50,10 @@ extension FirebaseAuthentication {
             }
         }
     }
+}
+
+// MARK: Apple
+
+extension FirebaseAuthentication {
+    //
 }
