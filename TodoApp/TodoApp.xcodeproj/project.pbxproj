@@ -1181,6 +1181,7 @@
 		63293E632A5CFED1000F3155 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				634A73092A5DAA83004AA3B4 /* Validators */,
 				63293E642A5CFF16000F3155 /* Login */,
 			);
 			path = Authentication;
@@ -1191,7 +1192,6 @@
 			children = (
 				63293E652A5CFF26000F3155 /* LoginViewController.swift */,
 				63293E672A5CFF52000F3155 /* LoginViewController.storyboard */,
-				638C97952A5D3F960092CD98 /* UserValidator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1210,6 +1210,14 @@
 				634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */,
 			);
 			path = Authentications;
+			sourceTree = "<group>";
+		};
+		634A73092A5DAA83004AA3B4 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				638C97952A5D3F960092CD98 /* UserValidator.swift */,
+			);
+			path = Validators;
 			sourceTree = "<group>";
 		};
 		635BE0C02A5AA0930045666D /* Intro */ = {
