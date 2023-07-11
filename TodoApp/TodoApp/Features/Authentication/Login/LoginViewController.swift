@@ -6,13 +6,15 @@
 //
 
 import FirebaseAuth
+import GoogleSignIn
 import UIKit
 
 class LoginViewController: BaseViewController {
     @IBOutlet private var userNameTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
 
-    private lazy var firebaseAuth = Auth.auth()
+    lazy var firebaseAuth = Auth.auth()
+    lazy var googleSignIn = GIDSignIn.sharedInstance
     private var openRegisterScreen: (() -> Void)!
     private var openHomeScreen: (() -> Void)!
 
@@ -27,28 +29,18 @@ class LoginViewController: BaseViewController {
     @IBAction private func touchUpInsideLoginButton(_ sender: Any) {
         do {
             let (email, password) = try UserValidator.validateData(email: userNameTextField.text, password: passwordTextField.text)
-            login(with: email, password: password)
+            loginWith(email: email, password: password, loginSuccesed: { [weak self] in
+                self?.openHomeScreen?()
+            })
         } catch {
             showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
         }
     }
 
-    private func login(with email: String, password: String) {
-        displayIndicator(isShow: true)
-        firebaseAuth.signIn(withEmail: email, password: password) { [weak self] _, error in
-            DispatchQueue.main.async {
-                self?.displayIndicator(isShow: false)
-                if let error = error {
-                    self?.showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
-                } else {
-                    self?.openHomeScreen?()
-                }
-            }
-        }
-    }
-
     @IBAction private func touchUpInsideLoginWithGoogleButton(_ sender: Any) {
-        print(Self.self, #function)
+        loginWithGoogle(loginSuccesed: { [weak self] in
+            self?.openHomeScreen?()
+        })
     }
 
     @IBAction private func touchUpInsideLoginWithAppleButton(_ sender: Any) {
@@ -69,3 +61,7 @@ extension LoginViewController {
         return viewController
     }
 }
+
+// MARK: Firebase Email
+
+extension LoginViewController: FirebaseAuthentication {}
