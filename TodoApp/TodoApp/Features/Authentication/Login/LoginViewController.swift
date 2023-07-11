@@ -12,6 +12,7 @@ class LoginViewController: BaseViewController {
     @IBOutlet private var passwordTextField: UITextField!
 
     private var openRegisterScreen: (() -> Void)!
+    private var openHomeScreen: (() -> Void)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class LoginViewController: BaseViewController {
 
     private func login(with email: String, password: String) {
         print(Self.self, #function, email, password)
+        // TODO: - call openHomeScreen when login success
     }
 
     @IBAction private func touchUpInsideLoginWithGoogleButton(_ sender: Any) {
