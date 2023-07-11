@@ -28,7 +28,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can easily manage all of your daily tasks in DoMe for free" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIL-ph-Exz">
-                                <rect key="frame" x="28" y="397.33333333333331" width="319" height="38.333333333333314"/>
+                                <rect key="frame" x="32" y="397.33333333333331" width="311" height="38.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="0.67000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -48,8 +48,8 @@
                             <constraint firstAttribute="trailing" secondItem="qAU-q0-dpX" secondAttribute="trailing" constant="28" id="aVV-ya-AHJ"/>
                             <constraint firstItem="qAU-q0-dpX" firstAttribute="centerX" secondItem="fDn-rN-SSO" secondAttribute="centerX" id="bfN-Q9-Xcx"/>
                             <constraint firstItem="8ge-kA-boc" firstAttribute="width" secondItem="8ge-kA-boc" secondAttribute="height" multiplier="271:296" id="lvH-hu-WiG"/>
-                            <constraint firstItem="sIL-ph-Exz" firstAttribute="leading" secondItem="qAU-q0-dpX" secondAttribute="leading" id="qOG-TT-wyq"/>
-                            <constraint firstItem="sIL-ph-Exz" firstAttribute="trailing" secondItem="qAU-q0-dpX" secondAttribute="trailing" id="x6g-QT-7tE"/>
+                            <constraint firstItem="sIL-ph-Exz" firstAttribute="leading" secondItem="qAU-q0-dpX" secondAttribute="leading" constant="4" id="qOG-TT-wyq"/>
+                            <constraint firstItem="sIL-ph-Exz" firstAttribute="trailing" secondItem="qAU-q0-dpX" secondAttribute="trailing" constant="-4" id="x6g-QT-7tE"/>
                             <constraint firstItem="qAU-q0-dpX" firstAttribute="leading" secondItem="fDn-rN-SSO" secondAttribute="leading" constant="28" id="yCR-q2-KhA"/>
                             <constraint firstItem="qAU-q0-dpX" firstAttribute="top" secondItem="8ge-kA-boc" secondAttribute="bottom" constant="117" id="ySS-HQ-t7c"/>
                         </constraints>
