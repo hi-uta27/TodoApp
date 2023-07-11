@@ -5,17 +5,23 @@
 //  Created by TaHieu on 7/11/23.
 //
 
+import FirebaseAuth
 import UIKit
 
 class LoginViewController: BaseViewController {
     @IBOutlet private var userNameTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
 
+    private lazy var firebaseAuth = Auth.auth()
     private var openRegisterScreen: (() -> Void)!
     private var openHomeScreen: (() -> Void)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        #if DEBUG
+        userNameTextField.text = "tavanhieun@gmail.com"
+        passwordTextField.text = "123456"
+        #endif
     }
 
     @IBAction private func touchUpInsideLoginButton(_ sender: Any) {
@@ -28,8 +34,17 @@ class LoginViewController: BaseViewController {
     }
 
     private func login(with email: String, password: String) {
-        print(Self.self, #function, email, password)
-        // TODO: - call openHomeScreen when login success
+        displayIndicator(isShow: true)
+        firebaseAuth.signIn(withEmail: email, password: password) { [weak self] _, error in
+            DispatchQueue.main.async {
+                self?.displayIndicator(isShow: false)
+                if let error = error {
+                    self?.showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
+                } else {
+                    self?.openHomeScreen?()
+                }
+            }
+        }
     }
 
     @IBAction private func touchUpInsideLoginWithGoogleButton(_ sender: Any) {
@@ -47,9 +62,10 @@ class LoginViewController: BaseViewController {
 }
 
 extension LoginViewController {
-    static func initial(openRegisterScreen: @escaping () -> Void) -> Self {
+    static func initial(openRegisterScreen: @escaping () -> Void, openHomeScreen: @escaping () -> Void) -> Self {
         let viewController = initial()
         viewController.openRegisterScreen = openRegisterScreen
+        viewController.openHomeScreen = openHomeScreen
         return viewController
     }
 }
