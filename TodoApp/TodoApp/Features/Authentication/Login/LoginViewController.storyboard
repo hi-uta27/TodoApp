@@ -31,6 +31,9 @@
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="ArrowLeft"/>
+                                                <connections>
+                                                    <action selector="touchUpInsideCloseButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mkQ-9F-ZVA"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="977-5M-F3b">
                                                 <rect key="frame" x="24.000000000000007" y="91" width="82.666666666666686" height="38.333333333333343"/>
@@ -122,6 +125,9 @@
                                                 <state key="normal" title="Login">
                                                     <color key="titleColor" name="White87"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="touchUpInsideLoginButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Dx5-nQ-X9j"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0sg-rH-WSX" userLabel="Or Stack View">
                                                 <rect key="frame" x="24" y="505.99999999999994" width="345" height="19.333333333333314"/>
@@ -169,6 +175,9 @@
                                                         <state key="normal" title="Login with Google" image="Google">
                                                             <color key="titleColor" name="White87"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="touchUpInsideLoginWithGoogleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XAi-zl-QVg"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9us-iM-1y2">
                                                         <rect key="frame" x="0.0" y="68" width="345" height="48"/>
@@ -182,6 +191,9 @@
                                                         <state key="normal" title="Login with Apple" image="Apple">
                                                             <color key="titleColor" name="White87"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="touchUpInsideLoginWithAppleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="n9i-0V-5v6"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -201,6 +213,9 @@
                                                         <state key="normal" title="Register">
                                                             <color key="titleColor" name="White87"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="touchUpInsideRegisterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Z69-cP-4QL"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -251,6 +266,10 @@
                             <constraint firstItem="wgz-OR-qwc" firstAttribute="height" secondItem="vDu-zF-Fre" secondAttribute="height" priority="250" id="ppO-3a-BKy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="m5K-Ha-jZ2" id="Ayr-bA-0sA"/>
+                        <outlet property="userNameTextField" destination="IKH-24-BxF" id="XXo-qf-OjW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="LbW-FX-ttN" userLabel="Round Corner 4" customClass="RoundCornerViewBehavior" customModule="TodoApp" customModuleProvider="target">

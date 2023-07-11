@@ -161,6 +161,7 @@
 		63734DAD2A5674B30006EDF6 /* DeleteTaskUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DAC2A5674B30006EDF6 /* DeleteTaskUseCaseImpl.swift */; };
 		63734DAF2A5675270006EDF6 /* DeleteTaskInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DAE2A5675270006EDF6 /* DeleteTaskInject.swift */; };
 		63734DB12A5677830006EDF6 /* DeleteTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DB02A5677830006EDF6 /* DeleteTaskViewController.swift */; };
+		638C97962A5D3F960092CD98 /* UserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C97952A5D3F960092CD98 /* UserValidator.swift */; };
 		63C933A82A56C155006DFFE2 /* TaskTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C933A72A56C155006DFFE2 /* TaskTitleViewController.swift */; };
 		63C933AA2A56C176006DFFE2 /* TaskTitleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C933A92A56C176006DFFE2 /* TaskTitleViewController.storyboard */; };
 		63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D64C282A55621900913D63 /* DetailTaskViewController.swift */; };
@@ -326,6 +327,7 @@
 		63734DAC2A5674B30006EDF6 /* DeleteTaskUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCaseImpl.swift; sourceTree = "<group>"; };
 		63734DAE2A5675270006EDF6 /* DeleteTaskInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskInject.swift; sourceTree = "<group>"; };
 		63734DB02A5677830006EDF6 /* DeleteTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskViewController.swift; sourceTree = "<group>"; };
+		638C97952A5D3F960092CD98 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidator.swift; sourceTree = "<group>"; };
 		63C933A72A56C155006DFFE2 /* TaskTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTitleViewController.swift; sourceTree = "<group>"; };
 		63C933A92A56C176006DFFE2 /* TaskTitleViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskTitleViewController.storyboard; sourceTree = "<group>"; };
 		63D64C282A55621900913D63 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
@@ -1173,6 +1175,7 @@
 			children = (
 				63293E652A5CFF26000F3155 /* LoginViewController.swift */,
 				63293E672A5CFF52000F3155 /* LoginViewController.storyboard */,
+				638C97952A5D3F960092CD98 /* UserValidator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1401,6 +1404,7 @@
 				2BFE12D12A33282A001155EA /* CreateCategoryUseCase.swift in Sources */,
 				2B7206812A36C8EC009A1158 /* UITextField+Style.swift in Sources */,
 				2B9328E52A3C42FF00DD6730 /* TaskValidator.swift in Sources */,
+				638C97962A5D3F960092CD98 /* UserValidator.swift in Sources */,
 				630CAD9C2A5C561200300DFE /* IntroInject.swift in Sources */,
 				63734DA92A5673210006EDF6 /* TasksLocalDataSource+DeleteTask.swift in Sources */,
 				2B9E2D7A2A4E76CD00FA3531 /* FocusMoodViewController.swift in Sources */,
