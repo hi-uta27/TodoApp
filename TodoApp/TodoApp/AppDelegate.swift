@@ -5,6 +5,7 @@
 //  Created by Heligate on 06/06/2023.
 //
 
+import FirebaseCore
 import IQKeyboardManagerSwift
 import SwiftDate
 import UIKit
@@ -14,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         IQKeyboardManager.shared.enable = true
         SwiftDate.defaultRegion = Region.local
+        FirebaseApp.configure()
         return AppContainer.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
