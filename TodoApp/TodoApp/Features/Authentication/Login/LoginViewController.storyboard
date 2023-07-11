@@ -87,7 +87,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="g4O-Ek-2zS" userLabel="PasswordTF Stack View">
                                                                 <rect key="frame" x="0.0" y="27.333333333333314" width="345" height="48"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="************" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="m5K-Ha-jZ2">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="m5K-Ha-jZ2">
                                                                         <rect key="frame" x="12" y="0.0" width="321" height="48"/>
                                                                         <color key="tintColor" name="8687E7"/>
                                                                         <color key="textColor" name="White87"/>
@@ -260,11 +260,11 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outletCollection property="views" destination="PN3-qR-kbh" collectionClass="NSMutableArray" id="Kzg-uR-EJI"/>
-                        <outletCollection property="views" destination="Gnw-Rq-yEp" collectionClass="NSMutableArray" id="d4F-0T-MHD"/>
                         <outletCollection property="views" destination="Vfp-gi-uNg" collectionClass="NSMutableArray" id="Dft-LF-XOC"/>
                         <outletCollection property="views" destination="Z7h-SR-7Di" collectionClass="NSMutableArray" id="OpS-1n-nMq"/>
                         <outletCollection property="views" destination="9us-iM-1y2" collectionClass="NSMutableArray" id="5Rc-Z4-6X5"/>
+                        <outletCollection property="views" destination="g4O-Ek-2zS" collectionClass="NSMutableArray" id="Dt3-kd-Ult"/>
+                        <outletCollection property="views" destination="gQO-mp-x4W" collectionClass="NSMutableArray" id="fnG-ZE-Wkk"/>
                     </connections>
                 </customObject>
                 <customObject id="1UD-tk-YTY" userLabel="TextField ClearButton" customClass="TextFieldClearButtonBehavior" customModule="TodoApp" customModuleProvider="target">
@@ -284,12 +284,12 @@
                             <color key="value" name="979797"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="width">
-                            <real key="value" value="0.80000000000000004"/>
+                            <real key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outletCollection property="views" destination="g4O-Ek-2zS" collectionClass="NSMutableArray" id="Hms-Ol-Qqq"/>
-                        <outletCollection property="views" destination="gQO-mp-x4W" collectionClass="NSMutableArray" id="dv2-CX-2PP"/>
+                        <outletCollection property="views" destination="g4O-Ek-2zS" collectionClass="NSMutableArray" id="sbp-F8-Yxh"/>
+                        <outletCollection property="views" destination="gQO-mp-x4W" collectionClass="NSMutableArray" id="cat-V8-Mga"/>
                     </connections>
                 </customObject>
                 <customObject id="8hu-K3-EB7" userLabel="Border View Orther Login" customClass="BorderViewBehavior" customModule="TodoApp" customModuleProvider="target">
