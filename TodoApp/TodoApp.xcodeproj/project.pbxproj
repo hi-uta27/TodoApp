@@ -144,6 +144,8 @@
 		630CAD952A5C537A00300DFE /* OnboardingScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD942A5C537A00300DFE /* OnboardingScreenRouter.swift */; };
 		630CAD9A2A5C549100300DFE /* OnboardingScreenRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD992A5C549100300DFE /* OnboardingScreenRouterImpl.swift */; };
 		630CAD9C2A5C561200300DFE /* IntroInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD9B2A5C561200300DFE /* IntroInject.swift */; };
+		63293E662A5CFF26000F3155 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63293E652A5CFF26000F3155 /* LoginViewController.swift */; };
+		63293E682A5CFF52000F3155 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63293E672A5CFF52000F3155 /* LoginViewController.storyboard */; };
 		635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C22A5AA0C10045666D /* IntroViewController.swift */; };
 		635BE0C52A5AA0D20045666D /* IntroViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */; };
 		635BE0C82A5AA5580045666D /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C72A5AA5580045666D /* StartScreenViewController.swift */; };
@@ -307,6 +309,8 @@
 		630CAD942A5C537A00300DFE /* OnboardingScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenRouter.swift; sourceTree = "<group>"; };
 		630CAD992A5C549100300DFE /* OnboardingScreenRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenRouterImpl.swift; sourceTree = "<group>"; };
 		630CAD9B2A5C561200300DFE /* IntroInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroInject.swift; sourceTree = "<group>"; };
+		63293E652A5CFF26000F3155 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		63293E672A5CFF52000F3155 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		635BE0C22A5AA0C10045666D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
 		635BE0C72A5AA5580045666D /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
@@ -1026,6 +1030,7 @@
 		2BD1659B2A301AC300AFEA24 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				63293E632A5CFED1000F3155 /* Authentication */,
 				635BE0C02A5AA0930045666D /* Intro */,
 				2B9E2D852A4E78DD00FA3531 /* MainTabbar */,
 				2B9E2D752A4E768F00FA3531 /* Focuse */,
@@ -1153,6 +1158,23 @@
 				630CAD9B2A5C561200300DFE /* IntroInject.swift */,
 			);
 			path = Inject;
+			sourceTree = "<group>";
+		};
+		63293E632A5CFED1000F3155 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				63293E642A5CFF16000F3155 /* Login */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		63293E642A5CFF16000F3155 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				63293E652A5CFF26000F3155 /* LoginViewController.swift */,
+				63293E672A5CFF52000F3155 /* LoginViewController.storyboard */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		635BE0C02A5AA0930045666D /* Intro */ = {
@@ -1346,6 +1368,7 @@
 				2B9328E92A3C5F3A00DD6730 /* TaskAlarmViewController.storyboard in Resources */,
 				2B6C14DC2A4D96DD00161D85 /* MainTabbarViewController.storyboard in Resources */,
 				2B9328D02A3C096900DD6730 /* TaskPriorityCell.xib in Resources */,
+				63293E682A5CFF52000F3155 /* LoginViewController.storyboard in Resources */,
 				2B9328CC2A3C094E00DD6730 /* TaskPriorityViewController.storyboard in Resources */,
 				2BC969B42A429CCB00D11EB1 /* TimePickerCell.xib in Resources */,
 				2B9328DF2A3C1DB600DD6730 /* AddTaskViewController.storyboard in Resources */,
@@ -1415,6 +1438,7 @@
 				2B0981C42A39A11D00B80C03 /* CreateTaskUseCase.swift in Sources */,
 				2B9E2D7E2A4E772800FA3531 /* UserProfileViewController.swift in Sources */,
 				63F684812A58094700B9A86A /* FSCalendarWeekDataSource.swift in Sources */,
+				63293E662A5CFF26000F3155 /* LoginViewController.swift in Sources */,
 				2BBFCCCA2A4952BD0095EA4D /* ReadTaskRepository.swift in Sources */,
 				2B3192CD2A4D1726005C6F69 /* RoundCornerMarkViewBehavior.swift in Sources */,
 				2B57DE8B2A2F215D002160E7 /* BaseViewController.swift in Sources */,
