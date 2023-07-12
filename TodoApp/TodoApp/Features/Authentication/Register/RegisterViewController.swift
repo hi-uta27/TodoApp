@@ -13,6 +13,8 @@ class RegisterViewController: BaseViewController {
     @IBOutlet private var userNameTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
     @IBOutlet private var confirmPasswordTextField: UITextField!
+    @IBOutlet private var showHidePasswordButton: UIButton!
+    @IBOutlet private var showHideConfirmPasswordButton: UIButton!
 
     lazy var firebaseAuth = Auth.auth()
     lazy var googleSignIn = GIDSignIn.sharedInstance
@@ -48,6 +50,16 @@ class RegisterViewController: BaseViewController {
         loginWithBiometric { [weak self] in
             self?.openHomeScreen?()
         }
+    }
+
+    @IBAction private func touchUpInsideShowHidePassswordButton(_ sender: Any) {
+        showHidePasswordButton.isSelected.toggle()
+        passwordTextField.isSecureTextEntry.toggle()
+    }
+
+    @IBAction private func touchUpInsideShowHideConfirmPasswordButton(_ sender: Any) {
+        showHideConfirmPasswordButton.isSelected.toggle()
+        confirmPasswordTextField.isSecureTextEntry.toggle()
     }
 }
 
