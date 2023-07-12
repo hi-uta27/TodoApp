@@ -90,12 +90,12 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="R2q-oL-udv" userLabel="PasswordTF Stack View">
                                                                 <rect key="frame" x="0.0" y="27.333333333333314" width="345" height="48"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="stX-GZ-B1a">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZYu-iU-dWF">
                                                                         <rect key="frame" x="12" y="0.0" width="321" height="48"/>
-                                                                        <color key="tintColor" name="8687E7"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="textColor" name="White87"/>
-                                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                                 <color key="value" name="535353"/>
@@ -124,15 +124,15 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mdC-bm-6zL" userLabel="PasswordTF Stack View">
                                                                 <rect key="frame" x="0.0" y="27.333333333333314" width="345" height="48"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JQg-vz-92b">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JQg-vz-92b">
                                                                         <rect key="frame" x="12" y="0.0" width="321" height="48"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <color key="textColor" name="White87"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                                <color key="value" name="979797"/>
+                                                                                <color key="value" name="535353"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </textField>
@@ -304,7 +304,7 @@
                     </view>
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="JQg-vz-92b" id="EDs-wL-OUj"/>
-                        <outlet property="passwordTextField" destination="stX-GZ-B1a" id="QQo-BS-SRd"/>
+                        <outlet property="passwordTextField" destination="ZYu-iU-dWF" id="YQZ-Bj-wLc"/>
                         <outlet property="userNameTextField" destination="74d-nl-nZ7" id="oAY-bg-ku5"/>
                     </connections>
                 </viewController>
@@ -332,7 +332,6 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outletCollection property="textFields" destination="74d-nl-nZ7" collectionClass="NSMutableArray" id="JTi-YA-shw"/>
-                        <outletCollection property="textFields" destination="stX-GZ-B1a" collectionClass="NSMutableArray" id="6iQ-wO-0WD"/>
                         <outletCollection property="textFields" destination="JQg-vz-92b" collectionClass="NSMutableArray" id="caY-4d-1Mt"/>
                     </connections>
                 </customObject>
