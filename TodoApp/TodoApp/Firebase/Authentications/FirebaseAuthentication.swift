@@ -23,6 +23,20 @@ extension FirebaseAuthentication {
             }
         }
     }
+
+    func registerWith(email: String, password: String, registerSuccessed: @escaping () -> Void) {
+        displayIndicator(isShow: true)
+        firebaseAuth.createUser(withEmail: email, password: password) { [weak self] _, error in
+            DispatchQueue.main.async {
+                self?.displayIndicator(isShow: false)
+                if let error = error {
+                    self?.showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
+                } else {
+                    registerSuccessed()
+                }
+            }
+        }
+    }
 }
 
 // MARK: Google
