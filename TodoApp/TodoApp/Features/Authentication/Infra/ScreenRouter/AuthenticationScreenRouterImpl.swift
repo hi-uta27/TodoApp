@@ -14,29 +14,26 @@ class AuthenticationScreenRouterImpl: AuthenticationScreenRouter {
         self.navigationController = navigationController
     }
 
-    func openLogin(openHomeScreen: @escaping () -> Void) {
+    func openLogin() {
         let viewController = LoginViewController.initial(openRegisterScreen: { [weak self] in
-            self?.openRegisterScreen(openHomeScreen: openHomeScreen)
-        }, openHomeScreen: {
-            openHomeScreen()
+            self?.openRegister()
+        }, openHomeScreen: { [weak self] in
+            self?.openHomeScreen()
         })
-
         navigationController.pushViewController(viewController, animated: true)
     }
-}
 
-private extension AuthenticationScreenRouterImpl {
-    func openRegisterScreen(openHomeScreen: @escaping () -> Void) {
-        let viewController = RegisterViewController.initial {
-            openHomeScreen()
+    func openRegister() {
+        let viewController = RegisterViewController.initial { [weak self] in
+            self?.openHomeScreen()
         }
-
         navigationController.pushViewController(viewController, animated: true)
     }
 }
 
 private extension AuthenticationScreenRouterImpl {
     func openHomeScreen() {
-        //
+        let viewController = MainTabbarViewController.initial()
+        navigationController.setViewControllers([viewController], animated: true)
     }
 }

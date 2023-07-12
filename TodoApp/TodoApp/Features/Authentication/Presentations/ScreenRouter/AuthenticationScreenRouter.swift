@@ -8,5 +8,6 @@
 import Foundation
 
 protocol AuthenticationScreenRouter {
-    func openLogin(openHomeScreen: @escaping () -> Void)
+    func openLogin()
+    func openRegister()
 }
