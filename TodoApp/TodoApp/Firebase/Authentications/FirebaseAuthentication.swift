@@ -51,9 +51,3 @@ extension FirebaseAuthentication {
         }
     }
 }
-
-// MARK: Apple
-
-extension FirebaseAuthentication {
-    //
-}

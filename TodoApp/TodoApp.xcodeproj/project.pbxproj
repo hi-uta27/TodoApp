@@ -163,6 +163,7 @@
 		63734DAD2A5674B30006EDF6 /* DeleteTaskUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DAC2A5674B30006EDF6 /* DeleteTaskUseCaseImpl.swift */; };
 		63734DAF2A5675270006EDF6 /* DeleteTaskInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DAE2A5675270006EDF6 /* DeleteTaskInject.swift */; };
 		63734DB12A5677830006EDF6 /* DeleteTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DB02A5677830006EDF6 /* DeleteTaskViewController.swift */; };
+		63754AB42A5E8DC700DC24EE /* BiometricAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63754AB32A5E8DC700DC24EE /* BiometricAuthentication.swift */; };
 		638C97962A5D3F960092CD98 /* UserValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638C97952A5D3F960092CD98 /* UserValidator.swift */; };
 		638C97982A5D4FAB0092CD98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 638C97972A5D4FAB0092CD98 /* GoogleService-Info.plist */; };
 		638C97A22A5D52FD0092CD98 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 638C97A12A5D52FD0092CD98 /* FirebaseAnalytics */; };
@@ -335,6 +336,7 @@
 		63734DAC2A5674B30006EDF6 /* DeleteTaskUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCaseImpl.swift; sourceTree = "<group>"; };
 		63734DAE2A5675270006EDF6 /* DeleteTaskInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskInject.swift; sourceTree = "<group>"; };
 		63734DB02A5677830006EDF6 /* DeleteTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskViewController.swift; sourceTree = "<group>"; };
+		63754AB32A5E8DC700DC24EE /* BiometricAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthentication.swift; sourceTree = "<group>"; };
 		638C97952A5D3F960092CD98 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidator.swift; sourceTree = "<group>"; };
 		638C97972A5D4FAB0092CD98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		63C933A72A56C155006DFFE2 /* TaskTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTitleViewController.swift; sourceTree = "<group>"; };
@@ -1208,6 +1210,7 @@
 			isa = PBXGroup;
 			children = (
 				634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */,
+				63754AB32A5E8DC700DC24EE /* BiometricAuthentication.swift */,
 			);
 			path = Authentications;
 			sourceTree = "<group>";
@@ -1579,6 +1582,7 @@
 				2B83EE682A3078E00009D5C6 /* CategoriesLocalDataSourceImpl.swift in Sources */,
 				2B945AD62A395FAA004EED4F /* UIImage+CategoryIcon.swift in Sources */,
 				2BBFCCDC2A4964730095EA4D /* UpdateTaskLocalDataSource.swift in Sources */,
+				63754AB42A5E8DC700DC24EE /* BiometricAuthentication.swift in Sources */,
 				63ECF3872A5B9497009D5C58 /* OnboardingCollectionDataSource.swift in Sources */,
 				2B9328DD2A3C1D7D00DD6730 /* AddTaskViewController.swift in Sources */,
 				2BBFCCC62A4951160095EA4D /* TaskFilter.swift in Sources */,

@@ -38,17 +38,18 @@ class LoginViewController: BaseViewController {
     }
 
     @IBAction private func touchUpInsideLoginWithGoogleButton(_ sender: Any) {
-        loginWithGoogle(loginSuccesed: { [weak self] in
+        loginWithGoogle { [weak self] in
             self?.openHomeScreen?()
-        })
+        }
     }
 
     @IBAction private func touchUpInsideLoginWithAppleButton(_ sender: Any) {
-        print(Self.self, #function)
+        loginWithBiometric { [weak self] in
+            self?.openHomeScreen?()
+        }
     }
 
     @IBAction private func touchUpInsideRegisterButton(_ sender: Any) {
-        print(Self.self, #function)
         openRegisterScreen?()
     }
 }
@@ -62,6 +63,5 @@ extension LoginViewController {
     }
 }
 
-// MARK: Firebase Email
-
 extension LoginViewController: FirebaseAuthentication {}
+extension LoginViewController: BiometricAuthentication {}
