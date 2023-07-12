@@ -18,7 +18,6 @@ class RegisterViewController: BaseViewController {
 
     lazy var firebaseAuth = Auth.auth()
     lazy var googleSignIn = GIDSignIn.sharedInstance
-    private var openRegisterScreen: (() -> Void)!
     private var openHomeScreen: (() -> Void)!
 
     override func viewDidLoad() {
@@ -64,9 +63,8 @@ class RegisterViewController: BaseViewController {
 }
 
 extension RegisterViewController {
-    static func initial(openRegisterScreen: @escaping () -> Void, openHomeScreen: @escaping () -> Void) -> Self {
+    static func initial(openHomeScreen: @escaping () -> Void) -> Self {
         let viewController = initial()
-        viewController.openRegisterScreen = openRegisterScreen
         viewController.openHomeScreen = openHomeScreen
         return viewController
     }

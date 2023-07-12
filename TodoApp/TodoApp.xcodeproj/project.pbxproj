@@ -172,6 +172,9 @@
 		638C97A42A5D52FD0092CD98 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 638C97A32A5D52FD0092CD98 /* FirebaseAuth */; };
 		638C97A62A5D52FD0092CD98 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 638C97A52A5D52FD0092CD98 /* FirebaseCrashlytics */; };
 		638C97A82A5D52FD0092CD98 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 638C97A72A5D52FD0092CD98 /* FirebaseFirestore */; };
+		639ADAD32A5EF1D6000FB8F3 /* AuthenticationScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639ADAD22A5EF1D6000FB8F3 /* AuthenticationScreenRouter.swift */; };
+		639ADAD62A5EF20F000FB8F3 /* AuthenticationScreenRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639ADAD52A5EF20F000FB8F3 /* AuthenticationScreenRouterImpl.swift */; };
+		639ADADA2A5EF46D000FB8F3 /* AuthenticationInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639ADAD92A5EF46D000FB8F3 /* AuthenticationInject.swift */; };
 		63C933A82A56C155006DFFE2 /* TaskTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C933A72A56C155006DFFE2 /* TaskTitleViewController.swift */; };
 		63C933AA2A56C176006DFFE2 /* TaskTitleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C933A92A56C176006DFFE2 /* TaskTitleViewController.storyboard */; };
 		63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D64C282A55621900913D63 /* DetailTaskViewController.swift */; };
@@ -343,6 +346,9 @@
 		63754AB82A5EA38B00DC24EE /* RegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
 		638C97952A5D3F960092CD98 /* UserValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserValidator.swift; sourceTree = "<group>"; };
 		638C97972A5D4FAB0092CD98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		639ADAD22A5EF1D6000FB8F3 /* AuthenticationScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationScreenRouter.swift; sourceTree = "<group>"; };
+		639ADAD52A5EF20F000FB8F3 /* AuthenticationScreenRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationScreenRouterImpl.swift; sourceTree = "<group>"; };
+		639ADAD92A5EF46D000FB8F3 /* AuthenticationInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationInject.swift; sourceTree = "<group>"; };
 		63C933A72A56C155006DFFE2 /* TaskTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTitleViewController.swift; sourceTree = "<group>"; };
 		63C933A92A56C176006DFFE2 /* TaskTitleViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskTitleViewController.storyboard; sourceTree = "<group>"; };
 		63D64C282A55621900913D63 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
@@ -1187,9 +1193,9 @@
 		63293E632A5CFED1000F3155 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				634A73092A5DAA83004AA3B4 /* Validators */,
-				63293E642A5CFF16000F3155 /* Login */,
-				63754AB52A5EA35300DC24EE /* Register */,
+				639ADAD82A5EF462000FB8F3 /* Inject */,
+				639ADAD42A5EF204000FB8F3 /* Infra */,
+				639ADAD12A5EF1B6000FB8F3 /* Presentations */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -1290,6 +1296,49 @@
 				63754AB82A5EA38B00DC24EE /* RegisterViewController.storyboard */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		639ADAD02A5EF1A6000FB8F3 /* ScreenRouter */ = {
+			isa = PBXGroup;
+			children = (
+				639ADAD22A5EF1D6000FB8F3 /* AuthenticationScreenRouter.swift */,
+			);
+			path = ScreenRouter;
+			sourceTree = "<group>";
+		};
+		639ADAD12A5EF1B6000FB8F3 /* Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				639ADAD02A5EF1A6000FB8F3 /* ScreenRouter */,
+				634A73092A5DAA83004AA3B4 /* Validators */,
+				63293E642A5CFF16000F3155 /* Login */,
+				63754AB52A5EA35300DC24EE /* Register */,
+			);
+			path = Presentations;
+			sourceTree = "<group>";
+		};
+		639ADAD42A5EF204000FB8F3 /* Infra */ = {
+			isa = PBXGroup;
+			children = (
+				639ADAD72A5EF227000FB8F3 /* ScreenRouter */,
+			);
+			path = Infra;
+			sourceTree = "<group>";
+		};
+		639ADAD72A5EF227000FB8F3 /* ScreenRouter */ = {
+			isa = PBXGroup;
+			children = (
+				639ADAD52A5EF20F000FB8F3 /* AuthenticationScreenRouterImpl.swift */,
+			);
+			path = ScreenRouter;
+			sourceTree = "<group>";
+		};
+		639ADAD82A5EF462000FB8F3 /* Inject */ = {
+			isa = PBXGroup;
+			children = (
+				639ADAD92A5EF46D000FB8F3 /* AuthenticationInject.swift */,
+			);
+			path = Inject;
 			sourceTree = "<group>";
 		};
 		63C933A62A56C131006DFFE2 /* TaskTitle */ = {
@@ -1515,6 +1564,7 @@
 				2B6264182A41863D00B53646 /* SinglePickerView.swift in Sources */,
 				63734DAF2A5675270006EDF6 /* DeleteTaskInject.swift in Sources */,
 				2BBFCCE22A49665F0095EA4D /* TasksLocalDataSourceImpl+UpdateTask.swift in Sources */,
+				639ADAD32A5EF1D6000FB8F3 /* AuthenticationScreenRouter.swift in Sources */,
 				63734DB12A5677830006EDF6 /* DeleteTaskViewController.swift in Sources */,
 				635BE0CD2A5AAC210045666D /* OnboardingViewController.swift in Sources */,
 				2BBFCCE92A49682F0095EA4D /* TaskCell.swift in Sources */,
@@ -1557,6 +1607,7 @@
 				2B83EE652A30776F0009D5C6 /* RCategoryModel.swift in Sources */,
 				2B9794D82A3B037800F4B8E8 /* CreateTaskUseCaseImpl.swift in Sources */,
 				2BBFCCDE2A49663A0095EA4D /* UpdateTaskUseCaseImpl.swift in Sources */,
+				639ADAD62A5EF20F000FB8F3 /* AuthenticationScreenRouterImpl.swift in Sources */,
 				2BFE12C92A3301F4001155EA /* ReadCategoryInject.swift in Sources */,
 				2B0981C82A39A12700B80C03 /* TaskStatus.swift in Sources */,
 				2BBFCCD02A495D9E0095EA4D /* TasksLocalDataSourceImpl+ReadTask.swift in Sources */,
@@ -1587,6 +1638,7 @@
 				2B1DEF972A4BF4500061CB00 /* TasksLocalDataSource.swift in Sources */,
 				2BBFCCD82A4964390095EA4D /* UpdateTaskUseCase.swift in Sources */,
 				2B9794C62A3AE2BA00F4B8E8 /* CreateTaskLocalDataSource.swift in Sources */,
+				639ADADA2A5EF46D000FB8F3 /* AuthenticationInject.swift in Sources */,
 				2B9E2D722A4E75CB00FA3531 /* Array+UIButton.swift in Sources */,
 				2B9794D42A3AF83900F4B8E8 /* TasksLocalDataSourceImpl.swift in Sources */,
 				2BFE12C62A330030001155EA /* CategoryInject.swift in Sources */,
