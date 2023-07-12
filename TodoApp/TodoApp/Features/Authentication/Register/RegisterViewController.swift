@@ -32,7 +32,7 @@ class RegisterViewController: BaseViewController {
                 password: passwordTextField.text,
                 confirmPassword: confirmPasswordTextField.text)
 
-            loginWith(email: email, password: password, loginSuccesed: { [weak self] in
+            registerWith(email: email, password: password, registerSuccessed: { [weak self] in
                 self?.navigationController?.popViewController(animated: true)
             })
         } catch {
