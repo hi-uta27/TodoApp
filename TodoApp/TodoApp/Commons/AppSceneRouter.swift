@@ -14,7 +14,7 @@ class AppSceneRouter {
 
     func prepareScene() {
 //        onboardingRouter.openIntroForApp()
-        let vc = LoginViewController.initial()
+        let vc = RegisterViewController.initial()
         rootNavigationController.setViewControllers([vc], animated: true)
     }
 }
