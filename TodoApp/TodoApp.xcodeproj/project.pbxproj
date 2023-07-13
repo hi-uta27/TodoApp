@@ -164,6 +164,7 @@
 		632BAA2C2A5FA58A00A272F2 /* LogoutRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA2B2A5FA58A00A272F2 /* LogoutRepositoryImpl.swift */; };
 		632BAA2E2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA2D2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift */; };
 		632BAA302A5FA62600A272F2 /* LoginInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA2F2A5FA62600A272F2 /* LoginInject.swift */; };
+		632BAA322A5FA75E00A272F2 /* LogoutInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA312A5FA75E00A272F2 /* LogoutInject.swift */; };
 		634A73022A5D9CD2004AA3B4 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 634A73012A5D9CD2004AA3B4 /* GoogleSignIn */; };
 		634A73082A5DA79B004AA3B4 /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */; };
 		635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C22A5AA0C10045666D /* IntroViewController.swift */; };
@@ -361,6 +362,7 @@
 		632BAA2B2A5FA58A00A272F2 /* LogoutRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoutRepositoryImpl.swift; path = TodoApp/Features/Authentication/Data/Repositories/Login/LogoutRepositoryImpl.swift; sourceTree = SOURCE_ROOT; };
 		632BAA2D2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoutUseCaseImpl.swift; path = TodoApp/Features/Authentication/Data/Repositories/Login/LogoutUseCaseImpl.swift; sourceTree = SOURCE_ROOT; };
 		632BAA2F2A5FA62600A272F2 /* LoginInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInject.swift; sourceTree = "<group>"; };
+		632BAA312A5FA75E00A272F2 /* LogoutInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutInject.swift; sourceTree = "<group>"; };
 		634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		635BE0C22A5AA0C10045666D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
@@ -1615,6 +1617,7 @@
 			children = (
 				639ADAD92A5EF46D000FB8F3 /* AuthenticationInject.swift */,
 				632BAA2F2A5FA62600A272F2 /* LoginInject.swift */,
+				632BAA312A5FA75E00A272F2 /* LogoutInject.swift */,
 			);
 			path = Inject;
 			sourceTree = "<group>";
@@ -1958,6 +1961,7 @@
 				2BFE12E02A33382B001155EA /* CreateCategoryInject.swift in Sources */,
 				2B2EAE742A445EF700A88123 /* UINavigationController+Action.swift in Sources */,
 				2B3192CB2A4D167B005C6F69 /* RoundCornerViewBehavior.swift in Sources */,
+				632BAA322A5FA75E00A272F2 /* LogoutInject.swift in Sources */,
 				2B72068B2A36D3D6009A1158 /* CategoryColorCollectionViewDataSource.swift in Sources */,
 				2B9328D72A3C162A00DD6730 /* Int+TaskPriority.swift in Sources */,
 				2B9794DD2A3B043C00F4B8E8 /* CreateTaskInject.swift in Sources */,

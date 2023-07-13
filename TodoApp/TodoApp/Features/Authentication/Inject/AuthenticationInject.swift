@@ -13,8 +13,10 @@ enum AuthenticationInject {
         container.register(AuthenticationScreenRouter.self) { _, navigationController in
             AuthenticationScreenRouterImpl(navigationController: navigationController)
         }
-        register(container: container)
+        registerLogin(container: container)
+        registerLogout(container: container)
     }
 }
 
 extension AuthenticationInject: LoginInject {}
+extension AuthenticationInject: LogoutInject {}
