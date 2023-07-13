@@ -16,9 +16,11 @@ enum AuthenticationInject {
         registerLogin(container: container)
         registerLogout(container: container)
         registerUserInfo(container: container)
+        registerRegisterAccount(container: container)
     }
 }
 
 extension AuthenticationInject: LoginInject {}
 extension AuthenticationInject: LogoutInject {}
 extension AuthenticationInject: UserInfoInject {}
+extension AuthenticationInject: RegisterInject {}
