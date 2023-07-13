@@ -5,8 +5,6 @@
 //  Created by TaHieu on 7/12/23.
 //
 
-import FirebaseAuth
-import GoogleSignIn
 import UIKit
 
 class RegisterViewController: BaseViewController {
@@ -16,8 +14,6 @@ class RegisterViewController: BaseViewController {
     @IBOutlet private var showHidePasswordButton: UIButton!
     @IBOutlet private var showHideConfirmPasswordButton: UIButton!
 
-    lazy var firebaseAuth = Auth.auth()
-    lazy var googleSignIn = GIDSignIn.sharedInstance
     private var openHomeScreen: (() -> Void)!
 
     override func viewDidLoad() {
@@ -31,18 +27,18 @@ class RegisterViewController: BaseViewController {
                 password: passwordTextField.text,
                 confirmPassword: confirmPasswordTextField.text)
 
-            registerWith(email: email, password: password, registerSuccessed: { [weak self] in
-                self?.navigationController?.popViewController(animated: true)
-            })
+//            registerWith(email: email, password: password, registerSuccessed: { [weak self] in
+//                self?.navigationController?.popViewController(animated: true)
+//            })
         } catch {
             showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
         }
     }
 
     @IBAction private func touchUpInsideLoginWithGoogleButton(_ sender: Any) {
-        loginWithGoogle { [weak self] in
-            self?.openHomeScreen?()
-        }
+//        loginWithGoogle { [weak self] in
+//            self?.openHomeScreen?()
+//        }
     }
 
     @IBAction private func touchUpInsideLoginWithAppleButton(_ sender: Any) {
@@ -70,5 +66,4 @@ extension RegisterViewController {
     }
 }
 
-extension RegisterViewController: FirebaseAuthentication {}
 extension RegisterViewController: BiometricAuthentication {}

@@ -167,6 +167,9 @@
 		632BAA322A5FA75E00A272F2 /* LogoutInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA312A5FA75E00A272F2 /* LogoutInject.swift */; };
 		632BAA342A5FA7DA00A272F2 /* UserInfoInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA332A5FA7DA00A272F2 /* UserInfoInject.swift */; };
 		632BAA372A5FA8B000A272F2 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA362A5FA8B000A272F2 /* UserDTO.swift */; };
+		632BAA3A2A5FB82C00A272F2 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA392A5FB82C00A272F2 /* RegisterUseCase.swift */; };
+		632BAA3C2A5FB89C00A272F2 /* RegisterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA3B2A5FB89C00A272F2 /* RegisterRepository.swift */; };
+		632BAA402A5FB8CA00A272F2 /* RegisterRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA3F2A5FB8CA00A272F2 /* RegisterRemoteDataSource.swift */; };
 		634A73022A5D9CD2004AA3B4 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 634A73012A5D9CD2004AA3B4 /* GoogleSignIn */; };
 		634A73082A5DA79B004AA3B4 /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */; };
 		635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C22A5AA0C10045666D /* IntroViewController.swift */; };
@@ -367,6 +370,9 @@
 		632BAA312A5FA75E00A272F2 /* LogoutInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutInject.swift; sourceTree = "<group>"; };
 		632BAA332A5FA7DA00A272F2 /* UserInfoInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoInject.swift; sourceTree = "<group>"; };
 		632BAA362A5FA8B000A272F2 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		632BAA392A5FB82C00A272F2 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
+		632BAA3B2A5FB89C00A272F2 /* RegisterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRepository.swift; sourceTree = "<group>"; };
+		632BAA3F2A5FB8CA00A272F2 /* RegisterRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRemoteDataSource.swift; sourceTree = "<group>"; };
 		634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		635BE0C22A5AA0C10045666D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
@@ -1299,6 +1305,7 @@
 		632BA9DD2A5F967B00A272F2 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				632BAA382A5FB81B00A272F2 /* Register */,
 				632BA9DB2A5F95E600A272F2 /* UserInfo */,
 				632BA9DA2A5F95DF00A272F2 /* Logout */,
 				632BA9D92A5F95DA00A272F2 /* Login */,
@@ -1309,6 +1316,7 @@
 		632BA9DE2A5F968300A272F2 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				632BAA3D2A5FB8A100A272F2 /* Register */,
 				632BA9EA2A5F99D300A272F2 /* UserInfo */,
 				632BA9EB2A5F99D900A272F2 /* Logout */,
 				632BA9EC2A5F99DE00A272F2 /* Login */,
@@ -1319,6 +1327,7 @@
 		632BA9DF2A5F969000A272F2 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				632BAA3E2A5FB8B800A272F2 /* Register */,
 				632BA9EF2A5F99FB00A272F2 /* UserInfo */,
 				632BA9EE2A5F99F500A272F2 /* Logout */,
 				632BA9ED2A5F99EF00A272F2 /* Login */,
@@ -1497,6 +1506,30 @@
 				632BAA362A5FA8B000A272F2 /* UserDTO.swift */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		632BAA382A5FB81B00A272F2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				632BAA392A5FB82C00A272F2 /* RegisterUseCase.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		632BAA3D2A5FB8A100A272F2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				632BAA3B2A5FB89C00A272F2 /* RegisterRepository.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		632BAA3E2A5FB8B800A272F2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				632BAA3F2A5FB8CA00A272F2 /* RegisterRemoteDataSource.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		634A73032A5DA56E004AA3B4 /* Firebase */ = {
@@ -1878,6 +1911,7 @@
 				2B9794D62A3B021300F4B8E8 /* CreateTaskRepositoryImpl.swift in Sources */,
 				2B0B02A72A4AA1D70018C454 /* TaskStatus+Value.swift in Sources */,
 				2B0981C42A39A11D00B80C03 /* CreateTaskUseCase.swift in Sources */,
+				632BAA3C2A5FB89C00A272F2 /* RegisterRepository.swift in Sources */,
 				2B9E2D7E2A4E772800FA3531 /* UserProfileViewController.swift in Sources */,
 				63F684812A58094700B9A86A /* FSCalendarWeekDataSource.swift in Sources */,
 				63293E662A5CFF26000F3155 /* LoginViewController.swift in Sources */,
@@ -1935,6 +1969,7 @@
 				632BA9F22A5F9A5100A272F2 /* UserInfoRemoteDataSource.swift in Sources */,
 				63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */,
 				632BA9FE2A5F9D3A00A272F2 /* LogoutRepository.swift in Sources */,
+				632BAA402A5FB8CA00A272F2 /* RegisterRemoteDataSource.swift in Sources */,
 				635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */,
 				632BAA222A5FA3AB00A272F2 /* UserInfoUseCaseImpl.swift in Sources */,
 				632BAA2C2A5FA58A00A272F2 /* LogoutRepositoryImpl.swift in Sources */,
@@ -1957,6 +1992,7 @@
 				63F684872A58115C00B9A86A /* CalendarHeader.swift in Sources */,
 				2B2EAE762A445F1200A88123 /* TaskScreenModel.swift in Sources */,
 				2B83EE682A3078E00009D5C6 /* CategoriesLocalDataSourceImpl.swift in Sources */,
+				632BAA3A2A5FB82C00A272F2 /* RegisterUseCase.swift in Sources */,
 				2B945AD62A395FAA004EED4F /* UIImage+CategoryIcon.swift in Sources */,
 				2BBFCCDC2A4964730095EA4D /* UpdateTaskLocalDataSource.swift in Sources */,
 				63754AB42A5E8DC700DC24EE /* BiometricAuthentication.swift in Sources */,
