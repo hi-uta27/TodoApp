@@ -11,5 +11,5 @@ struct UserInfoModel: UserEntity {
     let uid: String
     let email: String
     let displayName: String
-    let image: URL
+    let image: URL?
 }

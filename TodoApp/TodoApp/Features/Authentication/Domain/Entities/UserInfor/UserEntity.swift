@@ -11,5 +11,5 @@ protocol UserEntity {
     var uid: String { get }
     var email: String { get }
     var displayName: String { get }
-    var image: URL { get }
+    var image: URL? { get }
 }

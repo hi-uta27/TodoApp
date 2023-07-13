@@ -67,6 +67,12 @@ extension FirebaseAuthentication {
                 }
             }
         }
-        let auth = firebaseAuth.currentUser
+    }
+}
+
+extension User {
+    func transferToModel() -> UserEntity? {
+        guard let email = email, let displayName = displayName else { return nil }
+        return UserInfoModel(uid: uid, email: email, displayName: displayName, image: nil)
     }
 }
