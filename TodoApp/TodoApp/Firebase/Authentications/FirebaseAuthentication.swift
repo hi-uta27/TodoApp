@@ -1,67 +1,75 @@
 import FirebaseAuth
-import Foundation
 import GoogleSignIn
+import UIKit
 
-protocol FirebaseAuthentication: BaseViewController {
-    var firebaseAuth: Auth { get set }
-    var googleSignIn: GIDSignIn { get set }
+class FirebaseAuthentications {
+    private let firebaseAuth: Auth
+    private let googleSignIn: GIDSignIn
+    private var viewController: UIViewController
+
+    init(firebaseAuth: Auth = .auth(),
+         googleSignIn: GIDSignIn = .sharedInstance,
+         viewController: UIViewController = .init())
+    {
+        self.firebaseAuth = firebaseAuth
+        self.googleSignIn = googleSignIn
+        self.viewController = viewController
+    }
 }
 
-// MARK: Email
-
-extension FirebaseAuthentication {
-    func loginWith(email: String, password: String, loginSuccesed: @escaping () -> Void) {
-        displayIndicator(isShow: true)
-        firebaseAuth.signIn(withEmail: email, password: password) { [weak self] _, error in
-            DispatchQueue.main.async {
-                self?.displayIndicator(isShow: false)
-                if let error = error {
-                    self?.showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
-                } else {
-                    loginSuccesed()
-                }
+extension FirebaseAuthentications {
+    func loginWith(email: String, password: String, completed: @escaping (Result<UserDTO, Error>) -> Void) {
+        firebaseAuth.signIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                completed(.failure(error))
+            } else {
+                guard let userDTO = result?.user else { return }
+                completed(.success(userDTO))
             }
         }
     }
 
-    func registerWith(email: String, password: String, registerSuccessed: @escaping () -> Void) {
-        displayIndicator(isShow: true)
-        firebaseAuth.createUser(withEmail: email, password: password) { [weak self] _, error in
-            DispatchQueue.main.async {
-                self?.displayIndicator(isShow: false)
-                if let error = error {
-                    self?.showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
-                } else {
-                    registerSuccessed()
-                }
-            }
-        }
-    }
-}
-
-// MARK: Google
-
-extension FirebaseAuthentication {
-    func loginWithGoogle(loginSuccesed: @escaping () -> Void) {
-        googleSignIn.signIn(withPresenting: self) { [weak self] result, error in
+    func loginWithGoogle(completed: @escaping (Result<UserDTO, Error>) -> Void) {
+        googleSignIn.signIn(withPresenting: viewController) { [weak self] result, error in
             guard error == nil else { return }
             guard let user = result?.user, let idToken = user.idToken?.tokenString else { return }
             let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
-            self?.loginWith(credential: credential, loginSuccesed: loginSuccesed)
+            self?.loginWith(credential: credential, completed: completed)
         }
     }
 
-    private func loginWith(credential: AuthCredential, loginSuccesed: @escaping () -> Void) {
-        displayIndicator(isShow: true)
-        firebaseAuth.signIn(with: credential) { [weak self] _, error in
-            DispatchQueue.main.async {
-                self?.displayIndicator(isShow: false)
-                if let error = error {
-                    self?.showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
-                } else {
-                    loginSuccesed()
-                }
+    private func loginWith(credential: AuthCredential, completed: @escaping (Result<UserDTO, Error>) -> Void) {
+        firebaseAuth.signIn(with: credential) { result, error in
+            if let error = error {
+                completed(.failure(error))
+            } else {
+                guard let userDTO = result?.user else { return }
+                completed(.success(userDTO))
             }
+        }
+    }
+
+    func registerWith(email: String, password: String, confirmPassword: String, completed: @escaping (Result<UserDTO, Error>) -> Void) {
+        firebaseAuth.createUser(withEmail: email, password: password) { result, error in
+            if let error = error {
+                completed(.failure(error))
+            } else {
+                guard let userDTO = result?.user else { return }
+                completed(.success(userDTO))
+            }
+        }
+    }
+
+    func readUserInfo(completed: @escaping (UserDTO?) -> Void) {
+        completed(firebaseAuth.currentUser)
+    }
+
+    func logout(completed: @escaping (Error?) -> Void) {
+        do {
+            try firebaseAuth.signOut()
+            completed(nil)
+        } catch {
+            completed(error)
         }
     }
 }

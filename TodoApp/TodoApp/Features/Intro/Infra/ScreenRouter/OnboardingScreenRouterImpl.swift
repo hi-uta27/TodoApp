@@ -18,6 +18,8 @@ class OnboardingScreenRouterImpl: OnboardingScreenRouter {
         }
     }
 
+    private lazy var authenticationRouter = di.resolve(AuthenticationScreenRouter.self, argument: navigationController)!
+
     init(navigationController: UINavigationController = .init()) {
         self.navigationController = navigationController
     }
@@ -50,18 +52,10 @@ class OnboardingScreenRouterImpl: OnboardingScreenRouter {
 private extension OnboardingScreenRouterImpl {
     func openStartScreen() {
         let viewController = StartScreenViewController.initial(openLogin: { [weak self] in
-            self?.openLogin()
+            self?.authenticationRouter.openLogin()
         }, openCreateAccount: { [weak self] in
-            self?.openCreateAccount()
+            self?.authenticationRouter.openRegister()
         })
         navigationController.pushViewController(viewController, animated: true)
-    }
-
-    func openLogin() {
-        // TODO: - Update later
-    }
-
-    func openCreateAccount() {
-        // TODO: - Update later
     }
 }
