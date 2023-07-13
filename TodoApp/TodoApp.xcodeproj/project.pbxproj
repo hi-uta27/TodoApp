@@ -161,6 +161,8 @@
 		632BAA222A5FA3AB00A272F2 /* UserInfoUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA212A5FA3AB00A272F2 /* UserInfoUseCaseImpl.swift */; };
 		632BAA262A5FA43500A272F2 /* LoginRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA252A5FA43500A272F2 /* LoginRepositoryImpl.swift */; };
 		632BAA2A2A5FA52F00A272F2 /* LoginUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA292A5FA52F00A272F2 /* LoginUseCaseImpl.swift */; };
+		632BAA2C2A5FA58A00A272F2 /* LogoutRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA2B2A5FA58A00A272F2 /* LogoutRepositoryImpl.swift */; };
+		632BAA2E2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA2D2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift */; };
 		634A73022A5D9CD2004AA3B4 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 634A73012A5D9CD2004AA3B4 /* GoogleSignIn */; };
 		634A73082A5DA79B004AA3B4 /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */; };
 		635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C22A5AA0C10045666D /* IntroViewController.swift */; };
@@ -355,6 +357,8 @@
 		632BAA212A5FA3AB00A272F2 /* UserInfoUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserInfoUseCaseImpl.swift; path = TodoApp/Features/Authentication/Data/Repositories/Login/UserInfoUseCaseImpl.swift; sourceTree = SOURCE_ROOT; };
 		632BAA252A5FA43500A272F2 /* LoginRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRepositoryImpl.swift; path = TodoApp/Features/Authentication/Data/Repositories/Login/LoginRepositoryImpl.swift; sourceTree = SOURCE_ROOT; };
 		632BAA292A5FA52F00A272F2 /* LoginUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginUseCaseImpl.swift; path = TodoApp/Features/Authentication/Data/Repositories/Login/LoginUseCaseImpl.swift; sourceTree = SOURCE_ROOT; };
+		632BAA2B2A5FA58A00A272F2 /* LogoutRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoutRepositoryImpl.swift; path = TodoApp/Features/Authentication/Data/Repositories/Login/LogoutRepositoryImpl.swift; sourceTree = SOURCE_ROOT; };
+		632BAA2D2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoutUseCaseImpl.swift; path = TodoApp/Features/Authentication/Data/Repositories/Login/LogoutUseCaseImpl.swift; sourceTree = SOURCE_ROOT; };
 		634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		635BE0C22A5AA0C10045666D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
@@ -1457,6 +1461,7 @@
 		632BAA242A5FA41600A272F2 /* Logout */ = {
 			isa = PBXGroup;
 			children = (
+				632BAA2B2A5FA58A00A272F2 /* LogoutRepositoryImpl.swift */,
 			);
 			path = Logout;
 			sourceTree = "<group>";
@@ -1472,6 +1477,7 @@
 		632BAA282A5FA51700A272F2 /* Logout */ = {
 			isa = PBXGroup;
 			children = (
+				632BAA2D2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift */,
 			);
 			path = Logout;
 			sourceTree = "<group>";
@@ -1869,6 +1875,7 @@
 				2B7206872A36D114009A1158 /* CategoryColorCell.swift in Sources */,
 				2B9328D42A3C098B00DD6730 /* TaskPriorityCollectionViewDataSource.swift in Sources */,
 				2BBFCCD42A4961BD0095EA4D /* HomeScreenViewController.swift in Sources */,
+				632BAA2E2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift in Sources */,
 				632BA9F42A5F9B1400A272F2 /* LogoutRemoteDataSource.swift in Sources */,
 				2BFE12D32A33294B001155EA /* CreateCategoryRepository.swift in Sources */,
 				2B945AD82A396689004EED4F /* ShowAlertViewController.swift in Sources */,
@@ -1910,6 +1917,7 @@
 				632BA9FE2A5F9D3A00A272F2 /* LogoutRepository.swift in Sources */,
 				635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */,
 				632BAA222A5FA3AB00A272F2 /* UserInfoUseCaseImpl.swift in Sources */,
+				632BAA2C2A5FA58A00A272F2 /* LogoutRepositoryImpl.swift in Sources */,
 				63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */,
 				2B6C14E22A4D9F1400161D85 /* TabbarButton.swift in Sources */,
 				2BD165AC2A30432A00AFEA24 /* ReadCategoryRepository.swift in Sources */,
