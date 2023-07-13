@@ -49,6 +49,17 @@ extension FirebaseAuthentications {
         }
     }
 
+    func registerWith(email: String, password: String, confirmPassword: String, completed: @escaping (Result<UserDTO, Error>) -> Void) {
+        firebaseAuth.createUser(withEmail: email, password: password) { result, error in
+            if let error = error {
+                completed(.failure(error))
+            } else {
+                guard let userDTO = result?.user else { return }
+                completed(.success(userDTO))
+            }
+        }
+    }
+
     func readUserInfo(completed: @escaping (UserDTO?) -> Void) {
         completed(firebaseAuth.currentUser)
     }
