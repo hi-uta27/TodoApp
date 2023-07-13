@@ -150,6 +150,9 @@
 		632BA9E52A5F978F00A272F2 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BA9E42A5F978F00A272F2 /* UserEntity.swift */; };
 		632BA9E72A5F97E300A272F2 /* LogoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BA9E62A5F97E300A272F2 /* LogoutUseCase.swift */; };
 		632BA9E92A5F980900A272F2 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BA9E82A5F980900A272F2 /* LoginUseCase.swift */; };
+		632BA9F22A5F9A5100A272F2 /* UserInfoRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BA9F12A5F9A5100A272F2 /* UserInfoRemoteDataSource.swift */; };
+		632BA9F42A5F9B1400A272F2 /* LogoutRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BA9F32A5F9B1400A272F2 /* LogoutRemoteDataSource.swift */; };
+		632BA9F62A5F9B9300A272F2 /* LoginRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BA9F52A5F9B9300A272F2 /* LoginRemoteDataSource.swift */; };
 		634A73022A5D9CD2004AA3B4 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 634A73012A5D9CD2004AA3B4 /* GoogleSignIn */; };
 		634A73082A5DA79B004AA3B4 /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */; };
 		635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C22A5AA0C10045666D /* IntroViewController.swift */; };
@@ -333,6 +336,9 @@
 		632BA9E42A5F978F00A272F2 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		632BA9E62A5F97E300A272F2 /* LogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCase.swift; sourceTree = "<group>"; };
 		632BA9E82A5F980900A272F2 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		632BA9F12A5F9A5100A272F2 /* UserInfoRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoRemoteDataSource.swift; sourceTree = "<group>"; };
+		632BA9F32A5F9B1400A272F2 /* LogoutRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRemoteDataSource.swift; sourceTree = "<group>"; };
+		632BA9F52A5F9B9300A272F2 /* LoginRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRemoteDataSource.swift; sourceTree = "<group>"; };
 		634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		635BE0C22A5AA0C10045666D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
@@ -1274,6 +1280,9 @@
 		632BA9DE2A5F968300A272F2 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				632BA9EA2A5F99D300A272F2 /* UserInfo */,
+				632BA9EB2A5F99D900A272F2 /* Logout */,
+				632BA9EC2A5F99DE00A272F2 /* Login */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1281,6 +1290,9 @@
 		632BA9DF2A5F969000A272F2 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				632BA9EF2A5F99FB00A272F2 /* UserInfo */,
+				632BA9EE2A5F99F500A272F2 /* Logout */,
+				632BA9ED2A5F99EF00A272F2 /* Login */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -1299,6 +1311,51 @@
 				632BA9E42A5F978F00A272F2 /* UserEntity.swift */,
 			);
 			path = UserInfor;
+			sourceTree = "<group>";
+		};
+		632BA9EA2A5F99D300A272F2 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		632BA9EB2A5F99D900A272F2 /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logout;
+			sourceTree = "<group>";
+		};
+		632BA9EC2A5F99DE00A272F2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		632BA9ED2A5F99EF00A272F2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				632BA9F52A5F9B9300A272F2 /* LoginRemoteDataSource.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		632BA9EE2A5F99F500A272F2 /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+				632BA9F32A5F9B1400A272F2 /* LogoutRemoteDataSource.swift */,
+			);
+			path = Logout;
+			sourceTree = "<group>";
+		};
+		632BA9EF2A5F99FB00A272F2 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				632BA9F12A5F9A5100A272F2 /* UserInfoRemoteDataSource.swift */,
+			);
+			path = UserInfo;
 			sourceTree = "<group>";
 		};
 		634A73032A5DA56E004AA3B4 /* Firebase */ = {
@@ -1690,6 +1747,7 @@
 				2B7206872A36D114009A1158 /* CategoryColorCell.swift in Sources */,
 				2B9328D42A3C098B00DD6730 /* TaskPriorityCollectionViewDataSource.swift in Sources */,
 				2BBFCCD42A4961BD0095EA4D /* HomeScreenViewController.swift in Sources */,
+				632BA9F42A5F9B1400A272F2 /* LogoutRemoteDataSource.swift in Sources */,
 				2BFE12D32A33294B001155EA /* CreateCategoryRepository.swift in Sources */,
 				2B945AD82A396689004EED4F /* ShowAlertViewController.swift in Sources */,
 				2B9328E12A3C1DF500DD6730 /* UIStackView+Style.swift in Sources */,
@@ -1724,6 +1782,7 @@
 				2BBFCCCE2A495D850095EA4D /* ReadTaskRepositoryImpl.swift in Sources */,
 				2B7206792A36B98D009A1158 /* ReadCategoryLocalDataSource.swift in Sources */,
 				2B2EAE722A445E2A00A88123 /* TaskScreenRouterImpl.swift in Sources */,
+				632BA9F22A5F9A5100A272F2 /* UserInfoRemoteDataSource.swift in Sources */,
 				63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */,
 				635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */,
 				63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */,
@@ -1768,6 +1827,7 @@
 				2B8E30512A32E46200CFDD3D /* CreateCategoryModel.swift in Sources */,
 				2B9328D12A3C096900DD6730 /* TaskPriorityCell.swift in Sources */,
 				63C933A82A56C155006DFFE2 /* TaskTitleViewController.swift in Sources */,
+				632BA9F62A5F9B9300A272F2 /* LoginRemoteDataSource.swift in Sources */,
 				2B0B02A92A4AC3AC0018C454 /* ReadTaskViewController.swift in Sources */,
 				2B2EAE6E2A43F9BC00A88123 /* DateModel.swift in Sources */,
 				2B0B02A02A4A822C0018C454 /* ReadTaskInject.swift in Sources */,

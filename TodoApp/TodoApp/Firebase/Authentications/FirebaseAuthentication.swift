@@ -2,6 +2,8 @@ import FirebaseAuth
 import Foundation
 import GoogleSignIn
 
+typealias UserDTO = User
+
 // TODO: - Update this with class, and add Data and Domain for it
 
 protocol FirebaseAuthentication: BaseViewController {
@@ -65,5 +67,6 @@ extension FirebaseAuthentication {
                 }
             }
         }
+        let auth = firebaseAuth.currentUser
     }
 }

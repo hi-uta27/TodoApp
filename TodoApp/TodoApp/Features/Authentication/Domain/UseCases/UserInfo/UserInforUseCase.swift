@@ -8,5 +8,5 @@
 import Foundation
 
 protocol UserInforUseCase {
-    func readUserInfor(completed: @escaping (Result<UserEntity?, Error>) -> Void)
+    func readUserInfor(completed: @escaping (UserEntity?) -> Void)
 }
