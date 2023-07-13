@@ -12,13 +12,16 @@ class AppSceneRouter {
     static let shared = AppSceneRouter()
     private(set) var rootNavigationController: UINavigationController = .init()
     private lazy var onboardingRouter = di.resolve(OnboardingScreenRouter.self, argument: rootNavigationController)!
+    private lazy var userInfoUseCase = di.resolve(UserInforUseCase.self)!
 
     func prepareScene() {
-        if Auth.auth().currentUser == nil {
-            onboardingRouter.openIntroForApp()
-        } else {
-            let viewController = MainTabbarViewController.initial()
-            rootNavigationController.setViewControllers([viewController], animated: true)
+        userInfoUseCase.readUserInfor { [weak self] user in
+            if user == nil {
+                self?.onboardingRouter.openIntroForApp()
+            } else {
+                let viewController = MainTabbarViewController.initial()
+                self?.rootNavigationController.setViewControllers([viewController], animated: true)
+            }
         }
     }
 }
