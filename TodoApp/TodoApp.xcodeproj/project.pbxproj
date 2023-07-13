@@ -146,6 +146,10 @@
 		630CAD9C2A5C561200300DFE /* IntroInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD9B2A5C561200300DFE /* IntroInject.swift */; };
 		63293E662A5CFF26000F3155 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63293E652A5CFF26000F3155 /* LoginViewController.swift */; };
 		63293E682A5CFF52000F3155 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63293E672A5CFF52000F3155 /* LoginViewController.storyboard */; };
+		632BA9E12A5F96A800A272F2 /* UserInforUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BA9E02A5F96A800A272F2 /* UserInforUseCase.swift */; };
+		632BA9E52A5F978F00A272F2 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BA9E42A5F978F00A272F2 /* UserEntity.swift */; };
+		632BA9E72A5F97E300A272F2 /* LogoutUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BA9E62A5F97E300A272F2 /* LogoutUseCase.swift */; };
+		632BA9E92A5F980900A272F2 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BA9E82A5F980900A272F2 /* LoginUseCase.swift */; };
 		634A73022A5D9CD2004AA3B4 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 634A73012A5D9CD2004AA3B4 /* GoogleSignIn */; };
 		634A73082A5DA79B004AA3B4 /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */; };
 		635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C22A5AA0C10045666D /* IntroViewController.swift */; };
@@ -325,6 +329,10 @@
 		630CAD9B2A5C561200300DFE /* IntroInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroInject.swift; sourceTree = "<group>"; };
 		63293E652A5CFF26000F3155 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		63293E672A5CFF52000F3155 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		632BA9E02A5F96A800A272F2 /* UserInforUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInforUseCase.swift; sourceTree = "<group>"; };
+		632BA9E42A5F978F00A272F2 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		632BA9E62A5F97E300A272F2 /* LogoutUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutUseCase.swift; sourceTree = "<group>"; };
+		632BA9E82A5F980900A272F2 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		635BE0C22A5AA0C10045666D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
@@ -1196,6 +1204,8 @@
 				639ADAD82A5EF462000FB8F3 /* Inject */,
 				639ADAD42A5EF204000FB8F3 /* Infra */,
 				639ADAD12A5EF1B6000FB8F3 /* Presentations */,
+				632BA9DC2A5F965500A272F2 /* Data */,
+				632BA9D82A5F95D000A272F2 /* Domain */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -1207,6 +1217,88 @@
 				63293E672A5CFF52000F3155 /* LoginViewController.storyboard */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		632BA9D82A5F95D000A272F2 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				632BA9E22A5F977B00A272F2 /* Entities */,
+				632BA9DD2A5F967B00A272F2 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		632BA9D92A5F95DA00A272F2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				632BA9E82A5F980900A272F2 /* LoginUseCase.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		632BA9DA2A5F95DF00A272F2 /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+				632BA9E62A5F97E300A272F2 /* LogoutUseCase.swift */,
+			);
+			path = Logout;
+			sourceTree = "<group>";
+		};
+		632BA9DB2A5F95E600A272F2 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				632BA9E02A5F96A800A272F2 /* UserInforUseCase.swift */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		632BA9DC2A5F965500A272F2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				632BA9DF2A5F969000A272F2 /* DataSource */,
+				632BA9DE2A5F968300A272F2 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		632BA9DD2A5F967B00A272F2 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				632BA9DB2A5F95E600A272F2 /* UserInfo */,
+				632BA9DA2A5F95DF00A272F2 /* Logout */,
+				632BA9D92A5F95DA00A272F2 /* Login */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		632BA9DE2A5F968300A272F2 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		632BA9DF2A5F969000A272F2 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		632BA9E22A5F977B00A272F2 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				632BA9E32A5F978100A272F2 /* UserInfor */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		632BA9E32A5F978100A272F2 /* UserInfor */ = {
+			isa = PBXGroup;
+			children = (
+				632BA9E42A5F978F00A272F2 /* UserEntity.swift */,
+			);
+			path = UserInfor;
 			sourceTree = "<group>";
 		};
 		634A73032A5DA56E004AA3B4 /* Firebase */ = {
@@ -1559,8 +1651,10 @@
 				2BC969B22A429CB700D11EB1 /* TimePickerCell.swift in Sources */,
 				2B9794DB2A3B041700F4B8E8 /* TaskInject.swift in Sources */,
 				2BB9E5E52A43002B00755022 /* Date+Convert.swift in Sources */,
+				632BA9E52A5F978F00A272F2 /* UserEntity.swift in Sources */,
 				630CAD9A2A5C549100300DFE /* OnboardingScreenRouterImpl.swift in Sources */,
 				2B8E30592A32E83A00CFDD3D /* ChooseCategoryViewController.swift in Sources */,
+				632BA9E12A5F96A800A272F2 /* UserInforUseCase.swift in Sources */,
 				2B6264182A41863D00B53646 /* SinglePickerView.swift in Sources */,
 				63734DAF2A5675270006EDF6 /* DeleteTaskInject.swift in Sources */,
 				2BBFCCE22A49665F0095EA4D /* TasksLocalDataSourceImpl+UpdateTask.swift in Sources */,
@@ -1645,6 +1739,7 @@
 				2B62641F2A4194F300B53646 /* FSCalendarDataSource.swift in Sources */,
 				2BBFCCC42A4950680095EA4D /* ReadTaskUseCase.swift in Sources */,
 				2B03C42D2A3814FF007B4C40 /* CategoryValidator.swift in Sources */,
+				632BA9E72A5F97E300A272F2 /* LogoutUseCase.swift in Sources */,
 				63F684872A58115C00B9A86A /* CalendarHeader.swift in Sources */,
 				2B2EAE762A445F1200A88123 /* TaskScreenModel.swift in Sources */,
 				2B83EE682A3078E00009D5C6 /* CategoriesLocalDataSourceImpl.swift in Sources */,
@@ -1676,6 +1771,7 @@
 				2B0B02A92A4AC3AC0018C454 /* ReadTaskViewController.swift in Sources */,
 				2B2EAE6E2A43F9BC00A88123 /* DateModel.swift in Sources */,
 				2B0B02A02A4A822C0018C454 /* ReadTaskInject.swift in Sources */,
+				632BA9E92A5F980900A272F2 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
