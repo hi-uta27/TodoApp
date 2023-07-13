@@ -75,3 +75,21 @@ extension User {
         return UserInfoModel(uid: uid, email: email ?? "", displayName: displayName ?? "", image: nil)
     }
 }
+
+class FirebaseAuthentications {
+    func loginWith(email: String, password: String, completed: @escaping (Result<UserDTO, Error>) -> Void) {
+        //
+    }
+
+    func loginWithGoogle(completed: @escaping (Result<UserDTO, Error>) -> Void) {
+        //
+    }
+
+    func readUserInfo(completed: @escaping (UserDTO?) -> Void) {
+        //
+    }
+
+    func logout(completed: @escaping (Error?) -> Void) {
+        //
+    }
+}

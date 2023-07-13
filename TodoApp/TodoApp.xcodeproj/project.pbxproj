@@ -163,6 +163,7 @@
 		632BAA2A2A5FA52F00A272F2 /* LoginUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA292A5FA52F00A272F2 /* LoginUseCaseImpl.swift */; };
 		632BAA2C2A5FA58A00A272F2 /* LogoutRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA2B2A5FA58A00A272F2 /* LogoutRepositoryImpl.swift */; };
 		632BAA2E2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA2D2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift */; };
+		632BAA302A5FA62600A272F2 /* LoginInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA2F2A5FA62600A272F2 /* LoginInject.swift */; };
 		634A73022A5D9CD2004AA3B4 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 634A73012A5D9CD2004AA3B4 /* GoogleSignIn */; };
 		634A73082A5DA79B004AA3B4 /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */; };
 		635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C22A5AA0C10045666D /* IntroViewController.swift */; };
@@ -359,6 +360,7 @@
 		632BAA292A5FA52F00A272F2 /* LoginUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginUseCaseImpl.swift; path = TodoApp/Features/Authentication/Data/Repositories/Login/LoginUseCaseImpl.swift; sourceTree = SOURCE_ROOT; };
 		632BAA2B2A5FA58A00A272F2 /* LogoutRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoutRepositoryImpl.swift; path = TodoApp/Features/Authentication/Data/Repositories/Login/LogoutRepositoryImpl.swift; sourceTree = SOURCE_ROOT; };
 		632BAA2D2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoutUseCaseImpl.swift; path = TodoApp/Features/Authentication/Data/Repositories/Login/LogoutUseCaseImpl.swift; sourceTree = SOURCE_ROOT; };
+		632BAA2F2A5FA62600A272F2 /* LoginInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInject.swift; sourceTree = "<group>"; };
 		634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		635BE0C22A5AA0C10045666D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
@@ -1612,6 +1614,7 @@
 			isa = PBXGroup;
 			children = (
 				639ADAD92A5EF46D000FB8F3 /* AuthenticationInject.swift */,
+				632BAA2F2A5FA62600A272F2 /* LoginInject.swift */,
 			);
 			path = Inject;
 			sourceTree = "<group>";
@@ -1967,6 +1970,7 @@
 				2B0B02A92A4AC3AC0018C454 /* ReadTaskViewController.swift in Sources */,
 				2B2EAE6E2A43F9BC00A88123 /* DateModel.swift in Sources */,
 				2B0B02A02A4A822C0018C454 /* ReadTaskInject.swift in Sources */,
+				632BAA302A5FA62600A272F2 /* LoginInject.swift in Sources */,
 				632BA9E92A5F980900A272F2 /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
