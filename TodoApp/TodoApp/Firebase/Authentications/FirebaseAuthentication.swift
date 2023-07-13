@@ -2,6 +2,8 @@ import FirebaseAuth
 import Foundation
 import GoogleSignIn
 
+// TODO: - Update this with class, and add Data and Domain for it
+
 protocol FirebaseAuthentication: BaseViewController {
     var firebaseAuth: Auth { get set }
     var googleSignIn: GIDSignIn { get set }

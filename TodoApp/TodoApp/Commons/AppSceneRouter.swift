@@ -5,6 +5,7 @@
 //  Created by Heligate on 06/06/2023.
 //
 
+import Firebase
 import UIKit
 
 class AppSceneRouter {
@@ -13,8 +14,11 @@ class AppSceneRouter {
     private lazy var onboardingRouter = di.resolve(OnboardingScreenRouter.self, argument: rootNavigationController)!
 
     func prepareScene() {
-//        onboardingRouter.openIntroForApp()
-        let vc = RegisterViewController.initial()
-        rootNavigationController.setViewControllers([vc], animated: true)
+        if Auth.auth().currentUser == nil {
+            onboardingRouter.openIntroForApp()
+        } else {
+            let viewController = MainTabbarViewController.initial()
+            rootNavigationController.setViewControllers([viewController], animated: true)
+        }
     }
 }
