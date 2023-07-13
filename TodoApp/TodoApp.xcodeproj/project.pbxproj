@@ -159,6 +159,8 @@
 		632BAA002A5F9D4E00A272F2 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BA9FF2A5F9D4E00A272F2 /* LoginRepository.swift */; };
 		632BAA1F2A5FA39100A272F2 /* UserInfoRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA1E2A5FA39000A272F2 /* UserInfoRepositoryImpl.swift */; };
 		632BAA222A5FA3AB00A272F2 /* UserInfoUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA212A5FA3AB00A272F2 /* UserInfoUseCaseImpl.swift */; };
+		632BAA262A5FA43500A272F2 /* LoginRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA252A5FA43500A272F2 /* LoginRepositoryImpl.swift */; };
+		632BAA2A2A5FA52F00A272F2 /* LoginUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA292A5FA52F00A272F2 /* LoginUseCaseImpl.swift */; };
 		634A73022A5D9CD2004AA3B4 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 634A73012A5D9CD2004AA3B4 /* GoogleSignIn */; };
 		634A73082A5DA79B004AA3B4 /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */; };
 		635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C22A5AA0C10045666D /* IntroViewController.swift */; };
@@ -351,6 +353,8 @@
 		632BA9FF2A5F9D4E00A272F2 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		632BAA1E2A5FA39000A272F2 /* UserInfoRepositoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoRepositoryImpl.swift; sourceTree = "<group>"; };
 		632BAA212A5FA3AB00A272F2 /* UserInfoUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserInfoUseCaseImpl.swift; path = TodoApp/Features/Authentication/Data/Repositories/Login/UserInfoUseCaseImpl.swift; sourceTree = SOURCE_ROOT; };
+		632BAA252A5FA43500A272F2 /* LoginRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginRepositoryImpl.swift; path = TodoApp/Features/Authentication/Data/Repositories/Login/LoginRepositoryImpl.swift; sourceTree = SOURCE_ROOT; };
+		632BAA292A5FA52F00A272F2 /* LoginUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginUseCaseImpl.swift; path = TodoApp/Features/Authentication/Data/Repositories/Login/LoginUseCaseImpl.swift; sourceTree = SOURCE_ROOT; };
 		634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		635BE0C22A5AA0C10045666D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
@@ -1402,6 +1406,8 @@
 			isa = PBXGroup;
 			children = (
 				632BAA202A5FA39C00A272F2 /* UserInfo */,
+				632BAA282A5FA51700A272F2 /* Logout */,
+				632BAA272A5FA51300A272F2 /* Login */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -1410,6 +1416,8 @@
 			isa = PBXGroup;
 			children = (
 				632BAA1D2A5FA29400A272F2 /* UserInfo */,
+				632BAA242A5FA41600A272F2 /* Logout */,
+				632BAA232A5FA40F00A272F2 /* Login */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1436,6 +1444,36 @@
 				632BAA212A5FA3AB00A272F2 /* UserInfoUseCaseImpl.swift */,
 			);
 			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		632BAA232A5FA40F00A272F2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				632BAA252A5FA43500A272F2 /* LoginRepositoryImpl.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		632BAA242A5FA41600A272F2 /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logout;
+			sourceTree = "<group>";
+		};
+		632BAA272A5FA51300A272F2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				632BAA292A5FA52F00A272F2 /* LoginUseCaseImpl.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		632BAA282A5FA51700A272F2 /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logout;
 			sourceTree = "<group>";
 		};
 		634A73032A5DA56E004AA3B4 /* Firebase */ = {
@@ -1804,6 +1842,7 @@
 				632BA9FA2A5F9CF000A272F2 /* UserInfoModel.swift in Sources */,
 				63F684842A580D7500B9A86A /* CalendarTableViewDataSource.swift in Sources */,
 				2B0981C72A39A12700B80C03 /* TaskEntity.swift in Sources */,
+				632BAA262A5FA43500A272F2 /* LoginRepositoryImpl.swift in Sources */,
 				2B9794BB2A3ACE1D00F4B8E8 /* CreateTaskRepository.swift in Sources */,
 				630CAD952A5C537A00300DFE /* OnboardingScreenRouter.swift in Sources */,
 				2BFE12DC2A333616001155EA /* CreateCategoryRepositoryImpl.swift in Sources */,
@@ -1903,6 +1942,7 @@
 				632BAA1F2A5FA39100A272F2 /* UserInfoRepositoryImpl.swift in Sources */,
 				2B03C4292A38072C007B4C40 /* UIAlertAction+Action.swift in Sources */,
 				635BE0C82A5AA5580045666D /* StartScreenViewController.swift in Sources */,
+				632BAA2A2A5FA52F00A272F2 /* LoginUseCaseImpl.swift in Sources */,
 				63734DA72A5672DF0006EDF6 /* DeleteTaskLocalDataSource.swift in Sources */,
 				2BFE12E02A33382B001155EA /* CreateCategoryInject.swift in Sources */,
 				2B2EAE742A445EF700A88123 /* UINavigationController+Action.swift in Sources */,
