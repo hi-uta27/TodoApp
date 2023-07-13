@@ -165,6 +165,8 @@
 		632BAA2E2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA2D2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift */; };
 		632BAA302A5FA62600A272F2 /* LoginInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA2F2A5FA62600A272F2 /* LoginInject.swift */; };
 		632BAA322A5FA75E00A272F2 /* LogoutInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA312A5FA75E00A272F2 /* LogoutInject.swift */; };
+		632BAA342A5FA7DA00A272F2 /* UserInfoInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA332A5FA7DA00A272F2 /* UserInfoInject.swift */; };
+		632BAA372A5FA8B000A272F2 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA362A5FA8B000A272F2 /* UserDTO.swift */; };
 		634A73022A5D9CD2004AA3B4 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 634A73012A5D9CD2004AA3B4 /* GoogleSignIn */; };
 		634A73082A5DA79B004AA3B4 /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */; };
 		635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C22A5AA0C10045666D /* IntroViewController.swift */; };
@@ -363,6 +365,8 @@
 		632BAA2D2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoutUseCaseImpl.swift; path = TodoApp/Features/Authentication/Data/Repositories/Login/LogoutUseCaseImpl.swift; sourceTree = SOURCE_ROOT; };
 		632BAA2F2A5FA62600A272F2 /* LoginInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInject.swift; sourceTree = "<group>"; };
 		632BAA312A5FA75E00A272F2 /* LogoutInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutInject.swift; sourceTree = "<group>"; };
+		632BAA332A5FA7DA00A272F2 /* UserInfoInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoInject.swift; sourceTree = "<group>"; };
+		632BAA362A5FA8B000A272F2 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		635BE0C22A5AA0C10045666D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
@@ -1381,6 +1385,7 @@
 		632BA9EF2A5F99FB00A272F2 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
+				632BAA352A5FA8A300A272F2 /* DTO */,
 				632BA9F12A5F9A5100A272F2 /* UserInfoRemoteDataSource.swift */,
 			);
 			path = UserInfo;
@@ -1484,6 +1489,14 @@
 				632BAA2D2A5FA5C800A272F2 /* LogoutUseCaseImpl.swift */,
 			);
 			path = Logout;
+			sourceTree = "<group>";
+		};
+		632BAA352A5FA8A300A272F2 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				632BAA362A5FA8B000A272F2 /* UserDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		634A73032A5DA56E004AA3B4 /* Firebase */ = {
@@ -1618,6 +1631,7 @@
 				639ADAD92A5EF46D000FB8F3 /* AuthenticationInject.swift */,
 				632BAA2F2A5FA62600A272F2 /* LoginInject.swift */,
 				632BAA312A5FA75E00A272F2 /* LogoutInject.swift */,
+				632BAA332A5FA7DA00A272F2 /* UserInfoInject.swift */,
 			);
 			path = Inject;
 			sourceTree = "<group>";
@@ -1927,6 +1941,7 @@
 				63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */,
 				2B6C14E22A4D9F1400161D85 /* TabbarButton.swift in Sources */,
 				2BD165AC2A30432A00AFEA24 /* ReadCategoryRepository.swift in Sources */,
+				632BAA372A5FA8B000A272F2 /* UserDTO.swift in Sources */,
 				2B1DEF972A4BF4500061CB00 /* TasksLocalDataSource.swift in Sources */,
 				2BBFCCD82A4964390095EA4D /* UpdateTaskUseCase.swift in Sources */,
 				2B9794C62A3AE2BA00F4B8E8 /* CreateTaskLocalDataSource.swift in Sources */,
@@ -1936,6 +1951,7 @@
 				2BFE12C62A330030001155EA /* CategoryInject.swift in Sources */,
 				2B62641F2A4194F300B53646 /* FSCalendarDataSource.swift in Sources */,
 				2BBFCCC42A4950680095EA4D /* ReadTaskUseCase.swift in Sources */,
+				632BAA342A5FA7DA00A272F2 /* UserInfoInject.swift in Sources */,
 				2B03C42D2A3814FF007B4C40 /* CategoryValidator.swift in Sources */,
 				632BA9E72A5F97E300A272F2 /* LogoutUseCase.swift in Sources */,
 				63F684872A58115C00B9A86A /* CalendarHeader.swift in Sources */,
