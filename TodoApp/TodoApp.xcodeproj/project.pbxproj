@@ -170,6 +170,9 @@
 		632BAA3A2A5FB82C00A272F2 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA392A5FB82C00A272F2 /* RegisterUseCase.swift */; };
 		632BAA3C2A5FB89C00A272F2 /* RegisterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA3B2A5FB89C00A272F2 /* RegisterRepository.swift */; };
 		632BAA402A5FB8CA00A272F2 /* RegisterRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA3F2A5FB8CA00A272F2 /* RegisterRemoteDataSource.swift */; };
+		632BAA432A5FB91500A272F2 /* RegisterUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA422A5FB91500A272F2 /* RegisterUseCaseImpl.swift */; };
+		632BAA462A5FB99900A272F2 /* RegisterRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA452A5FB99900A272F2 /* RegisterRepositoryImpl.swift */; };
+		632BAA482A5FBB7100A272F2 /* RegisterInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BAA472A5FBB7100A272F2 /* RegisterInject.swift */; };
 		634A73022A5D9CD2004AA3B4 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 634A73012A5D9CD2004AA3B4 /* GoogleSignIn */; };
 		634A73082A5DA79B004AA3B4 /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */; };
 		635BE0C32A5AA0C10045666D /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BE0C22A5AA0C10045666D /* IntroViewController.swift */; };
@@ -373,6 +376,9 @@
 		632BAA392A5FB82C00A272F2 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
 		632BAA3B2A5FB89C00A272F2 /* RegisterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRepository.swift; sourceTree = "<group>"; };
 		632BAA3F2A5FB8CA00A272F2 /* RegisterRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRemoteDataSource.swift; sourceTree = "<group>"; };
+		632BAA422A5FB91500A272F2 /* RegisterUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCaseImpl.swift; sourceTree = "<group>"; };
+		632BAA452A5FB99900A272F2 /* RegisterRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRepositoryImpl.swift; sourceTree = "<group>"; };
+		632BAA472A5FBB7100A272F2 /* RegisterInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInject.swift; sourceTree = "<group>"; };
 		634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		635BE0C22A5AA0C10045666D /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		635BE0C42A5AA0D20045666D /* IntroViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroViewController.storyboard; sourceTree = "<group>"; };
@@ -1427,6 +1433,7 @@
 		632BAA182A5FA19700A272F2 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				632BAA412A5FB90700A272F2 /* Register */,
 				632BAA202A5FA39C00A272F2 /* UserInfo */,
 				632BAA282A5FA51700A272F2 /* Logout */,
 				632BAA272A5FA51300A272F2 /* Login */,
@@ -1437,6 +1444,7 @@
 		632BAA192A5FA19F00A272F2 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				632BAA442A5FB97100A272F2 /* Register */,
 				632BAA1D2A5FA29400A272F2 /* UserInfo */,
 				632BAA242A5FA41600A272F2 /* Logout */,
 				632BAA232A5FA40F00A272F2 /* Login */,
@@ -1528,6 +1536,22 @@
 			isa = PBXGroup;
 			children = (
 				632BAA3F2A5FB8CA00A272F2 /* RegisterRemoteDataSource.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		632BAA412A5FB90700A272F2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				632BAA422A5FB91500A272F2 /* RegisterUseCaseImpl.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		632BAA442A5FB97100A272F2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				632BAA452A5FB99900A272F2 /* RegisterRepositoryImpl.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -1665,6 +1689,7 @@
 				632BAA2F2A5FA62600A272F2 /* LoginInject.swift */,
 				632BAA312A5FA75E00A272F2 /* LogoutInject.swift */,
 				632BAA332A5FA7DA00A272F2 /* UserInfoInject.swift */,
+				632BAA472A5FBB7100A272F2 /* RegisterInject.swift */,
 			);
 			path = Inject;
 			sourceTree = "<group>";
@@ -1919,6 +1944,7 @@
 				2B3192CD2A4D1726005C6F69 /* RoundCornerMarkViewBehavior.swift in Sources */,
 				2B57DE8B2A2F215D002160E7 /* BaseViewController.swift in Sources */,
 				2B57DE6D2A2F1B8B002160E7 /* AppDelegate.swift in Sources */,
+				632BAA482A5FBB7100A272F2 /* RegisterInject.swift in Sources */,
 				2BD165A22A301B1D00AFEA24 /* CategoryEntity.swift in Sources */,
 				2B57DE8D2A2F2424002160E7 /* AppSceneRouter.swift in Sources */,
 				2B3192C92A4D164C005C6F69 /* BorderViewBehavior.swift in Sources */,
@@ -1947,6 +1973,7 @@
 				2B0981C82A39A12700B80C03 /* TaskStatus.swift in Sources */,
 				2BBFCCD02A495D9E0095EA4D /* TasksLocalDataSourceImpl+ReadTask.swift in Sources */,
 				2BBFCCF22A4975280095EA4D /* TaskFilterModel.swift in Sources */,
+				632BAA432A5FB91500A272F2 /* RegisterUseCaseImpl.swift in Sources */,
 				2B62641A2A418B8A00B53646 /* ChooseTimeViewController.swift in Sources */,
 				2B9328CB2A3C094E00DD6730 /* TaskPriorityViewController.swift in Sources */,
 				2BBFCCE02A4966490095EA4D /* UpdateTaskRepositoryImpl.swift in Sources */,
@@ -2025,6 +2052,7 @@
 				632BA9F62A5F9B9300A272F2 /* LoginRemoteDataSource.swift in Sources */,
 				2B0B02A92A4AC3AC0018C454 /* ReadTaskViewController.swift in Sources */,
 				2B2EAE6E2A43F9BC00A88123 /* DateModel.swift in Sources */,
+				632BAA462A5FB99900A272F2 /* RegisterRepositoryImpl.swift in Sources */,
 				2B0B02A02A4A822C0018C454 /* ReadTaskInject.swift in Sources */,
 				632BAA302A5FA62600A272F2 /* LoginInject.swift in Sources */,
 				632BA9E92A5F980900A272F2 /* LoginUseCase.swift in Sources */,
