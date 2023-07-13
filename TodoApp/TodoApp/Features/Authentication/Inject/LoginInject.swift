@@ -5,8 +5,8 @@
 //  Created by TaHieu on 7/13/23.
 //
 
-import Foundation
 import Swinject
+import UIKit
 
 protocol LoginInject {}
 
@@ -17,17 +17,17 @@ extension LoginInject {
     }
 
     private static func registerData(container: Container) {
-        container.register(LoginRemoteDataSource.self) { _ in
-            FirebaseAuthentications()
+        container.register(LoginRemoteDataSource.self) { _, viewController in
+            FirebaseAuthentications(viewController: viewController)
         }
-        container.register(LoginRepository.self) { r in
-            LoginRepositoryImpl(dataSource: r.resolve(LoginRemoteDataSource.self)!)
+        container.register(LoginRepository.self) { r, viewController in
+            LoginRepositoryImpl(dataSource: r.resolve(LoginRemoteDataSource.self, argument: viewController as UIViewController)!)
         }
     }
 
     private static func registerUseCase(container: Container) {
-        container.register(LoginUseCase.self) { r in
-            LoginUseCaseImpl(repository: r.resolve(LoginRepository.self)!)
+        container.register(LoginUseCase.self) { r, viewController in
+            LoginUseCaseImpl(repository: r.resolve(LoginRepository.self, argument: viewController as UIViewController)!)
         }
     }
 }

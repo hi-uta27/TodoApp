@@ -5,16 +5,13 @@
 //  Created by TaHieu on 7/11/23.
 //
 
-import FirebaseAuth
-import GoogleSignIn
 import UIKit
 
 class LoginViewController: BaseViewController {
     @IBOutlet private var userNameTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
 
-    lazy var firebaseAuth = Auth.auth()
-    lazy var googleSignIn = GIDSignIn.sharedInstance
+    private lazy var loginUseCase = di.resolve(LoginUseCase.self, argument: self as UIViewController)!
     private var openRegisterScreen: (() -> Void)!
     private var openHomeScreen: (() -> Void)!
 
@@ -29,16 +26,16 @@ class LoginViewController: BaseViewController {
     @IBAction private func touchUpInsideLoginButton(_ sender: Any) {
         do {
             let (email, password) = try UserValidator.validateData(email: userNameTextField.text, password: passwordTextField.text)
-            loginWith(email: email, password: password, loginSuccesed: { [weak self] in
+            loginUseCase.loginWith(email: email, password: password) { [weak self] _ in
                 self?.openHomeScreen?()
-            })
+            }
         } catch {
             showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
         }
     }
 
     @IBAction private func touchUpInsideLoginWithGoogleButton(_ sender: Any) {
-        loginWithGoogle { [weak self] in
+        loginUseCase.loginWithGoogle { [weak self] _ in
             self?.openHomeScreen?()
         }
     }
@@ -63,5 +60,4 @@ extension LoginViewController {
     }
 }
 
-extension LoginViewController: FirebaseAuthentication {}
 extension LoginViewController: BiometricAuthentication {}
