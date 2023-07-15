@@ -574,7 +574,7 @@
 			children = (
 				2B57DE882A2F2145002160E7 /* Commons */,
 				2BD1659B2A301AC300AFEA24 /* Features */,
-				634A73032A5DA56E004AA3B4 /* Firebase */,
+				634A73032A5DA56E004AA3B4 /* NetworkLayer */,
 				2B57DE6C2A2F1B8B002160E7 /* AppDelegate.swift */,
 				2B57DE6E2A2F1B8B002160E7 /* SceneDelegate.swift */,
 				2B57DE752A2F1B8E002160E7 /* Assets.xcassets */,
@@ -1556,19 +1556,19 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
-		634A73032A5DA56E004AA3B4 /* Firebase */ = {
+		634A73032A5DA56E004AA3B4 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
 				634A73062A5DA76E004AA3B4 /* Authentications */,
 			);
-			path = Firebase;
+			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 		634A73062A5DA76E004AA3B4 /* Authentications */ = {
 			isa = PBXGroup;
 			children = (
-				634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */,
-				63754AB32A5E8DC700DC24EE /* BiometricAuthentication.swift */,
+				63E056B42A6296B3000F6FC4 /* Firebase */,
+				63E056B52A6296BA000F6FC4 /* Biometric */,
 			);
 			path = Authentications;
 			sourceTree = "<group>";
@@ -1710,6 +1710,22 @@
 				63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */,
 			);
 			path = DetailTask;
+			sourceTree = "<group>";
+		};
+		63E056B42A6296B3000F6FC4 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		63E056B52A6296BA000F6FC4 /* Biometric */ = {
+			isa = PBXGroup;
+			children = (
+				63754AB32A5E8DC700DC24EE /* BiometricAuthentication.swift */,
+			);
+			path = Biometric;
 			sourceTree = "<group>";
 		};
 		63ECF3802A5B9263009D5C58 /* Cell */ = {

@@ -26,8 +26,13 @@ class LoginViewController: BaseViewController {
     @IBAction private func touchUpInsideLoginButton(_ sender: Any) {
         do {
             let (email, password) = try UserValidator.validateData(email: userNameTextField.text, password: passwordTextField.text)
-            loginUseCase.loginWith(email: email, password: password) { [weak self] _ in
-                self?.openHomeScreen?()
+            loginUseCase.loginWith(email: email, password: password) { [weak self] result in
+                switch result {
+                case .success:
+                    self?.openHomeScreen?()
+                case .failure(let failure):
+                    self?.showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
+                }
             }
         } catch {
             showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
@@ -35,15 +40,27 @@ class LoginViewController: BaseViewController {
     }
 
     @IBAction private func touchUpInsideLoginWithGoogleButton(_ sender: Any) {
-        loginUseCase.loginWithGoogle { [weak self] _ in
-            self?.openHomeScreen?()
+        loginUseCase.loginWithGoogle { [weak self] result in
+            switch result {
+            case .success:
+                self?.openHomeScreen?()
+            case .failure(let failure):
+                self?.showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
+            }
         }
     }
 
     @IBAction private func touchUpInsideLoginWithAppleButton(_ sender: Any) {
-        loginWithBiometric { [weak self] in
-            self?.openHomeScreen?()
-        }
+        print(Self.self, #function, "This feature is under developing")
+        // TODO: - Update when have apple develop account
+//        loginWithBiometric { [weak self] result in
+//            switch result {
+//            case .success:
+//                self?.openHomeScreen?()
+//            case .failure(let failure):
+//                self?.showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
+//            }
+//        }
     }
 
     @IBAction private func touchUpInsideRegisterButton(_ sender: Any) {
