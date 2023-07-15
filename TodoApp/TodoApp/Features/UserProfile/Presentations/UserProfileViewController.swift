@@ -16,10 +16,13 @@ class UserProfileViewController: BaseViewController {
 
     private lazy var logoutUseCase = di.resolve(LogoutUseCase.self)!
     private lazy var userInforUseCase = di.resolve(UserInforUseCase.self)!
+    lazy var readTaskUseCase = di.resolve(ReadTaskUseCase.self)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         readUserInfo()
+        readTask()
+        registerObserveTaskNotification()
     }
 
     private func readUserInfo() {
@@ -31,6 +34,16 @@ class UserProfileViewController: BaseViewController {
                 self?.userNameLabel.text = user.displayName
                 self?.imageView.sd_setImage(with: user.image)
             }
+        }
+    }
+
+    private func readTask() {
+        refreshTask(filter: nil) { [weak self] tasks in
+            guard let tasks = tasks else { return }
+            let taskLeft = tasks.filter { $0.status == .todo }.count
+            let taskDone = tasks.count - taskLeft
+            self?.taskLeftButton.setTitle("\(taskLeft) Task left", for: .normal)
+            self?.taskDoneButton.setTitle("\(taskDone) Task done", for: .normal)
         }
     }
 
@@ -87,4 +100,24 @@ class UserProfileViewController: BaseViewController {
             }
         }
     }
+
+    // MARK: - observeTaskChangeNotification
+
+    private func registerObserveTaskNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(observeTaskChangeNotification), name: .taskChangeNotification, object: nil)
+    }
+
+    @objc private func observeTaskChangeNotification() {
+        readTask()
+    }
+
+    private func removeObserveTaskNotification() {
+        NotificationCenter.default.removeObserver(self, name: .taskChangeNotification, object: nil)
+    }
+
+    deinit {
+        removeObserveTaskNotification()
+    }
 }
+
+extension UserProfileViewController: ReadTaskViewController {}
