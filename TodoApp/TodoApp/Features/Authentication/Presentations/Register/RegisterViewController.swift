@@ -14,6 +14,7 @@ class RegisterViewController: BaseViewController {
     @IBOutlet private var showHidePasswordButton: UIButton!
     @IBOutlet private var showHideConfirmPasswordButton: UIButton!
 
+    private lazy var loginUseCase = di.resolve(LoginUseCase.self, argument: self as UIViewController)!
     private var openHomeScreen: (() -> Void)!
 
     override func viewDidLoad() {
@@ -36,15 +37,18 @@ class RegisterViewController: BaseViewController {
     }
 
     @IBAction private func touchUpInsideLoginWithGoogleButton(_ sender: Any) {
-//        loginWithGoogle { [weak self] in
-//            self?.openHomeScreen?()
-//        }
+        loginUseCase.loginWithGoogle { [weak self] result in
+            switch result {
+            case .success:
+                self?.openHomeScreen?()
+            case .failure(let failure):
+                self?.showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
+            }
+        }
     }
 
     @IBAction private func touchUpInsideLoginWithAppleButton(_ sender: Any) {
-        loginWithBiometric { [weak self] in
-            self?.openHomeScreen?()
-        }
+        print(Self.self, #function, "This feature is under developing")
     }
 
     @IBAction private func touchUpInsideShowHidePassswordButton(_ sender: Any) {
@@ -65,5 +69,3 @@ extension RegisterViewController {
         return viewController
     }
 }
-
-extension RegisterViewController: BiometricAuthentication {}
