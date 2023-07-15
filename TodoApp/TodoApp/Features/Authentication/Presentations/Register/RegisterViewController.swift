@@ -28,7 +28,17 @@ class RegisterViewController: BaseViewController {
                 email: userNameTextField.text,
                 password: passwordTextField.text,
                 confirmPassword: confirmPasswordTextField.text)
-            registerUseCase.registerWith(email: email, password: password) { [weak self] result in
+            registerWith(email: email, password: password)
+        } catch {
+            showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
+        }
+    }
+
+    private func registerWith(email: String, password: String) {
+        displayIndicator(isShow: true)
+        registerUseCase.registerWith(email: email, password: password) { [weak self] result in
+            DispatchQueue.main.async {
+                self?.displayIndicator(isShow: false)
                 switch result {
                 case .success:
                     self?.navigationController?.popViewController(animated: true)
@@ -36,18 +46,20 @@ class RegisterViewController: BaseViewController {
                     self?.showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
                 }
             }
-        } catch {
-            showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
         }
     }
 
     @IBAction private func touchUpInsideLoginWithGoogleButton(_ sender: Any) {
+        displayIndicator(isShow: true)
         loginUseCase.loginWithGoogle { [weak self] result in
-            switch result {
-            case .success:
-                self?.openHomeScreen?()
-            case .failure(let failure):
-                self?.showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
+            DispatchQueue.main.async {
+                self?.displayIndicator(isShow: false)
+                switch result {
+                case .success:
+                    self?.openHomeScreen?()
+                case .failure(let failure):
+                    self?.showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
+                }
             }
         }
     }
