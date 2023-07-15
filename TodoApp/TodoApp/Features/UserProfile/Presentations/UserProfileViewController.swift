@@ -17,11 +17,6 @@ class UserProfileViewController: BaseViewController {
     private lazy var logoutUseCase = di.resolve(LogoutUseCase.self)!
     private lazy var userInforUseCase = di.resolve(UserInforUseCase.self)!
 
-    private var openChangeAppSetting: (() -> Void)!
-    private var openChangeAccountName: (() -> Void)!
-    private var openChangeAccountPassword: (() -> Void)!
-    private var openChangeAccountImage: (() -> Void)!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         readUserInfo()
@@ -40,19 +35,19 @@ class UserProfileViewController: BaseViewController {
     }
 
     @IBAction private func touchUpInsideAppSettingButton(_ sender: Any) {
-        openChangeAppSetting?()
+        print(Self.self, #function)
     }
 
     @IBAction private func touchUpInsideChangeAccountNameButton(_ sender: Any) {
-        openChangeAccountName?()
+        print(Self.self, #function)
     }
 
     @IBAction private func touchUpInsideChangeAccountPasswordButton(_ sender: Any) {
-        openChangeAccountPassword?()
+        print(Self.self, #function)
     }
 
     @IBAction private func touchUpInsideChangeAccountImageButton(_ sender: Any) {
-        openChangeAccountImage?()
+        print(Self.self, #function)
     }
 
     @IBAction private func touchUpInsideAboutUSButton(_ sender: Any) {
@@ -91,20 +86,5 @@ class UserProfileViewController: BaseViewController {
                 }
             }
         }
-    }
-}
-
-extension UserProfileViewController {
-    static func initial(openChangeAppSetting: @escaping () -> Void,
-                        openChangeAccountName: @escaping () -> Void,
-                        openChangeAccountPassword: @escaping () -> Void,
-                        openChangeAccountImage: @escaping () -> Void) -> Self
-    {
-        let viewController = initial()
-        viewController.openChangeAppSetting = openChangeAppSetting
-        viewController.openChangeAccountName = openChangeAccountName
-        viewController.openChangeAccountPassword = openChangeAccountPassword
-        viewController.openChangeAccountImage = openChangeAccountImage
-        return viewController
     }
 }
