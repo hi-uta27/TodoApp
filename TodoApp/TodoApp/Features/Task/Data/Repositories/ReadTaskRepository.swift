@@ -7,8 +7,6 @@
 
 import Foundation
 
-// Func readTask with: Date, TaskFilter? -> [TaskEnity]?
-
 protocol ReadTaskRepository {
-    func readTask(date: Date, keyword: String?, completed: @escaping (Result<[TaskEntity]?, Error>) -> Void)
+    func readTask(date: Date?, keyword: String?, completed: @escaping (Result<[TaskEntity]?, Error>) -> Void)
 }

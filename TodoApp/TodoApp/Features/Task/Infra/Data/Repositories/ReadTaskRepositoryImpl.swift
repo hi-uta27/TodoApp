@@ -16,7 +16,7 @@ class ReadTaskRepositoryImpl: ReadTaskRepository {
         self.localDataSource = localDataSource
     }
 
-    func readTask(date: Date, keyword: String?, completed: @escaping (Result<[TaskEntity]?, Error>) -> Void) {
+    func readTask(date: Date?, keyword: String?, completed: @escaping (Result<[TaskEntity]?, Error>) -> Void) {
         localDataSource.readTask(date: date, keyword: keyword) { result in
             switch result {
             case .success(let entities):
