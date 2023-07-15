@@ -5,6 +5,7 @@
 //  Created by Heligate on 30/06/2023.
 //
 
+import SDWebImage
 import UIKit
 
 class UserProfileViewController: BaseViewController {
@@ -33,7 +34,7 @@ class UserProfileViewController: BaseViewController {
                 self?.displayIndicator(isShow: false)
                 guard let user = user else { return }
                 self?.userNameLabel.text = user.displayName
-                // TODO: Update image with URL
+                self?.imageView.sd_setImage(with: user.image)
             }
         }
     }

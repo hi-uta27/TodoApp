@@ -144,6 +144,7 @@
 		630CAD952A5C537A00300DFE /* OnboardingScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD942A5C537A00300DFE /* OnboardingScreenRouter.swift */; };
 		630CAD9A2A5C549100300DFE /* OnboardingScreenRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD992A5C549100300DFE /* OnboardingScreenRouterImpl.swift */; };
 		630CAD9C2A5C561200300DFE /* IntroInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630CAD9B2A5C561200300DFE /* IntroInject.swift */; };
+		631188DA2A62E5E400F53F6D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 631188D92A62E5E400F53F6D /* SDWebImage */; };
 		63293E662A5CFF26000F3155 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63293E652A5CFF26000F3155 /* LoginViewController.swift */; };
 		63293E682A5CFF52000F3155 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63293E672A5CFF52000F3155 /* LoginViewController.storyboard */; };
 		632BA9E12A5F96A800A272F2 /* UserInforUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632BA9E02A5F96A800A272F2 /* UserInforUseCase.swift */; };
@@ -428,6 +429,7 @@
 				2B3192D52A4D25A6005C6F69 /* SVPullToRefresh in Frameworks */,
 				638C97A82A5D52FD0092CD98 /* FirebaseFirestore in Frameworks */,
 				2B9328EC2A3C672500DD6730 /* FSCalendar in Frameworks */,
+				631188DA2A62E5E400F53F6D /* SDWebImage in Frameworks */,
 				2BC969B82A42B53C00D11EB1 /* SwiftDate in Frameworks */,
 				2BFE12C42A33001E001155EA /* Swinject in Frameworks */,
 				638C97A62A5D52FD0092CD98 /* FirebaseCrashlytics in Frameworks */,
@@ -1792,6 +1794,7 @@
 				638C97A52A5D52FD0092CD98 /* FirebaseCrashlytics */,
 				638C97A72A5D52FD0092CD98 /* FirebaseFirestore */,
 				634A73012A5D9CD2004AA3B4 /* GoogleSignIn */,
+				631188D92A62E5E400F53F6D /* SDWebImage */,
 			);
 			productName = TodoApp;
 			productReference = 2B57DE692A2F1B8B002160E7 /* TodoApp.app */;
@@ -1830,6 +1833,7 @@
 				2B3192D32A4D25A6005C6F69 /* XCRemoteSwiftPackageReference "SVPullToRefresh" */,
 				638C97A02A5D52FD0092CD98 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				634A73002A5D9CD2004AA3B4 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				631188D82A62E5E400F53F6D /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 2B57DE6A2A2F1B8B002160E7 /* Products */;
 			projectDirPath = "";
@@ -2342,6 +2346,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		631188D82A62E5E400F53F6D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		634A73002A5D9CD2004AA3B4 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -2390,6 +2402,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2BFE12C22A33001E001155EA /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		631188D92A62E5E400F53F6D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 631188D82A62E5E400F53F6D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 		634A73012A5D9CD2004AA3B4 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
