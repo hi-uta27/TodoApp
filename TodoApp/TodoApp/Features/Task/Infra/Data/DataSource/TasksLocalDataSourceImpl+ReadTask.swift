@@ -25,7 +25,7 @@ extension TasksLocalDataSourceImpl {
     private func filterResult(_ results: Results<RTaskModel>, by date: Date, keyword: String?, completed: @escaping (Result<[RTaskModel]?, Error>) -> Void) {
         let resultsByDate = results.filter { $0.startTime.compare(.isSameDay(date)) }
         if let keyword = keyword, !keyword.isEmpty {
-            let resultsByKeyword = results.filter { $0.title.contains(keyword) }
+            let resultsByKeyword = resultsByDate.filter { $0.title.contains(keyword) }
             completed(.success(Array(resultsByKeyword)))
         } else {
             completed(.success(Array(resultsByDate)))
