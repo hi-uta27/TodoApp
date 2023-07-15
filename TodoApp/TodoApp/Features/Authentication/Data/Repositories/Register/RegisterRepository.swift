@@ -8,5 +8,5 @@
 import Foundation
 
 protocol RegisterRepository {
-    func registerWith(email: String, password: String, confirmPassword: String, completed: @escaping (Result<UserEntity, Error>) -> Void)
+    func registerWith(email: String, password: String, completed: @escaping (Result<UserEntity, Error>) -> Void)
 }

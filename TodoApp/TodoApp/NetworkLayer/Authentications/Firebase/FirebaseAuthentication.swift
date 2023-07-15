@@ -7,10 +7,7 @@ class FirebaseAuthentications {
     private let googleSignIn: GIDSignIn
     private var viewController: UIViewController
 
-    init(firebaseAuth: Auth = .auth(),
-         googleSignIn: GIDSignIn = .sharedInstance,
-         viewController: UIViewController = .init())
-    {
+    init(firebaseAuth: Auth = .auth(), googleSignIn: GIDSignIn = .sharedInstance, viewController: UIViewController = .init()) {
         self.firebaseAuth = firebaseAuth
         self.googleSignIn = googleSignIn
         self.viewController = viewController
@@ -49,7 +46,7 @@ extension FirebaseAuthentications {
         }
     }
 
-    func registerWith(email: String, password: String, confirmPassword: String, completed: @escaping (Result<UserDTO, Error>) -> Void) {
+    func registerWith(email: String, password: String, completed: @escaping (Result<UserDTO, Error>) -> Void) {
         firebaseAuth.createUser(withEmail: email, password: password) { result, error in
             if let error = error {
                 completed(.failure(error))

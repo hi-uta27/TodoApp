@@ -26,24 +26,53 @@ class LoginViewController: BaseViewController {
     @IBAction private func touchUpInsideLoginButton(_ sender: Any) {
         do {
             let (email, password) = try UserValidator.validateData(email: userNameTextField.text, password: passwordTextField.text)
-            loginUseCase.loginWith(email: email, password: password) { [weak self] _ in
-                self?.openHomeScreen?()
-            }
+            loginWith(email: email, password: password)
         } catch {
             showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
         }
     }
 
+    private func loginWith(email: String, password: String) {
+        displayIndicator(isShow: true)
+        loginUseCase.loginWith(email: email, password: password) { [weak self] result in
+            DispatchQueue.main.async {
+                self?.displayIndicator(isShow: false)
+                switch result {
+                case .success:
+                    self?.openHomeScreen?()
+                case .failure(let failure):
+                    self?.showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
+                }
+            }
+        }
+    }
+
     @IBAction private func touchUpInsideLoginWithGoogleButton(_ sender: Any) {
-        loginUseCase.loginWithGoogle { [weak self] _ in
-            self?.openHomeScreen?()
+        displayIndicator(isShow: true)
+        loginUseCase.loginWithGoogle { [weak self] result in
+            DispatchQueue.main.async {
+                self?.displayIndicator(isShow: false)
+                switch result {
+                case .success:
+                    self?.openHomeScreen?()
+                case .failure(let failure):
+                    self?.showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
+                }
+            }
         }
     }
 
     @IBAction private func touchUpInsideLoginWithAppleButton(_ sender: Any) {
-        loginWithBiometric { [weak self] in
-            self?.openHomeScreen?()
-        }
+        print(Self.self, #function, "This feature is under developing")
+        // TODO: - Update when have apple develop account
+//        loginWithBiometric { [weak self] result in
+//            switch result {
+//            case .success:
+//                self?.openHomeScreen?()
+//            case .failure(let failure):
+//                self?.showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
+//            }
+//        }
     }
 
     @IBAction private func touchUpInsideRegisterButton(_ sender: Any) {

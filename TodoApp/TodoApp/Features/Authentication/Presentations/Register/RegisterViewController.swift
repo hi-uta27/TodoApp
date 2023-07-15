@@ -14,6 +14,8 @@ class RegisterViewController: BaseViewController {
     @IBOutlet private var showHidePasswordButton: UIButton!
     @IBOutlet private var showHideConfirmPasswordButton: UIButton!
 
+    private lazy var loginUseCase = di.resolve(LoginUseCase.self, argument: self as UIViewController)!
+    private lazy var registerUseCase = di.resolve(RegisterUseCase.self)!
     private var openHomeScreen: (() -> Void)!
 
     override func viewDidLoad() {
@@ -26,25 +28,44 @@ class RegisterViewController: BaseViewController {
                 email: userNameTextField.text,
                 password: passwordTextField.text,
                 confirmPassword: confirmPasswordTextField.text)
-
-//            registerWith(email: email, password: password, registerSuccessed: { [weak self] in
-//                self?.navigationController?.popViewController(animated: true)
-//            })
+            registerWith(email: email, password: password)
         } catch {
             showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
         }
     }
 
+    private func registerWith(email: String, password: String) {
+        displayIndicator(isShow: true)
+        registerUseCase.registerWith(email: email, password: password) { [weak self] result in
+            DispatchQueue.main.async {
+                self?.displayIndicator(isShow: false)
+                switch result {
+                case .success:
+                    self?.navigationController?.popViewController(animated: true)
+                case .failure(let failure):
+                    self?.showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
+                }
+            }
+        }
+    }
+
     @IBAction private func touchUpInsideLoginWithGoogleButton(_ sender: Any) {
-//        loginWithGoogle { [weak self] in
-//            self?.openHomeScreen?()
-//        }
+        displayIndicator(isShow: true)
+        loginUseCase.loginWithGoogle { [weak self] result in
+            DispatchQueue.main.async {
+                self?.displayIndicator(isShow: false)
+                switch result {
+                case .success:
+                    self?.openHomeScreen?()
+                case .failure(let failure):
+                    self?.showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
+                }
+            }
+        }
     }
 
     @IBAction private func touchUpInsideLoginWithAppleButton(_ sender: Any) {
-        loginWithBiometric { [weak self] in
-            self?.openHomeScreen?()
-        }
+        print(Self.self, #function, "This feature is under developing")
     }
 
     @IBAction private func touchUpInsideShowHidePassswordButton(_ sender: Any) {
@@ -65,5 +86,3 @@ extension RegisterViewController {
         return viewController
     }
 }
-
-extension RegisterViewController: BiometricAuthentication {}
