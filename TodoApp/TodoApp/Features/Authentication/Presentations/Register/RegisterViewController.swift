@@ -15,6 +15,7 @@ class RegisterViewController: BaseViewController {
     @IBOutlet private var showHideConfirmPasswordButton: UIButton!
 
     private lazy var loginUseCase = di.resolve(LoginUseCase.self, argument: self as UIViewController)!
+    private lazy var registerUseCase = di.resolve(RegisterUseCase.self)!
     private var openHomeScreen: (() -> Void)!
 
     override func viewDidLoad() {
@@ -27,10 +28,14 @@ class RegisterViewController: BaseViewController {
                 email: userNameTextField.text,
                 password: passwordTextField.text,
                 confirmPassword: confirmPasswordTextField.text)
-
-//            registerWith(email: email, password: password, registerSuccessed: { [weak self] in
-//                self?.navigationController?.popViewController(animated: true)
-//            })
+            registerUseCase.registerWith(email: email, password: password) { [weak self] result in
+                switch result {
+                case .success:
+                    self?.navigationController?.popViewController(animated: true)
+                case .failure(let failure):
+                    self?.showAlert(title: "Error", message: failure.localizedDescription, actions: [.okAction()])
+                }
+            }
         } catch {
             showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
         }

@@ -14,7 +14,7 @@ class RegisterUseCaseImpl: RegisterUseCase {
         self.repository = repository
     }
 
-    func registerWith(email: String, password: String, confirmPassword: String, completed: @escaping (Result<UserEntity, Error>) -> Void) {
-        repository.registerWith(email: email, password: password, confirmPassword: confirmPassword, completed: completed)
+    func registerWith(email: String, password: String, completed: @escaping (Result<UserEntity, Error>) -> Void) {
+        repository.registerWith(email: email, password: password, completed: completed)
     }
 }

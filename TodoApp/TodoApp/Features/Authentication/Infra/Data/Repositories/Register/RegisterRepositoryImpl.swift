@@ -14,8 +14,8 @@ class RegisterRepositoryImpl: RegisterRepository {
         self.dataSource = dataSource
     }
 
-    func registerWith(email: String, password: String, confirmPassword: String, completed: @escaping (Result<UserEntity, Error>) -> Void) {
-        dataSource.registerWith(email: email, password: password, confirmPassword: confirmPassword) { result in
+    func registerWith(email: String, password: String, completed: @escaping (Result<UserEntity, Error>) -> Void) {
+        dataSource.registerWith(email: email, password: password) { result in
             switch result {
             case .success(let dto):
                 completed(.success(dto.transferToModel()))
