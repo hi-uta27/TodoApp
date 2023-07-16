@@ -920,9 +920,6 @@
 		2B9E2D732A4E767400FA3531 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
-				635C0E3A2A63CDB2001C6A92 /* ChangeAccountImage */,
-				635C0E312A63C628001C6A92 /* ChangeAccountPassword */,
-				635C0E302A63C61E001C6A92 /* ChangeAccountName */,
 				2B9E2D782A4E76AA00FA3531 /* Presentations */,
 			);
 			path = UserProfile;
@@ -967,8 +964,10 @@
 		2B9E2D782A4E76AA00FA3531 /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
-				2B9E2D7D2A4E772800FA3531 /* UserProfileViewController.swift */,
-				2B9E2D7F2A4E773900FA3531 /* UserProfileViewController.storyboard */,
+				635C0E3A2A63CDB2001C6A92 /* ChangeAccountImage */,
+				635C0E312A63C628001C6A92 /* ChangeAccountPassword */,
+				635C0E302A63C61E001C6A92 /* ChangeAccountName */,
+				635C0E3F2A63E121001C6A92 /* UserProfile */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -1662,6 +1661,15 @@
 				635C0E3D2A63CDE2001C6A92 /* ChangeAccountImageViewController.storyboard */,
 			);
 			path = ChangeAccountImage;
+			sourceTree = "<group>";
+		};
+		635C0E3F2A63E121001C6A92 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				2B9E2D7D2A4E772800FA3531 /* UserProfileViewController.swift */,
+				2B9E2D7F2A4E773900FA3531 /* UserProfileViewController.storyboard */,
+			);
+			path = UserProfile;
 			sourceTree = "<group>";
 		};
 		63734D9F2A5658560006EDF6 /* DetailTask */ = {
