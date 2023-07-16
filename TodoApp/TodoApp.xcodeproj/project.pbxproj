@@ -186,6 +186,8 @@
 		635C0E352A63C67F001C6A92 /* ChangeAccountNameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635C0E342A63C67F001C6A92 /* ChangeAccountNameViewController.storyboard */; };
 		635C0E372A63C6A7001C6A92 /* ChangeAccountPasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635C0E362A63C6A7001C6A92 /* ChangeAccountPasswordViewController.storyboard */; };
 		635C0E392A63C6B7001C6A92 /* ChangeAccountPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C0E382A63C6B7001C6A92 /* ChangeAccountPasswordViewController.swift */; };
+		635C0E3C2A63CDCB001C6A92 /* ChangeAccountImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C0E3B2A63CDCB001C6A92 /* ChangeAccountImageViewController.swift */; };
+		635C0E3E2A63CDE2001C6A92 /* ChangeAccountImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635C0E3D2A63CDE2001C6A92 /* ChangeAccountImageViewController.storyboard */; };
 		63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA02A56586C0006EDF6 /* TaskPresentation.swift */; };
 		63734DA32A566FE60006EDF6 /* DeleteTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */; };
 		63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */; };
@@ -395,6 +397,8 @@
 		635C0E342A63C67F001C6A92 /* ChangeAccountNameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeAccountNameViewController.storyboard; sourceTree = "<group>"; };
 		635C0E362A63C6A7001C6A92 /* ChangeAccountPasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeAccountPasswordViewController.storyboard; sourceTree = "<group>"; };
 		635C0E382A63C6B7001C6A92 /* ChangeAccountPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountPasswordViewController.swift; sourceTree = "<group>"; };
+		635C0E3B2A63CDCB001C6A92 /* ChangeAccountImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountImageViewController.swift; sourceTree = "<group>"; };
+		635C0E3D2A63CDE2001C6A92 /* ChangeAccountImageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeAccountImageViewController.storyboard; sourceTree = "<group>"; };
 		63734DA02A56586C0006EDF6 /* TaskPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresentation.swift; sourceTree = "<group>"; };
 		63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCase.swift; sourceTree = "<group>"; };
 		63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskRepository.swift; sourceTree = "<group>"; };
@@ -916,6 +920,7 @@
 		2B9E2D732A4E767400FA3531 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
+				635C0E3A2A63CDB2001C6A92 /* ChangeAccountImage */,
 				635C0E312A63C628001C6A92 /* ChangeAccountPassword */,
 				635C0E302A63C61E001C6A92 /* ChangeAccountName */,
 				2B9E2D782A4E76AA00FA3531 /* Presentations */,
@@ -1650,6 +1655,15 @@
 			path = ChangeAccountPassword;
 			sourceTree = "<group>";
 		};
+		635C0E3A2A63CDB2001C6A92 /* ChangeAccountImage */ = {
+			isa = PBXGroup;
+			children = (
+				635C0E3B2A63CDCB001C6A92 /* ChangeAccountImageViewController.swift */,
+				635C0E3D2A63CDE2001C6A92 /* ChangeAccountImageViewController.storyboard */,
+			);
+			path = ChangeAccountImage;
+			sourceTree = "<group>";
+		};
 		63734D9F2A5658560006EDF6 /* DetailTask */ = {
 			isa = PBXGroup;
 			children = (
@@ -1900,6 +1914,7 @@
 				2B72067F2A36BFF5009A1158 /* CreateCategoryViewController.storyboard in Resources */,
 				63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */,
 				2B8E30552A32E83000CFDD3D /* CategoryCell.xib in Resources */,
+				635C0E3E2A63CDE2001C6A92 /* ChangeAccountImageViewController.storyboard in Resources */,
 				2B62641C2A418BAE00B53646 /* ChooseTimeViewController.storyboard in Resources */,
 				635BE0C52A5AA0D20045666D /* IntroViewController.storyboard in Resources */,
 				2BBFCCEF2A49686E0095EA4D /* TaskHeader.xib in Resources */,
@@ -2039,6 +2054,7 @@
 				2BA3EA4B2A4AFE0900C496DD /* UpdateTaskInject.swift in Sources */,
 				2B945AD42A395F86004EED4F /* UIColor+CategoryColor.swift in Sources */,
 				2BB9E5E82A43006700755022 /* KindOfTime.swift in Sources */,
+				635C0E3C2A63CDCB001C6A92 /* ChangeAccountImageViewController.swift in Sources */,
 				63ECF3832A5B928B009D5C58 /* OnboardingCell.swift in Sources */,
 				2BBFCCDA2A4964570095EA4D /* UpdateTaskRepository.swift in Sources */,
 				632BA9FC2A5F9D1D00A272F2 /* UserInfoRepository.swift in Sources */,

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Change Account Image View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ChangeAccountImageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ChangeAccountImageViewController" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQU-Ed-zbg">
+                                <rect key="frame" x="0.0" y="59" width="393" height="551"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="touchUpInsideCloseButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iRr-c2-Kb4"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bea-Zb-GZu">
+                                <rect key="frame" x="0.0" y="610" width="393" height="242"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pfy-Ef-OVP">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="242"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mcp-lr-Vsw" userLabel="Title Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change account Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOP-Lu-P92">
+                                                        <rect key="frame" x="32" y="0.0" width="330" height="43"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUE-Sj-Wgn">
+                                                        <rect key="frame" x="32" y="43" width="330" height="1"/>
+                                                        <color key="backgroundColor" name="AFAFAF"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="zWZ-SL-4fj"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="vfA-0W-Qlz"/>
+                                                </constraints>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="32" bottom="0.0" right="31"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5C4-Ee-enb" userLabel="Action Stack View">
+                                                <rect key="frame" x="0.0" y="44" width="393" height="198"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBG-m2-mcd">
+                                                        <rect key="frame" x="34" y="10" width="325" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="zZL-Za-MQP"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Tack picture"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehM-fX-c5T">
+                                                        <rect key="frame" x="34" y="58" width="325" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="79M-dE-pFF"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Import from gallery"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6df-Hm-77j">
+                                                        <rect key="frame" x="34" y="106" width="325" height="48"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="pAl-Hl-Guc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Import from Google Drive"/>
+                                                    </button>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="10" left="34" bottom="10" right="34"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="363636"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="pfy-Ef-OVP" secondAttribute="bottom" id="Bke-pJ-WbA"/>
+                                    <constraint firstItem="pfy-Ef-OVP" firstAttribute="top" secondItem="bea-Zb-GZu" secondAttribute="top" id="b7y-JG-mKZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="pfy-Ef-OVP" secondAttribute="trailing" id="dkz-s0-LBQ"/>
+                                    <constraint firstItem="pfy-Ef-OVP" firstAttribute="leading" secondItem="bea-Zb-GZu" secondAttribute="leading" id="kKY-LH-xBX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bea-Zb-GZu" secondAttribute="bottom" id="1DE-pd-60H"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zQU-Ed-zbg" secondAttribute="trailing" id="Bmm-sQ-9FQ"/>
+                            <constraint firstItem="zQU-Ed-zbg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="D63-ha-xGz"/>
+                            <constraint firstItem="zQU-Ed-zbg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="MnS-n8-qiY"/>
+                            <constraint firstItem="bea-Zb-GZu" firstAttribute="top" secondItem="zQU-Ed-zbg" secondAttribute="bottom" id="bZj-7r-Zq4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bea-Zb-GZu" secondAttribute="trailing" id="eK3-mQ-6Vr"/>
+                            <constraint firstItem="bea-Zb-GZu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="lUU-wX-VBg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="NXK-5v-9S7" customClass="RoundCornerMarkViewBehavior" customModule="TodoApp" customModuleProvider="target">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftRadius" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="topRightRadius" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="views" destination="bea-Zb-GZu" collectionClass="NSMutableArray" id="tkq-HW-1Zd"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="74" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="363636">
+            <color red="0.21199999749660492" green="0.21199999749660492" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AFAFAF">
+            <color red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
