@@ -12,7 +12,6 @@ class ChangeAccountPasswordViewController: BaseViewController {
     @IBOutlet private var newPasswordTextField: UITextField!
 
     private lazy var changePasswordUseCase = di.resolve(ChangePasswordUseCase.self)!
-    private var changePasswordSuccess: (() -> Void)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +24,7 @@ class ChangeAccountPasswordViewController: BaseViewController {
         {
             print(Self.self, #function, oldPassword, newPassword)
         } else {
-            showAlert(title: "Error", message: "Please enter a user name", actions: [.okAction()])
+            showAlert(title: "Error", message: "Please enter password", actions: [.okAction()])
         }
     }
 
@@ -45,7 +44,6 @@ class ChangeAccountPasswordViewController: BaseViewController {
                 if let error = error {
                     self?.showAlert(title: "Error", message: error.localizedDescription, actions: [.okAction()])
                 } else {
-                    self?.changePasswordSuccess?()
                     self?.dismiss(animated: true)
                 }
             }
@@ -53,17 +51,9 @@ class ChangeAccountPasswordViewController: BaseViewController {
     }
 }
 
-extension ChangeAccountPasswordViewController {
-    static func initial(changePasswordSuccess: @escaping () -> Void) -> Self {
-        let viewController = initial()
-        viewController.changePasswordSuccess = changePasswordSuccess
-        return viewController
-    }
-}
-
 extension UIViewController {
-    func presentChangePassword(changePasswordSuccess: @escaping () -> Void, complete: (() -> Void)?) {
-        let viewController = ChangeAccountPasswordViewController.initial(changePasswordSuccess: changePasswordSuccess)
+    func presentChangePassword(complete: (() -> Void)?) {
+        let viewController = ChangeAccountPasswordViewController.initial()
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .overFullScreen
         present(viewController, animated: true, completion: complete)
