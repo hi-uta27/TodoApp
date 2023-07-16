@@ -16,6 +16,7 @@ enum AppContainer {
         TaskInject.register(container: di)
         IntroInject.register(container: di)
         AuthenticationInject.register(container: di)
+        UserProfileInject.register(container: di)
         return true
     }
 }
