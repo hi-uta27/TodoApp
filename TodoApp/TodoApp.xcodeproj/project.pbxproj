@@ -196,6 +196,9 @@
 		637226782A63EE5900D70052 /* ChangeAccountNameRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637226772A63EE5900D70052 /* ChangeAccountNameRepositoryImpl.swift */; };
 		6372267B2A63EEA700D70052 /* UserProfileInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372267A2A63EEA700D70052 /* UserProfileInject.swift */; };
 		6372267E2A63EF1A00D70052 /* ChangeAccountNameInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372267D2A63EF1A00D70052 /* ChangeAccountNameInject.swift */; };
+		637226812A63F48D00D70052 /* ChangePasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637226802A63F48D00D70052 /* ChangePasswordUseCase.swift */; };
+		637226842A63F4E400D70052 /* ChangePasswordRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637226832A63F4E400D70052 /* ChangePasswordRemoteDataSource.swift */; };
+		637226872A63F50800D70052 /* ChangePasswordRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637226862A63F50800D70052 /* ChangePasswordRepositories.swift */; };
 		63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA02A56586C0006EDF6 /* TaskPresentation.swift */; };
 		63734DA32A566FE60006EDF6 /* DeleteTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */; };
 		63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */; };
@@ -415,6 +418,9 @@
 		637226772A63EE5900D70052 /* ChangeAccountNameRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountNameRepositoryImpl.swift; sourceTree = "<group>"; };
 		6372267A2A63EEA700D70052 /* UserProfileInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileInject.swift; sourceTree = "<group>"; };
 		6372267D2A63EF1A00D70052 /* ChangeAccountNameInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountNameInject.swift; sourceTree = "<group>"; };
+		637226802A63F48D00D70052 /* ChangePasswordUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordUseCase.swift; sourceTree = "<group>"; };
+		637226832A63F4E400D70052 /* ChangePasswordRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordRemoteDataSource.swift; sourceTree = "<group>"; };
+		637226862A63F50800D70052 /* ChangePasswordRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordRepositories.swift; sourceTree = "<group>"; };
 		63734DA02A56586C0006EDF6 /* TaskPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresentation.swift; sourceTree = "<group>"; };
 		63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCase.swift; sourceTree = "<group>"; };
 		63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskRepository.swift; sourceTree = "<group>"; };
@@ -1712,6 +1718,7 @@
 		637226622A63ECB100D70052 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				6372267F2A63F47C00D70052 /* ChangePassword */,
 				637226632A63ECB800D70052 /* ChangeAccountName */,
 			);
 			path = UseCase;
@@ -1728,6 +1735,7 @@
 		637226662A63ED1E00D70052 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				637226852A63F4F600D70052 /* ChangePassword */,
 				637226682A63ED3200D70052 /* ChangeAccountName */,
 			);
 			path = Repositories;
@@ -1736,6 +1744,7 @@
 		637226672A63ED2700D70052 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				637226822A63F4CA00D70052 /* ChangePassword */,
 				6372266B2A63ED7B00D70052 /* ChangeAccountName */,
 			);
 			path = DataSource;
@@ -1821,6 +1830,30 @@
 				6372267D2A63EF1A00D70052 /* ChangeAccountNameInject.swift */,
 			);
 			path = Inject;
+			sourceTree = "<group>";
+		};
+		6372267F2A63F47C00D70052 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				637226802A63F48D00D70052 /* ChangePasswordUseCase.swift */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		637226822A63F4CA00D70052 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				637226832A63F4E400D70052 /* ChangePasswordRemoteDataSource.swift */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		637226852A63F4F600D70052 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				637226862A63F50800D70052 /* ChangePasswordRepositories.swift */,
+			);
+			path = ChangePassword;
 			sourceTree = "<group>";
 		};
 		63734D9F2A5658560006EDF6 /* DetailTask */ = {
@@ -2149,6 +2182,7 @@
 				635C0E392A63C6B7001C6A92 /* ChangeAccountPasswordViewController.swift in Sources */,
 				6372266D2A63ED9700D70052 /* ChangeAccountNameRemoteDataSource.swift in Sources */,
 				635BE0CD2A5AAC210045666D /* OnboardingViewController.swift in Sources */,
+				637226842A63F4E400D70052 /* ChangePasswordRemoteDataSource.swift in Sources */,
 				2BBFCCE92A49682F0095EA4D /* TaskCell.swift in Sources */,
 				632BA9FA2A5F9CF000A272F2 /* UserInfoModel.swift in Sources */,
 				63F684842A580D7500B9A86A /* CalendarTableViewDataSource.swift in Sources */,
@@ -2197,6 +2231,7 @@
 				2B83EE652A30776F0009D5C6 /* RCategoryModel.swift in Sources */,
 				2B9794D82A3B037800F4B8E8 /* CreateTaskUseCaseImpl.swift in Sources */,
 				2BBFCCDE2A49663A0095EA4D /* UpdateTaskUseCaseImpl.swift in Sources */,
+				637226812A63F48D00D70052 /* ChangePasswordUseCase.swift in Sources */,
 				639ADAD62A5EF20F000FB8F3 /* AuthenticationScreenRouterImpl.swift in Sources */,
 				2BFE12C92A3301F4001155EA /* ReadCategoryInject.swift in Sources */,
 				2B0981C82A39A12700B80C03 /* TaskStatus.swift in Sources */,
@@ -2279,6 +2314,7 @@
 				2B9794DD2A3B043C00F4B8E8 /* CreateTaskInject.swift in Sources */,
 				2B57DE6F2A2F1B8B002160E7 /* SceneDelegate.swift in Sources */,
 				2BA28F932A2F38A0004BB3D9 /* ProgressHUD.swift in Sources */,
+				637226872A63F50800D70052 /* ChangePasswordRepositories.swift in Sources */,
 				2B8E30512A32E46200CFDD3D /* CreateCategoryModel.swift in Sources */,
 				637226652A63ECC600D70052 /* ChangeAccountNameUseCase.swift in Sources */,
 				2B9328D12A3C096900DD6730 /* TaskPriorityCell.swift in Sources */,
