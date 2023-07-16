@@ -56,7 +56,7 @@ class UserProfileViewController: BaseViewController {
     }
 
     @IBAction private func touchUpInsideChangeAccountNameButton(_ sender: Any) {
-        print(Self.self, #function)
+        presentChangeAccountName()
     }
 
     @IBAction private func touchUpInsideChangeAccountPasswordButton(_ sender: Any) {

@@ -93,6 +93,9 @@
                                                         <state key="normal" title="Cancel">
                                                             <color key="titleColor" name="8687E7"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="touchUpInsideCloseButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="v6V-so-CfX"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgo-lb-jFN">
                                                         <rect key="frame" x="180" y="0.0" width="157" height="48"/>
@@ -105,6 +108,9 @@
                                                         <state key="normal" title="Edit">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="touchUpInsideEditButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kmJ-VC-DKE"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="8" right="8"/>
@@ -133,6 +139,9 @@
                             <constraint firstItem="KUE-ku-g4J" firstAttribute="centerY" secondItem="lJd-sS-Y7c" secondAttribute="centerY" id="fG8-7R-d2V"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="EM6-wg-SPM" id="KPu-gf-ag0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="U5B-yQ-dmR" userLabel="Round Corner 4" customClass="RoundCornerViewBehavior" customModule="TodoApp" customModuleProvider="target">
