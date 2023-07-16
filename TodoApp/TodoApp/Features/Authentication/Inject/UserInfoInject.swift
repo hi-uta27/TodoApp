@@ -18,7 +18,7 @@ extension UserInfoInject {
 
     private static func registerData(container: Container) {
         container.register(UserInfoRemoteDataSource.self) { _ in
-            FirebaseAuthentications()
+            FirebaseUserProfile()
         }
         container.register(UserInfoRepository.self) { r in
             UserInfoRepositoryImpl(dataSource: r.resolve(UserInfoRemoteDataSource.self)!)
@@ -32,4 +32,4 @@ extension UserInfoInject {
     }
 }
 
-extension FirebaseAuthentications: UserInfoRemoteDataSource {}
+extension FirebaseUserProfile: UserInfoRemoteDataSource {}

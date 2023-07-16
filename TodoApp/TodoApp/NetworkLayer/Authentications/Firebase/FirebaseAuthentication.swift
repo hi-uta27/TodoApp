@@ -57,10 +57,6 @@ extension FirebaseAuthentications {
         }
     }
 
-    func readUserInfo(completed: @escaping (UserDTO?) -> Void) {
-        completed(firebaseAuth.currentUser)
-    }
-
     func logout(completed: @escaping (Error?) -> Void) {
         do {
             try firebaseAuth.signOut()

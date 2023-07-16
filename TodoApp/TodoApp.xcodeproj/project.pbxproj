@@ -188,6 +188,7 @@
 		635C0E392A63C6B7001C6A92 /* ChangeAccountPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C0E382A63C6B7001C6A92 /* ChangeAccountPasswordViewController.swift */; };
 		635C0E3C2A63CDCB001C6A92 /* ChangeAccountImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C0E3B2A63CDCB001C6A92 /* ChangeAccountImageViewController.swift */; };
 		635C0E3E2A63CDE2001C6A92 /* ChangeAccountImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635C0E3D2A63CDE2001C6A92 /* ChangeAccountImageViewController.storyboard */; };
+		6372265F2A63EA3700D70052 /* FirebaseUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372265E2A63EA3700D70052 /* FirebaseUserProfile.swift */; };
 		63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA02A56586C0006EDF6 /* TaskPresentation.swift */; };
 		63734DA32A566FE60006EDF6 /* DeleteTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */; };
 		63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */; };
@@ -399,6 +400,7 @@
 		635C0E382A63C6B7001C6A92 /* ChangeAccountPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountPasswordViewController.swift; sourceTree = "<group>"; };
 		635C0E3B2A63CDCB001C6A92 /* ChangeAccountImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountImageViewController.swift; sourceTree = "<group>"; };
 		635C0E3D2A63CDE2001C6A92 /* ChangeAccountImageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeAccountImageViewController.storyboard; sourceTree = "<group>"; };
+		6372265E2A63EA3700D70052 /* FirebaseUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserProfile.swift; sourceTree = "<group>"; };
 		63734DA02A56586C0006EDF6 /* TaskPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresentation.swift; sourceTree = "<group>"; };
 		63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCase.swift; sourceTree = "<group>"; };
 		63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskRepository.swift; sourceTree = "<group>"; };
@@ -920,6 +922,8 @@
 		2B9E2D732A4E767400FA3531 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
+				637226612A63EC8300D70052 /* Domain */,
+				637226602A63EC7C00D70052 /* Data */,
 				2B9E2D782A4E76AA00FA3531 /* Presentations */,
 			);
 			path = UserProfile;
@@ -1672,6 +1676,20 @@
 			path = UserProfile;
 			sourceTree = "<group>";
 		};
+		637226602A63EC7C00D70052 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		637226612A63EC8300D70052 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		63734D9F2A5658560006EDF6 /* DetailTask */ = {
 			isa = PBXGroup;
 			children = (
@@ -1768,6 +1786,7 @@
 			isa = PBXGroup;
 			children = (
 				634A73072A5DA79B004AA3B4 /* FirebaseAuthentication.swift */,
+				6372265E2A63EA3700D70052 /* FirebaseUserProfile.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -2052,6 +2071,7 @@
 				2B62641A2A418B8A00B53646 /* ChooseTimeViewController.swift in Sources */,
 				2B9328CB2A3C094E00DD6730 /* TaskPriorityViewController.swift in Sources */,
 				2BBFCCE02A4966490095EA4D /* UpdateTaskRepositoryImpl.swift in Sources */,
+				6372265F2A63EA3700D70052 /* FirebaseUserProfile.swift in Sources */,
 				2B6C14DE2A4D9C4B00161D85 /* MainTabbarController.swift in Sources */,
 				2B8E304F2A32E3DD00CFDD3D /* CategoryCollectionViewDataSource.swift in Sources */,
 				2B9328E72A3C5F2D00DD6730 /* TaskAlarmViewController.swift in Sources */,
