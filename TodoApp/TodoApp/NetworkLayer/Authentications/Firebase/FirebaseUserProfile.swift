@@ -43,4 +43,8 @@ extension FirebaseUserProfile {
             }
         }
     }
+
+    func changePassword(_ password: String, completed: @escaping (Error?) -> Void) {
+        firebaseAuth.currentUser?.updatePassword(to: password, completion: completed)
+    }
 }

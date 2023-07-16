@@ -201,6 +201,7 @@
 		637226872A63F50800D70052 /* ChangePasswordRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637226862A63F50800D70052 /* ChangePasswordRepositories.swift */; };
 		6372268A2A63F56500D70052 /* ChangePasswordUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637226892A63F56500D70052 /* ChangePasswordUseCaseImpl.swift */; };
 		6372268D2A63F5B000D70052 /* ChangePasswordRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372268C2A63F5B000D70052 /* ChangePasswordRepositoryImpl.swift */; };
+		6372268F2A63F61400D70052 /* ChangePasswordInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372268E2A63F61400D70052 /* ChangePasswordInject.swift */; };
 		63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA02A56586C0006EDF6 /* TaskPresentation.swift */; };
 		63734DA32A566FE60006EDF6 /* DeleteTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */; };
 		63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */; };
@@ -425,6 +426,7 @@
 		637226862A63F50800D70052 /* ChangePasswordRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordRepositories.swift; sourceTree = "<group>"; };
 		637226892A63F56500D70052 /* ChangePasswordUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordUseCaseImpl.swift; sourceTree = "<group>"; };
 		6372268C2A63F5B000D70052 /* ChangePasswordRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordRepositoryImpl.swift; sourceTree = "<group>"; };
+		6372268E2A63F61400D70052 /* ChangePasswordInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordInject.swift; sourceTree = "<group>"; };
 		63734DA02A56586C0006EDF6 /* TaskPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresentation.swift; sourceTree = "<group>"; };
 		63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCase.swift; sourceTree = "<group>"; };
 		63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskRepository.swift; sourceTree = "<group>"; };
@@ -1834,6 +1836,7 @@
 			children = (
 				6372267A2A63EEA700D70052 /* UserProfileInject.swift */,
 				6372267D2A63EF1A00D70052 /* ChangeAccountNameInject.swift */,
+				6372268E2A63F61400D70052 /* ChangePasswordInject.swift */,
 			);
 			path = Inject;
 			sourceTree = "<group>";
@@ -2188,6 +2191,7 @@
 				2B3192D72A4D25CC005C6F69 /* UIScrollView+PullToRefresh.swift in Sources */,
 				2BFE12CB2A330295001155EA /* AppContainer.swift in Sources */,
 				2B2EAE7B2A445FCC00A88123 /* TaskScreenDataSource.swift in Sources */,
+				6372268F2A63F61400D70052 /* ChangePasswordInject.swift in Sources */,
 				63ECF3892A5BA4F9009D5C58 /* OnboardingModel.swift in Sources */,
 				2BC969B22A429CB700D11EB1 /* TimePickerCell.swift in Sources */,
 				2B9794DB2A3B041700F4B8E8 /* TaskInject.swift in Sources */,
