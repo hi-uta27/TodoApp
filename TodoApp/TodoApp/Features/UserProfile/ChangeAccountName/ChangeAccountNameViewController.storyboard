@@ -17,6 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRA-Aw-62e">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="touchUpInsideCloseButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1Ly-eQ-0Fu"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUE-ku-g4J" userLabel="Background Content View">
                                 <rect key="frame" x="24" y="332.66666666666669" width="345" height="187.00000000000006"/>
                                 <subviews>
@@ -117,8 +124,12 @@
                         <viewLayoutGuide key="safeArea" id="Fok-c3-3Vn"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="hRA-Aw-62e" firstAttribute="leading" secondItem="Fok-c3-3Vn" secondAttribute="leading" id="AFE-wf-fD2"/>
+                            <constraint firstItem="hRA-Aw-62e" firstAttribute="top" secondItem="Fok-c3-3Vn" secondAttribute="top" id="BLh-OJ-INd"/>
+                            <constraint firstItem="Fok-c3-3Vn" firstAttribute="trailing" secondItem="hRA-Aw-62e" secondAttribute="trailing" id="FVs-i1-F5W"/>
                             <constraint firstItem="Fok-c3-3Vn" firstAttribute="trailing" secondItem="KUE-ku-g4J" secondAttribute="trailing" constant="24" id="Ig5-dU-sds"/>
                             <constraint firstItem="KUE-ku-g4J" firstAttribute="leading" secondItem="Fok-c3-3Vn" secondAttribute="leading" constant="24" id="K9b-h5-akC"/>
+                            <constraint firstItem="Fok-c3-3Vn" firstAttribute="bottom" secondItem="hRA-Aw-62e" secondAttribute="bottom" id="dCM-m7-Nrs"/>
                             <constraint firstItem="KUE-ku-g4J" firstAttribute="centerY" secondItem="lJd-sS-Y7c" secondAttribute="centerY" id="fG8-7R-d2V"/>
                         </constraints>
                     </view>
