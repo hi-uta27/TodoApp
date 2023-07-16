@@ -199,6 +199,8 @@
 		637226812A63F48D00D70052 /* ChangePasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637226802A63F48D00D70052 /* ChangePasswordUseCase.swift */; };
 		637226842A63F4E400D70052 /* ChangePasswordRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637226832A63F4E400D70052 /* ChangePasswordRemoteDataSource.swift */; };
 		637226872A63F50800D70052 /* ChangePasswordRepositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637226862A63F50800D70052 /* ChangePasswordRepositories.swift */; };
+		6372268A2A63F56500D70052 /* ChangePasswordUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637226892A63F56500D70052 /* ChangePasswordUseCaseImpl.swift */; };
+		6372268D2A63F5B000D70052 /* ChangePasswordRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372268C2A63F5B000D70052 /* ChangePasswordRepositoryImpl.swift */; };
 		63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA02A56586C0006EDF6 /* TaskPresentation.swift */; };
 		63734DA32A566FE60006EDF6 /* DeleteTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */; };
 		63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */; };
@@ -421,6 +423,8 @@
 		637226802A63F48D00D70052 /* ChangePasswordUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordUseCase.swift; sourceTree = "<group>"; };
 		637226832A63F4E400D70052 /* ChangePasswordRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordRemoteDataSource.swift; sourceTree = "<group>"; };
 		637226862A63F50800D70052 /* ChangePasswordRepositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordRepositories.swift; sourceTree = "<group>"; };
+		637226892A63F56500D70052 /* ChangePasswordUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordUseCaseImpl.swift; sourceTree = "<group>"; };
+		6372268C2A63F5B000D70052 /* ChangePasswordRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordRepositoryImpl.swift; sourceTree = "<group>"; };
 		63734DA02A56586C0006EDF6 /* TaskPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresentation.swift; sourceTree = "<group>"; };
 		63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCase.swift; sourceTree = "<group>"; };
 		63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskRepository.swift; sourceTree = "<group>"; };
@@ -1794,6 +1798,7 @@
 		637226712A63EDE200D70052 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				637226882A63F55300D70052 /* ChangePassword */,
 				637226722A63EDF000D70052 /* ChangeAccountName */,
 			);
 			path = UseCases;
@@ -1810,6 +1815,7 @@
 		637226752A63EE3800D70052 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				6372268B2A63F59600D70052 /* ChangePassword */,
 				637226762A63EE4500D70052 /* ChangeAccountName */,
 			);
 			path = Repositories;
@@ -1852,6 +1858,22 @@
 			isa = PBXGroup;
 			children = (
 				637226862A63F50800D70052 /* ChangePasswordRepositories.swift */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		637226882A63F55300D70052 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				637226892A63F56500D70052 /* ChangePasswordUseCaseImpl.swift */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		6372268B2A63F59600D70052 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				6372268C2A63F5B000D70052 /* ChangePasswordRepositoryImpl.swift */,
 			);
 			path = ChangePassword;
 			sourceTree = "<group>";
@@ -2227,6 +2249,7 @@
 				2B9794D02A3AF0A000F4B8E8 /* RTaskModel.swift in Sources */,
 				634A73082A5DA79B004AA3B4 /* FirebaseAuthentication.swift in Sources */,
 				2BB9E5E12A42FFD300755022 /* TimeSinglePickerItem.swift in Sources */,
+				6372268D2A63F5B000D70052 /* ChangePasswordRepositoryImpl.swift in Sources */,
 				63734DAB2A56747B0006EDF6 /* DeleteTaskRepositoryImpl.swift in Sources */,
 				2B83EE652A30776F0009D5C6 /* RCategoryModel.swift in Sources */,
 				2B9794D82A3B037800F4B8E8 /* CreateTaskUseCaseImpl.swift in Sources */,
@@ -2313,6 +2336,7 @@
 				2B9328D72A3C162A00DD6730 /* Int+TaskPriority.swift in Sources */,
 				2B9794DD2A3B043C00F4B8E8 /* CreateTaskInject.swift in Sources */,
 				2B57DE6F2A2F1B8B002160E7 /* SceneDelegate.swift in Sources */,
+				6372268A2A63F56500D70052 /* ChangePasswordUseCaseImpl.swift in Sources */,
 				2BA28F932A2F38A0004BB3D9 /* ProgressHUD.swift in Sources */,
 				637226872A63F50800D70052 /* ChangePasswordRepositories.swift in Sources */,
 				2B8E30512A32E46200CFDD3D /* CreateCategoryModel.swift in Sources */,
