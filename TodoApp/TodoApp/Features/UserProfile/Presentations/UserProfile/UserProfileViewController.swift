@@ -56,7 +56,9 @@ class UserProfileViewController: BaseViewController {
     }
 
     @IBAction private func touchUpInsideChangeAccountNameButton(_ sender: Any) {
-        presentChangeAccountName()
+        presentChangeAccountName(changeAccountNameSuccess: { [weak self] name in
+            self?.userNameLabel.text = name
+        }, complete: nil)
     }
 
     @IBAction private func touchUpInsideChangeAccountPasswordButton(_ sender: Any) {
