@@ -14,7 +14,7 @@ class ChangePasswordRepositoryImpl: ChangePasswordRepositories {
         self.dataSource = dataSource
     }
 
-    func changePassword(_ password: String, completed: @escaping (Error?) -> Void) {
-        dataSource.changePassword(password, completed: completed)
+    func changePassword(_ password: String, oldPassword: String, completed: @escaping (Error?) -> Void) {
+        dataSource.changePassword(password, oldPassword: oldPassword, completed: completed)
     }
 }
