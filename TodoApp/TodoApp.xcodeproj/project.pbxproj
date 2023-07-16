@@ -189,6 +189,7 @@
 		635C0E3C2A63CDCB001C6A92 /* ChangeAccountImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C0E3B2A63CDCB001C6A92 /* ChangeAccountImageViewController.swift */; };
 		635C0E3E2A63CDE2001C6A92 /* ChangeAccountImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635C0E3D2A63CDE2001C6A92 /* ChangeAccountImageViewController.storyboard */; };
 		6372265F2A63EA3700D70052 /* FirebaseUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6372265E2A63EA3700D70052 /* FirebaseUserProfile.swift */; };
+		637226652A63ECC600D70052 /* ChangeAccountNameUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637226642A63ECC600D70052 /* ChangeAccountNameUseCase.swift */; };
 		63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA02A56586C0006EDF6 /* TaskPresentation.swift */; };
 		63734DA32A566FE60006EDF6 /* DeleteTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */; };
 		63734DA52A5671B20006EDF6 /* DeleteTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */; };
@@ -401,6 +402,7 @@
 		635C0E3B2A63CDCB001C6A92 /* ChangeAccountImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountImageViewController.swift; sourceTree = "<group>"; };
 		635C0E3D2A63CDE2001C6A92 /* ChangeAccountImageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeAccountImageViewController.storyboard; sourceTree = "<group>"; };
 		6372265E2A63EA3700D70052 /* FirebaseUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserProfile.swift; sourceTree = "<group>"; };
+		637226642A63ECC600D70052 /* ChangeAccountNameUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountNameUseCase.swift; sourceTree = "<group>"; };
 		63734DA02A56586C0006EDF6 /* TaskPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPresentation.swift; sourceTree = "<group>"; };
 		63734DA22A566FE60006EDF6 /* DeleteTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskUseCase.swift; sourceTree = "<group>"; };
 		63734DA42A5671B20006EDF6 /* DeleteTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTaskRepository.swift; sourceTree = "<group>"; };
@@ -1686,8 +1688,25 @@
 		637226612A63EC8300D70052 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				637226622A63ECB100D70052 /* UseCase */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		637226622A63ECB100D70052 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				637226632A63ECB800D70052 /* ChangeAccountName */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		637226632A63ECB800D70052 /* ChangeAccountName */ = {
+			isa = PBXGroup;
+			children = (
+				637226642A63ECC600D70052 /* ChangeAccountNameUseCase.swift */,
+			);
+			path = ChangeAccountName;
 			sourceTree = "<group>";
 		};
 		63734D9F2A5658560006EDF6 /* DetailTask */ = {
@@ -2143,6 +2162,7 @@
 				2B57DE6F2A2F1B8B002160E7 /* SceneDelegate.swift in Sources */,
 				2BA28F932A2F38A0004BB3D9 /* ProgressHUD.swift in Sources */,
 				2B8E30512A32E46200CFDD3D /* CreateCategoryModel.swift in Sources */,
+				637226652A63ECC600D70052 /* ChangeAccountNameUseCase.swift in Sources */,
 				2B9328D12A3C096900DD6730 /* TaskPriorityCell.swift in Sources */,
 				63C933A82A56C155006DFFE2 /* TaskTitleViewController.swift in Sources */,
 				632BA9F62A5F9B9300A272F2 /* LoginRemoteDataSource.swift in Sources */,
