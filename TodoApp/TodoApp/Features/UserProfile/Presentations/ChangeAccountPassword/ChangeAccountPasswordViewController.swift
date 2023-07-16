@@ -10,6 +10,8 @@ import UIKit
 class ChangeAccountPasswordViewController: BaseViewController {
     @IBOutlet private var oldPasswordTextField: UITextField!
     @IBOutlet private var newPasswordTextField: UITextField!
+    @IBOutlet private var showHideOldPasswordButton: UIButton!
+    @IBOutlet private var showHideNewPasswordButton: UIButton!
 
     private lazy var changePasswordUseCase = di.resolve(ChangePasswordUseCase.self)!
 
@@ -19,10 +21,8 @@ class ChangeAccountPasswordViewController: BaseViewController {
 
     @IBAction private func touchUpInsideEditButton(_ sender: Any) {
         print(Self.self, #function)
-        if let oldPassword = validate(oldPasswordTextField),
-           let newPassword = validate(newPasswordTextField)
-        {
-            print(Self.self, #function, oldPassword, newPassword)
+        if let oldPassword = validate(oldPasswordTextField), let newPassword = validate(newPasswordTextField) {
+            changePassword(newPassword, oldPassword: oldPassword)
         } else {
             showAlert(title: "Error", message: "Please enter password", actions: [.okAction()])
         }
@@ -36,9 +36,9 @@ class ChangeAccountPasswordViewController: BaseViewController {
         }
     }
 
-    private func changePassword(_ password: String) {
+    private func changePassword(_ password: String, oldPassword: String) {
         displayIndicator(isShow: true)
-        changePasswordUseCase.changePassword(password) { [weak self] error in
+        changePasswordUseCase.changePassword(password, oldPassword: oldPassword) { [weak self] error in
             DispatchQueue.main.async {
                 self?.displayIndicator(isShow: false)
                 if let error = error {
@@ -48,6 +48,16 @@ class ChangeAccountPasswordViewController: BaseViewController {
                 }
             }
         }
+    }
+
+    @IBAction private func touchUpInsideShowHideOldPassswordButton(_ sender: Any) {
+        showHideOldPasswordButton.isSelected.toggle()
+        oldPasswordTextField.isSecureTextEntry.toggle()
+    }
+
+    @IBAction private func touchUpInsideShowHideNewPasswordButton(_ sender: Any) {
+        showHideNewPasswordButton.isSelected.toggle()
+        newPasswordTextField.isSecureTextEntry.toggle()
     }
 }
 
