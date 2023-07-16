@@ -12,7 +12,7 @@ protocol ReadTaskViewController: ShowAlertViewController {
 }
 
 extension ReadTaskViewController {
-    func refreshTask(filter: TaskFilter, refreshTaskSuccess: @escaping ([TaskEntity]?) -> Void) {
+    func refreshTask(filter: TaskFilter?, refreshTaskSuccess: @escaping ([TaskEntity]?) -> Void) {
         readTaskUseCase.readTask(filter: filter) { [weak self] result in
             switch result {
             case .success(let tasks):

@@ -16,7 +16,7 @@ class ReadTaskUseCaseImpl: ReadTaskUseCase {
         self.repository = repository
     }
 
-    func readTask(filter: TaskFilter, completed: @escaping (Result<[TaskEntity]?, Error>) -> Void) {
-        repository.readTask(date: filter.date, keyword: filter.keyword, completed: completed)
+    func readTask(filter: TaskFilter?, completed: @escaping (Result<[TaskEntity]?, Error>) -> Void) {
+        repository.readTask(date: filter?.date, keyword: filter?.keyword, completed: completed)
     }
 }

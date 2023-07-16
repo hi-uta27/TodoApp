@@ -7,8 +7,6 @@
 
 import Foundation
 
-// Func readTask with: Date, keyword? -> [RTaskModel]?
-
 protocol ReadTaskLocalDataSource {
-    func readTask(date: Date, keyword: String?, completed: @escaping (Result<[RTaskModel]?, Error>) -> Void)
+    func readTask(date: Date?, keyword: String?, completed: @escaping (Result<[RTaskModel]?, Error>) -> Void)
 }

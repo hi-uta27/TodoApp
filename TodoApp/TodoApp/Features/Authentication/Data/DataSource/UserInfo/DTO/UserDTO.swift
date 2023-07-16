@@ -5,13 +5,17 @@
 //  Created by TaHieu on 7/13/23.
 //
 
-import Firebase
+import FirebaseAuth
 import Foundation
 
 typealias UserDTO = User
 
 extension User {
     func transferToModel() -> UserEntity {
-        return UserInfoModel(uid: uid, email: email ?? "", displayName: displayName ?? "", image: nil)
+        return UserInfoModel(
+            uid: uid,
+            email: email ?? "Invalid Email",
+            displayName: displayName ?? email ?? "Invalid Name",
+            image: photoURL)
     }
 }
