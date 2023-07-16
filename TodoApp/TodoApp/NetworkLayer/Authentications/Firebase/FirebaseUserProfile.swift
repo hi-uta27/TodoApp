@@ -45,12 +45,12 @@ extension FirebaseUserProfile {
     }
 
     func changePassword(_ password: String, oldPassword: String, completed: @escaping (Error?) -> Void) {
-        guard let user = firebaseAuth.currentUser, let email = user.email else { return }
-        firebaseAuth.signIn(withEmail: email, password: oldPassword) { _, error in
+        guard let email = firebaseAuth.currentUser?.email else { return }
+        firebaseAuth.signIn(withEmail: email, password: oldPassword) { auth, error in
             if let error = error {
                 completed(error)
             } else {
-                user.updatePassword(to: password, completion: completed)
+                auth?.user.updatePassword(to: password, completion: completed)
             }
         }
     }
