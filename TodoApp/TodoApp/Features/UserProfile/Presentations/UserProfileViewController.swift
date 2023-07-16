@@ -32,7 +32,11 @@ class UserProfileViewController: BaseViewController {
                 self?.displayIndicator(isShow: false)
                 guard let user = user else { return }
                 self?.userNameLabel.text = user.displayName
-                self?.imageView.sd_setImage(with: user.image)
+                if let image = user.image {
+                    self?.imageView.sd_setImage(with: image)
+                } else {
+                    self?.imageView.image = UIImage(named: "UserDefault")
+                }
             }
         }
     }
