@@ -8,7 +8,9 @@
 import UIKit
 
 class ChangeAccountImageViewController: BaseViewController {
-    private var changeAccountImageSuccess: ((String) -> Void)!
+    private var changeAccountImageSuccess: ((URL) -> Void)!
+
+    private lazy var changeImageUseCase = di.resolve(ChangeAccountImageUseCase.self)!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ class ChangeAccountImageViewController: BaseViewController {
 }
 
 extension ChangeAccountImageViewController {
-    static func initial(changeAccountImageSuccess: @escaping (String) -> Void) -> Self {
+    static func initial(changeAccountImageSuccess: @escaping (URL) -> Void) -> Self {
         let viewController = initial()
         viewController.changeAccountImageSuccess = changeAccountImageSuccess
         return viewController
@@ -36,7 +38,7 @@ extension ChangeAccountImageViewController {
 }
 
 extension UIViewController {
-    func presentChangeAccountImage(changeAccountImageSuccess: @escaping (String) -> Void, complete: (() -> Void)?) {
+    func presentChangeAccountImage(changeAccountImageSuccess: @escaping (URL) -> Void, complete: (() -> Void)?) {
         let viewController = ChangeAccountImageViewController.initial(changeAccountImageSuccess: changeAccountImageSuccess)
         viewController.modalPresentationStyle = .overFullScreen
         present(viewController, animated: true, completion: complete)

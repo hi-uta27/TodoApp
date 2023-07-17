@@ -66,7 +66,9 @@ class UserProfileViewController: BaseViewController {
     }
 
     @IBAction private func touchUpInsideChangeAccountImageButton(_ sender: Any) {
-        print(Self.self, #function)
+        presentChangeAccountImage(changeAccountImageSuccess: { [weak self] url in
+            self?.imageView.sd_setImage(with: url)
+        }, complete: nil)
     }
 
     @IBAction private func touchUpInsideAboutUSButton(_ sender: Any) {
