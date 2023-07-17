@@ -225,6 +225,7 @@
 		639ADADA2A5EF46D000FB8F3 /* AuthenticationInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639ADAD92A5EF46D000FB8F3 /* AuthenticationInject.swift */; };
 		63C933A82A56C155006DFFE2 /* TaskTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C933A72A56C155006DFFE2 /* TaskTitleViewController.swift */; };
 		63C933AA2A56C176006DFFE2 /* TaskTitleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C933A92A56C176006DFFE2 /* TaskTitleViewController.storyboard */; };
+		63CDED0A2A65256000844B19 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 63CDED092A65256000844B19 /* FirebaseStorage */; };
 		63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D64C282A55621900913D63 /* DetailTaskViewController.swift */; };
 		63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */; };
 		63ECF3832A5B928B009D5C58 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECF3812A5B928B009D5C58 /* OnboardingCell.swift */; };
@@ -471,6 +472,7 @@
 				2B9328EC2A3C672500DD6730 /* FSCalendar in Frameworks */,
 				631188DA2A62E5E400F53F6D /* SDWebImage in Frameworks */,
 				2BC969B82A42B53C00D11EB1 /* SwiftDate in Frameworks */,
+				63CDED0A2A65256000844B19 /* FirebaseStorage in Frameworks */,
 				2BFE12C42A33001E001155EA /* Swinject in Frameworks */,
 				638C97A62A5D52FD0092CD98 /* FirebaseCrashlytics in Frameworks */,
 				2B03C4352A387D15007B4C40 /* IQKeyboardManagerSwift in Frameworks */,
@@ -600,6 +602,7 @@
 			children = (
 				2B57DE6B2A2F1B8B002160E7 /* TodoApp */,
 				2B57DE6A2A2F1B8B002160E7 /* Products */,
+				63CDED082A65256000844B19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1964,6 +1967,13 @@
 			path = TaskTitle;
 			sourceTree = "<group>";
 		};
+		63CDED082A65256000844B19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		63D64C272A55620300913D63 /* DetailTask */ = {
 			isa = PBXGroup;
 			children = (
@@ -2055,6 +2065,7 @@
 				638C97A72A5D52FD0092CD98 /* FirebaseFirestore */,
 				634A73012A5D9CD2004AA3B4 /* GoogleSignIn */,
 				631188D92A62E5E400F53F6D /* SDWebImage */,
+				63CDED092A65256000844B19 /* FirebaseStorage */,
 			);
 			productName = TodoApp;
 			productReference = 2B57DE692A2F1B8B002160E7 /* TodoApp.app */;
@@ -2712,6 +2723,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 638C97A02A5D52FD0092CD98 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		63CDED092A65256000844B19 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 638C97A02A5D52FD0092CD98 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
