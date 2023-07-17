@@ -226,6 +226,7 @@
 		63C933A82A56C155006DFFE2 /* TaskTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C933A72A56C155006DFFE2 /* TaskTitleViewController.swift */; };
 		63C933AA2A56C176006DFFE2 /* TaskTitleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C933A92A56C176006DFFE2 /* TaskTitleViewController.storyboard */; };
 		63CDED0A2A65256000844B19 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 63CDED092A65256000844B19 /* FirebaseStorage */; };
+		63CDED0D2A65309800844B19 /* ChangeAccountImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDED0C2A65309800844B19 /* ChangeAccountImageUseCase.swift */; };
 		63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D64C282A55621900913D63 /* DetailTaskViewController.swift */; };
 		63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */; };
 		63ECF3832A5B928B009D5C58 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECF3812A5B928B009D5C58 /* OnboardingCell.swift */; };
@@ -447,6 +448,7 @@
 		639ADAD92A5EF46D000FB8F3 /* AuthenticationInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationInject.swift; sourceTree = "<group>"; };
 		63C933A72A56C155006DFFE2 /* TaskTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTitleViewController.swift; sourceTree = "<group>"; };
 		63C933A92A56C176006DFFE2 /* TaskTitleViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaskTitleViewController.storyboard; sourceTree = "<group>"; };
+		63CDED0C2A65309800844B19 /* ChangeAccountImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountImageUseCase.swift; sourceTree = "<group>"; };
 		63D64C282A55621900913D63 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
 		63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTaskViewController.storyboard; sourceTree = "<group>"; };
 		63ECF3812A5B928B009D5C58 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -1727,6 +1729,7 @@
 		637226622A63ECB100D70052 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				63CDED0B2A65307A00844B19 /* ChangeAccountImage */,
 				6372267F2A63F47C00D70052 /* ChangePassword */,
 				637226632A63ECB800D70052 /* ChangeAccountName */,
 			);
@@ -1972,6 +1975,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63CDED0B2A65307A00844B19 /* ChangeAccountImage */ = {
+			isa = PBXGroup;
+			children = (
+				63CDED0C2A65309800844B19 /* ChangeAccountImageUseCase.swift */,
+			);
+			path = ChangeAccountImage;
 			sourceTree = "<group>";
 		};
 		63D64C272A55620300913D63 /* DetailTask */ = {
@@ -2297,6 +2308,7 @@
 				632BA9FC2A5F9D1D00A272F2 /* UserInfoRepository.swift in Sources */,
 				2BBFCCCE2A495D850095EA4D /* ReadTaskRepositoryImpl.swift in Sources */,
 				2B7206792A36B98D009A1158 /* ReadCategoryLocalDataSource.swift in Sources */,
+				63CDED0D2A65309800844B19 /* ChangeAccountImageUseCase.swift in Sources */,
 				2B2EAE722A445E2A00A88123 /* TaskScreenRouterImpl.swift in Sources */,
 				632BA9F22A5F9A5100A272F2 /* UserInfoRemoteDataSource.swift in Sources */,
 				63734DA12A56586C0006EDF6 /* TaskPresentation.swift in Sources */,
