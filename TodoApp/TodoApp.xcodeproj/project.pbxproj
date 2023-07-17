@@ -231,6 +231,7 @@
 		63CDED132A65316C00844B19 /* ChangeAccountImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDED122A65316C00844B19 /* ChangeAccountImageRepository.swift */; };
 		63CDED162A6531DB00844B19 /* ChangeAccountImageUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDED152A6531DB00844B19 /* ChangeAccountImageUseCaseImpl.swift */; };
 		63CDED182A65322100844B19 /* ChangeAccountImageRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDED172A65322100844B19 /* ChangeAccountImageRepositoryImpl.swift */; };
+		63CDED1B2A65329A00844B19 /* ChangeAccountImageInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDED1A2A65329A00844B19 /* ChangeAccountImageInject.swift */; };
 		63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D64C282A55621900913D63 /* DetailTaskViewController.swift */; };
 		63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */; };
 		63ECF3832A5B928B009D5C58 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECF3812A5B928B009D5C58 /* OnboardingCell.swift */; };
@@ -457,6 +458,7 @@
 		63CDED122A65316C00844B19 /* ChangeAccountImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountImageRepository.swift; sourceTree = "<group>"; };
 		63CDED152A6531DB00844B19 /* ChangeAccountImageUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountImageUseCaseImpl.swift; sourceTree = "<group>"; };
 		63CDED172A65322100844B19 /* ChangeAccountImageRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountImageRepositoryImpl.swift; sourceTree = "<group>"; };
+		63CDED1A2A65329A00844B19 /* ChangeAccountImageInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountImageInject.swift; sourceTree = "<group>"; };
 		63D64C282A55621900913D63 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
 		63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTaskViewController.storyboard; sourceTree = "<group>"; };
 		63ECF3812A5B928B009D5C58 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -1855,6 +1857,7 @@
 				6372267A2A63EEA700D70052 /* UserProfileInject.swift */,
 				6372267D2A63EF1A00D70052 /* ChangeAccountNameInject.swift */,
 				6372268E2A63F61400D70052 /* ChangePasswordInject.swift */,
+				63CDED1A2A65329A00844B19 /* ChangeAccountImageInject.swift */,
 			);
 			path = Inject;
 			sourceTree = "<group>";
@@ -2292,6 +2295,7 @@
 				2B0981C42A39A11D00B80C03 /* CreateTaskUseCase.swift in Sources */,
 				632BAA3C2A5FB89C00A272F2 /* RegisterRepository.swift in Sources */,
 				2B9E2D7E2A4E772800FA3531 /* UserProfileViewController.swift in Sources */,
+				63CDED1B2A65329A00844B19 /* ChangeAccountImageInject.swift in Sources */,
 				63F684812A58094700B9A86A /* FSCalendarWeekDataSource.swift in Sources */,
 				63293E662A5CFF26000F3155 /* LoginViewController.swift in Sources */,
 				2BBFCCCA2A4952BD0095EA4D /* ReadTaskRepository.swift in Sources */,

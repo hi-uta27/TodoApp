@@ -15,6 +15,6 @@ class ChangeAccountImageRepositoryImpl: ChangeAccountImageRepository {
     }
 
     func changeImage(_ image: Data, compledted completed: @escaping (Result<URL, Error>) -> Void) {
-        dataSource.changeImage(image, compledted: completed)
+        dataSource.changeImage(image, completed: completed)
     }
 }

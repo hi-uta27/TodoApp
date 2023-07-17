@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ChangeAccountImageRemoteDataSource {
-    func changeImage(_ image: Data, compledted: @escaping (Result<URL, Error>) -> Void)
+    func changeImage(_ image: Data, completed: @escaping (Result<URL, Error>) -> Void)
 }
