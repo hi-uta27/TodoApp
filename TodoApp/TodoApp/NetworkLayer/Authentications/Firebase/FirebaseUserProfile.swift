@@ -6,24 +6,16 @@
 //
 
 import FirebaseAuth
+import FirebaseStorage
 import Foundation
-
-enum FirebaseUserProfileError: LocalizedError {
-    case changeAccountNameFailure
-
-    var errorDescription: String? {
-        switch self {
-        case .changeAccountNameFailure:
-            return "Change account name failure"
-        }
-    }
-}
 
 class FirebaseUserProfile {
     private let firebaseAuth: Auth
+    private let firebaseStorage: Storage
 
-    init(firebaseAuth: Auth = .auth()) {
+    init(firebaseAuth: Auth = .auth(), firebaseStorage: Storage = .storage()) {
         self.firebaseAuth = firebaseAuth
+        self.firebaseStorage = firebaseStorage
     }
 }
 
@@ -51,6 +43,42 @@ extension FirebaseUserProfile {
                 completed(error)
             } else {
                 auth?.user.updatePassword(to: password, completion: completed)
+            }
+        }
+    }
+
+    func changeImage(_ image: Data, completed: @escaping (Result<URL, Error>) -> Void) {
+        guard let user = firebaseAuth.currentUser else { return }
+        let storageReference = firebaseStorage.reference().child("UserProfileImages/\(user.uid)")
+        storageReference.putData(image) { [weak self] result in
+            switch result {
+            case .success:
+                self?.downloadPhotoUrl(user: user, storageReference: storageReference, completed: completed)
+            case .failure(let failure):
+                completed(.failure(failure))
+            }
+        }
+    }
+
+    private func downloadPhotoUrl(user: User, storageReference: StorageReference, completed: @escaping (Result<URL, Error>) -> Void) {
+        storageReference.downloadURL { [weak self] url, error in
+            if let error = error {
+                completed(.failure(error))
+            } else {
+                guard let url = url else { return }
+                self?.setPhotoUrl(url, for: user, completed: completed)
+            }
+        }
+    }
+
+    private func setPhotoUrl(_ url: URL, for user: User, completed: @escaping (Result<URL, Error>) -> Void) {
+        let changeRequest = user.createProfileChangeRequest()
+        changeRequest.photoURL = url
+        changeRequest.commitChanges { error in
+            if let error = error {
+                completed(.failure(error))
+            } else {
+                completed(.success(url))
             }
         }
     }
