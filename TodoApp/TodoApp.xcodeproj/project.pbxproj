@@ -229,6 +229,8 @@
 		63CDED0D2A65309800844B19 /* ChangeAccountImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDED0C2A65309800844B19 /* ChangeAccountImageUseCase.swift */; };
 		63CDED102A65311A00844B19 /* ChangeAccountImageRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDED0F2A65311A00844B19 /* ChangeAccountImageRemoteDataSource.swift */; };
 		63CDED132A65316C00844B19 /* ChangeAccountImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDED122A65316C00844B19 /* ChangeAccountImageRepository.swift */; };
+		63CDED162A6531DB00844B19 /* ChangeAccountImageUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDED152A6531DB00844B19 /* ChangeAccountImageUseCaseImpl.swift */; };
+		63CDED182A65322100844B19 /* ChangeAccountImageRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDED172A65322100844B19 /* ChangeAccountImageRepositoryImpl.swift */; };
 		63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D64C282A55621900913D63 /* DetailTaskViewController.swift */; };
 		63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */; };
 		63ECF3832A5B928B009D5C58 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECF3812A5B928B009D5C58 /* OnboardingCell.swift */; };
@@ -453,6 +455,8 @@
 		63CDED0C2A65309800844B19 /* ChangeAccountImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountImageUseCase.swift; sourceTree = "<group>"; };
 		63CDED0F2A65311A00844B19 /* ChangeAccountImageRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountImageRemoteDataSource.swift; sourceTree = "<group>"; };
 		63CDED122A65316C00844B19 /* ChangeAccountImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountImageRepository.swift; sourceTree = "<group>"; };
+		63CDED152A6531DB00844B19 /* ChangeAccountImageUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountImageUseCaseImpl.swift; sourceTree = "<group>"; };
+		63CDED172A65322100844B19 /* ChangeAccountImageRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountImageRepositoryImpl.swift; sourceTree = "<group>"; };
 		63D64C282A55621900913D63 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
 		63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTaskViewController.storyboard; sourceTree = "<group>"; };
 		63ECF3812A5B928B009D5C58 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -1812,6 +1816,7 @@
 		637226712A63EDE200D70052 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				63CDED142A6531C800844B19 /* ChangeAccountImage */,
 				637226882A63F55300D70052 /* ChangePassword */,
 				637226722A63EDF000D70052 /* ChangeAccountName */,
 			);
@@ -1829,6 +1834,7 @@
 		637226752A63EE3800D70052 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				63CDED192A65325000844B19 /* ChangeAccountImage */,
 				6372268B2A63F59600D70052 /* ChangePassword */,
 				637226762A63EE4500D70052 /* ChangeAccountName */,
 			);
@@ -2003,6 +2009,22 @@
 			isa = PBXGroup;
 			children = (
 				63CDED122A65316C00844B19 /* ChangeAccountImageRepository.swift */,
+			);
+			path = ChangeAccountImage;
+			sourceTree = "<group>";
+		};
+		63CDED142A6531C800844B19 /* ChangeAccountImage */ = {
+			isa = PBXGroup;
+			children = (
+				63CDED152A6531DB00844B19 /* ChangeAccountImageUseCaseImpl.swift */,
+			);
+			path = ChangeAccountImage;
+			sourceTree = "<group>";
+		};
+		63CDED192A65325000844B19 /* ChangeAccountImage */ = {
+			isa = PBXGroup;
+			children = (
+				63CDED172A65322100844B19 /* ChangeAccountImageRepositoryImpl.swift */,
 			);
 			path = ChangeAccountImage;
 			sourceTree = "<group>";
@@ -2307,6 +2329,7 @@
 				639ADAD62A5EF20F000FB8F3 /* AuthenticationScreenRouterImpl.swift in Sources */,
 				2BFE12C92A3301F4001155EA /* ReadCategoryInject.swift in Sources */,
 				2B0981C82A39A12700B80C03 /* TaskStatus.swift in Sources */,
+				63CDED162A6531DB00844B19 /* ChangeAccountImageUseCaseImpl.swift in Sources */,
 				2BBFCCD02A495D9E0095EA4D /* TasksLocalDataSourceImpl+ReadTask.swift in Sources */,
 				2BBFCCF22A4975280095EA4D /* TaskFilterModel.swift in Sources */,
 				632BAA432A5FB91500A272F2 /* RegisterUseCaseImpl.swift in Sources */,
@@ -2385,6 +2408,7 @@
 				632BAA322A5FA75E00A272F2 /* LogoutInject.swift in Sources */,
 				2B72068B2A36D3D6009A1158 /* CategoryColorCollectionViewDataSource.swift in Sources */,
 				2B9328D72A3C162A00DD6730 /* Int+TaskPriority.swift in Sources */,
+				63CDED182A65322100844B19 /* ChangeAccountImageRepositoryImpl.swift in Sources */,
 				2B9794DD2A3B043C00F4B8E8 /* CreateTaskInject.swift in Sources */,
 				2B57DE6F2A2F1B8B002160E7 /* SceneDelegate.swift in Sources */,
 				6372268A2A63F56500D70052 /* ChangePasswordUseCaseImpl.swift in Sources */,
