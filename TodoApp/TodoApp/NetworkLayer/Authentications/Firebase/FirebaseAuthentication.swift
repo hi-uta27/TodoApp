@@ -28,10 +28,13 @@ extension FirebaseAuthentications {
 
     func loginWithGoogle(completed: @escaping (Result<UserDTO, Error>) -> Void) {
         googleSignIn.signIn(withPresenting: viewController) { [weak self] result, error in
-            guard error == nil else { return }
-            guard let user = result?.user, let idToken = user.idToken?.tokenString else { return }
-            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
-            self?.loginWith(credential: credential, completed: completed)
+            if let error = error {
+                completed(.failure(error))
+            } else {
+                guard let user = result?.user, let idToken = user.idToken?.tokenString else { return }
+                let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
+                self?.loginWith(credential: credential, completed: completed)
+            }
         }
     }
 

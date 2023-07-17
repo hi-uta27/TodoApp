@@ -234,6 +234,7 @@
 		63CDED1B2A65329A00844B19 /* ChangeAccountImageInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CDED1A2A65329A00844B19 /* ChangeAccountImageInject.swift */; };
 		63D64C292A55621900913D63 /* DetailTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D64C282A55621900913D63 /* DetailTaskViewController.swift */; };
 		63D64C2B2A55625400913D63 /* DetailTaskViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */; };
+		63E0D52D2A653DFA00E03C35 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E0D52C2A653DFA00E03C35 /* ImagePickerManager.swift */; };
 		63ECF3832A5B928B009D5C58 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECF3812A5B928B009D5C58 /* OnboardingCell.swift */; };
 		63ECF3842A5B928B009D5C58 /* OnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63ECF3822A5B928B009D5C58 /* OnboardingCell.xib */; };
 		63ECF3872A5B9497009D5C58 /* OnboardingCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECF3862A5B9497009D5C58 /* OnboardingCollectionDataSource.swift */; };
@@ -461,6 +462,7 @@
 		63CDED1A2A65329A00844B19 /* ChangeAccountImageInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeAccountImageInject.swift; sourceTree = "<group>"; };
 		63D64C282A55621900913D63 /* DetailTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskViewController.swift; sourceTree = "<group>"; };
 		63D64C2A2A55625400913D63 /* DetailTaskViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailTaskViewController.storyboard; sourceTree = "<group>"; };
+		63E0D52C2A653DFA00E03C35 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		63ECF3812A5B928B009D5C58 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		63ECF3822A5B928B009D5C58 /* OnboardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCell.xib; sourceTree = "<group>"; };
 		63ECF3862A5B9497009D5C58 /* OnboardingCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionDataSource.swift; sourceTree = "<group>"; };
@@ -968,6 +970,7 @@
 				637226612A63EC8300D70052 /* Domain */,
 				637226602A63EC7C00D70052 /* Data */,
 				2B9E2D782A4E76AA00FA3531 /* Presentations */,
+				63E0D52C2A653DFA00E03C35 /* ImagePickerManager.swift */,
 			);
 			path = UserProfile;
 			sourceTree = "<group>";
@@ -2281,6 +2284,7 @@
 				637226842A63F4E400D70052 /* ChangePasswordRemoteDataSource.swift in Sources */,
 				2BBFCCE92A49682F0095EA4D /* TaskCell.swift in Sources */,
 				632BA9FA2A5F9CF000A272F2 /* UserInfoModel.swift in Sources */,
+				63E0D52D2A653DFA00E03C35 /* ImagePickerManager.swift in Sources */,
 				63F684842A580D7500B9A86A /* CalendarTableViewDataSource.swift in Sources */,
 				2B0981C72A39A12700B80C03 /* TaskEntity.swift in Sources */,
 				632BAA262A5FA43500A272F2 /* LoginRepositoryImpl.swift in Sources */,
